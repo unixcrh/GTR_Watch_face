@@ -270,4 +270,22 @@
   <data name="Message_Save_new_JSON" xml:space="preserve">
     <value>Текущий проект еще не сохранен. Вы хотите сохранить его?</value>
   </data>
+  <data name="Message_WarningBatterySegment_Text" xml:space="preserve">
+    <value>Не рекомендуется отображение в виде стрелочного индикатора совместно с отображением сегментами для одного элемента.</value>
+  </data>
+  <data name="Message_WarningSpaceInName_Text" xml:space="preserve">
+    <value>Имя файла и путь к нему не должны содержать пробелов.</value>
+  </data>
+  <data name="Message_WarningTemperature_Text" xml:space="preserve">
+    <value>Отображение текущей температуры может не работать без отображения дневной и ночной температуры.</value>
+  </data>
+  <data name="Message_WarningAnimationCoun_Text" xml:space="preserve">
+    <value>Количество элементов для анимации не может быть больше 4.</value>
+  </data>
+  <data name="Message_WarningBatteryCount_Text" xml:space="preserve">
+    <value>Не рекомендуется использовать больше 10 картинок для отображения заряда батареи.</value>
+  </data>
+  <data name="Message_Error_SpaceInProgrammName_Text" xml:space="preserve">
+    <value>Путь к программе не должен содержать пробелы. Желательно поместить программу в корень диска.</value>
+  </data>
 </root>

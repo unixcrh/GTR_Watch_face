@@ -29,8 +29,9 @@ namespace GTR_Watch_face
         WATCH_FACE_PREWIEV_SET Watch_Face_Preview_Set;
         List<string> ListImages = new List<string>(); // перечень имен файлов с картинками
         List<string> ListImagesFullName = new List<string>(); // перечень путей к файлам с картинками
-        bool PreviewView; // включает прорисовку предпросмотра
-        bool Settings_Load; // включать при обновлении настроек длу выключения перерисовки
+        public bool PreviewView; // включает прорисовку предпросмотра
+        bool Settings_Load; // включать при обновлении настроек для выключения перерисовки
+        bool MotiomAnimation_Update = false; // включать при обновлении параметров анимации
         bool JSON_Modified = false; // JSON файл был изменен
         string FileName; // Запоминает имя для диалогов
         string FullFileDir; // Запоминает папку для диалогов
@@ -48,6 +49,8 @@ namespace GTR_Watch_face
         {
             //Logger.WriteLine("Form1");
             //if (File.Exists(Application.StartupPath + "\\log.txt")) File.Delete(Application.StartupPath + @"\log.txt");
+            
+
             Program_Settings = new PROGRAM_SETTINGS();
             try
             {
@@ -100,6 +103,14 @@ namespace GTR_Watch_face
                     if (language == "fr")
                     {
                         Program_Settings.language = "French";
+                    }
+                    if (language == "zh")
+                    {
+                        Program_Settings.language = "Chinese/简体中文";
+                    }
+                    if (language == "it")
+                    {
+                        Program_Settings.language = "Italian";
                     }
                 }
                 //Logger.WriteLine("Определили язык");
@@ -211,30 +222,35 @@ namespace GTR_Watch_face
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("fr");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("fr");
             }
+            else if (Program_Settings.language == "Chinese/简体中文")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("zh");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("zh");
+            }
+            else if (Program_Settings.language == "Italian")
+            {
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("it");
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("it");
+            }
             else
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("ru");
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru");
             }
         }
-        //private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    Properties.Settings.Default.pack_unpack_dir = textBox_pack_unpack_dir.Text;
-        //    if (radioButton_47.Checked)
-        //    {
-        //        Properties.Settings.Default.unpack_command = textBox_unpack_command.Text;
-        //        Properties.Settings.Default.pack_command = textBox_pack_command.Text;
-        //    }
-        //    else
-        //    {
-        //        Properties.Settings.Default.unpack_command_GTR42 = textBox_unpack_command.Text;
-        //        Properties.Settings.Default.pack_command_GTR42 = textBox_pack_command.Text;
-        //    }
-        //    Properties.Settings.Default.Save();
-        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
+#if !DEBUG
+            // пробелы в имени
+            if (Application.StartupPath.IndexOf(" ") != -1)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_Error_SpaceInProgrammName_Text,
+                    Properties.FormStrings.Message_Error_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+#endif
+
             //Logger.WriteLine("Form1_Load");
             helpProvider1.HelpNamespace = Application.StartupPath + Properties.FormStrings.File_ReadMy;
 #if Puthon
@@ -267,6 +283,12 @@ namespace GTR_Watch_face
                 textBox_unpack_command.Text = Program_Settings.unpack_command_TRex;
                 textBox_pack_command.Text = Program_Settings.pack_command_TRex;
             }
+            else if (Program_Settings.Model_Verge)
+            {
+                radioButton_Verge.Checked = Program_Settings.Model_Verge;
+                textBox_unpack_command.Text = Program_Settings.unpack_command_Verge;
+                textBox_pack_command.Text = Program_Settings.pack_command_Verge;
+            }
             else if (Program_Settings.Model_GTR42)
             {
                 radioButton_42.Checked = Program_Settings.Model_GTR42;
@@ -281,25 +303,6 @@ namespace GTR_Watch_face
             }
 
             PreviewView = false;
-            //checkBox_border.Checked = Program_Settings.ShowBorder;
-            //comboBox_MonthAndDayD_Alignment.Text = "Вверх влево";
-            //comboBox_MonthAndDayM_Alignment.Text = "Вверх влево";
-            //comboBox_OneLine_Alignment.Text = "Вверх влево";
-            //comboBox_Year_Alignment.Text = "Вверх влево";
-
-            //comboBox_ActivityGoal_Alignment.Text = "Вверх влево";
-            //comboBox_ActivitySteps_Alignment.Text = "Вверх влево";
-            //comboBox_ActivityDistance_Alignment.Text = "Вверх влево";
-            //comboBox_ActivityPuls_Alignment.Text = "Вверх влево";
-            //comboBox_ActivityCalories_Alignment.Text = "Вверх влево";
-            //comboBox_Battery_Text_Alignment.Text = "Вверх влево";
-
-            //comboBox_Weather_Text_Alignment.Text = "Вверх влево";
-            //comboBox_Weather_Day_Alignment.Text = "Вверх влево";
-            //comboBox_Weather_Night_Alignment.Text = "Вверх влево";
-
-            //comboBox_Battery_Flatness.Text = "Круглое";
-            //comboBox_StepsProgress_Flatness.Text = "Круглое";
             checkBox_border.Checked = Program_Settings.ShowBorder;
             checkBox_crop.Checked = Program_Settings.Crop;
             checkBox_Show_Shortcuts.Checked = Program_Settings.Show_Shortcuts;
@@ -320,6 +323,8 @@ namespace GTR_Watch_face
 
             comboBox_Battery_Flatness.SelectedIndex = 0;
             comboBox_StepsProgress_Flatness.SelectedIndex = 0;
+            comboBox_ActivityPulsScale_Flatness.SelectedIndex = 0;
+            comboBox_ActivityCaloriesScale_Flatness.SelectedIndex = 0;
 
             label_version.Text = "v " +
                 System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
@@ -346,6 +351,7 @@ namespace GTR_Watch_face
             radioButton_Settings_Unpack_Replace.Checked = Program_Settings.Settings_Unpack_Replace;
             radioButton_Settings_Unpack_Save.Checked = Program_Settings.Settings_Unpack_Save;
             numericUpDown_Gif_Speed.Value = (decimal)Program_Settings.Gif_Speed;
+            comboBox_Animation_Preview_Speed.SelectedIndex = Program_Settings.Animation_Preview_Speed;
 
             checkBox_Shortcuts_Area.Checked = Program_Settings.Shortcuts_Area;
             checkBox_Shortcuts_Border.Checked = Program_Settings.Shortcuts_Border;
@@ -373,6 +379,8 @@ namespace GTR_Watch_face
                 zip_unpack_bin(StartFileNameBin);
                 StartFileNameBin = "";
             }
+            JSON_Modified = false;
+            FormText();
             //Logger.WriteLine("Загрузили файл из значения аргумента " + StartFileNameJson);
         }
 
@@ -389,7 +397,7 @@ namespace GTR_Watch_face
                     {
                         string fullfilename = Path.Combine(FullFileDir, FileName);
                         File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
-                        if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
                     }
                     if (dr == DialogResult.Cancel)
                     {
@@ -420,7 +428,7 @@ namespace GTR_Watch_face
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
                             JSON_Modified = false;
-                            if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
                         }
                         else e.Cancel = true;
                     }
@@ -460,8 +468,8 @@ namespace GTR_Watch_face
 
         private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
         {
-            //FormFileExists f = new FormFileExists();
-            //f.ShowDialog();
+            //FormFileExists formAnimation = new FormFileExists();
+            //formAnimation.ShowDialog();
             //SendKeys.Send("{F1}");
             Help.ShowHelp(this, Application.StartupPath + Properties.FormStrings.File_ReadMy);
             e.Cancel = true;
@@ -469,6 +477,62 @@ namespace GTR_Watch_face
 
         private void button_zip_unpack_Click(object sender, EventArgs e)
         {
+            if (JSON_Modified) // сохранение если файл не сохранен
+            {
+                if (FileName != null)
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                        Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        string fullfilename = Path.Combine(FullFileDir, FileName);
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        JSON_Modified = false;
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_new_JSON,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption,
+                        MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        SaveFileDialog saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.InitialDirectory = FullFileDir;
+                        saveFileDialog.FileName = FileName;
+                        saveFileDialog.Filter = "Json files (*.json) | *.json";
+
+                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+                        ////openFileDialog1.FilterIndex = 2;
+                        saveFileDialog.RestoreDirectory = true;
+                        saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            string fullfilename = saveFileDialog.FileName;
+                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+
+                            FileName = Path.GetFileName(fullfilename);
+                            FullFileDir = Path.GetDirectoryName(fullfilename);
+                            JSON_Modified = false;
+                            FormText();
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                        }
+                        else return;
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+            }
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             //openFileDialog.Filter = "Json files (*.json) | *.json";
             openFileDialog.Filter = "Binary File (*.bin)|*.bin";
@@ -633,6 +697,62 @@ namespace GTR_Watch_face
 
         private void button_unpack_Click(object sender, EventArgs e)
         {
+            if (JSON_Modified) // сохранение если файл не сохранен
+            {
+                if (FileName != null)
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_JSON_Modified_Text1 +
+                        Path.GetFileNameWithoutExtension(FileName) + Properties.FormStrings.Message_Save_JSON_Modified_Text2,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        string fullfilename = Path.Combine(FullFileDir, FileName);
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+                        JSON_Modified = false;
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show(Properties.FormStrings.Message_Save_new_JSON,
+                        Properties.FormStrings.Message_Save_JSON_Modified_Caption,
+                        MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        SaveFileDialog saveFileDialog = new SaveFileDialog();
+                        saveFileDialog.InitialDirectory = FullFileDir;
+                        saveFileDialog.FileName = FileName;
+                        saveFileDialog.Filter = "Json files (*.json) | *.json";
+
+                        //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+                        ////openFileDialog1.FilterIndex = 2;
+                        saveFileDialog.RestoreDirectory = true;
+                        saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            string fullfilename = saveFileDialog.FileName;
+                            File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+
+                            FileName = Path.GetFileName(fullfilename);
+                            FullFileDir = Path.GetDirectoryName(fullfilename);
+                            JSON_Modified = false;
+                            FormText();
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                        }
+                        else return;
+                    }
+                    if (dr == DialogResult.Cancel)
+                    {
+                        return;
+                    }
+                }
+            }
+
             string subPath = Application.StartupPath + @"\Watch_face\";
             if (!Directory.Exists(subPath)) Directory.CreateDirectory(subPath);
 
@@ -827,7 +947,8 @@ namespace GTR_Watch_face
                         string fullfilename = Path.Combine(FullFileDir, FileName);
                         File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
                         JSON_Modified = false;
-                        if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
                     }
                     if (dr == DialogResult.Cancel)
                     {
@@ -854,12 +975,12 @@ namespace GTR_Watch_face
                         {
                             string fullfilename = saveFileDialog.FileName;
                             File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
-                            JSON_Modified = false;
 
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
                             JSON_Modified = false;
-                            if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                            FormText();
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
                         }
                         else return;
                     }
@@ -918,9 +1039,15 @@ namespace GTR_Watch_face
                     {
                         this.BringToFront();
                         double fileSize = (GetFileSizeMB(new FileInfo(newFullName)));
-                        if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
+                        if ((fileSize > 1.5) && (!radioButton_47.Checked))
+                        {
+                            MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1_gts + Environment.NewLine + Environment.NewLine +
                             Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else if (fileSize > 1.95) MessageBox.Show(Properties.FormStrings.Message_bigFile_Text1 + Environment.NewLine + Environment.NewLine +
+                        Properties.FormStrings.Message_bigFile_Text2, Properties.FormStrings.Message_bigFile_Caption,
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //if (radioButton_Settings_Pack_Dialog.Checked)
                         if (Program_Settings.Settings_Pack_Dialog)
@@ -1062,7 +1189,8 @@ namespace GTR_Watch_face
                         string fullfilename = Path.Combine(FullFileDir, FileName);
                         File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
                         JSON_Modified = false;
-                        if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
                     }
                     if (dr == DialogResult.Cancel)
                     {
@@ -1089,12 +1217,12 @@ namespace GTR_Watch_face
                         {
                             string fullfilename = saveFileDialog.FileName;
                             File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
-                            JSON_Modified = false;
 
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
                             JSON_Modified = false;
-                            if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                            FormText();
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
                         }
                         else return;
                     }
@@ -1353,7 +1481,8 @@ namespace GTR_Watch_face
                         string fullfilename = Path.Combine(FullFileDir, FileName);
                         File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
                         JSON_Modified = false;
-                        if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
                     }
                     if (dr == DialogResult.Cancel)
                     {
@@ -1380,12 +1509,12 @@ namespace GTR_Watch_face
                         {
                             string fullfilename = saveFileDialog.FileName;
                             File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
-                            JSON_Modified = false;
 
                             FileName = Path.GetFileName(fullfilename);
                             FullFileDir = Path.GetDirectoryName(fullfilename);
                             JSON_Modified = false;
-                            if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                            FormText();
+                            if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
                         }
                         else return;
                     }
@@ -1417,7 +1546,6 @@ namespace GTR_Watch_face
 
         private void LoadJsonAndImage(string fullfilename)
         {
-            JSON_Modified = false;
             //Logger.WriteLine("LoadJsonAndImage");
             FileName = Path.GetFileName(fullfilename);
             FullFileDir = Path.GetDirectoryName(fullfilename);
@@ -1505,11 +1633,14 @@ namespace GTR_Watch_face
             //Logger.WriteLine("Не верный json формат");
             try
             {
+                text = text.Replace("\"Unknown11_2\": [", "\"Unknown11_02_temp\": [");
+                //text = text.Replace("Unknown11_2", "Unknown11_02_temp");
                 Watch_Face = JsonConvert.DeserializeObject<WATCH_FACE_JSON>(text, new JsonSerializerSettings
                 {
                     DefaultValueHandling = DefaultValueHandling.Ignore,
                     NullValueHandling = NullValueHandling.Ignore
                 });
+                FixAnimation();
             }
             catch (Exception ex)
             {
@@ -1549,8 +1680,29 @@ namespace GTR_Watch_face
             }
             PreviewView = true;
             PreviewImage();
+            JSON_Modified = false;
+            FormText();
         }
-      
+
+        private void FixAnimation()
+        {
+            if (Watch_Face.Unknown11 != null && Watch_Face.Unknown11.Unknown11_2 == null)
+            {
+                if (Watch_Face.Unknown11.Unknown11_02_temp != null)
+                {
+                    foreach (StaticAnimation staticAnimation in Watch_Face.Unknown11.Unknown11_02_temp)
+                    {
+                        if (staticAnimation.Unknown11d2p1 != null)
+                        {
+                            Watch_Face.Unknown11.Unknown11_2 = staticAnimation;
+                            return;
+                        }
+                    }
+
+                }
+            }
+        }
+
         // формируем изображение для предпросмотра
         private void PreviewImage()
         {
@@ -1560,7 +1712,8 @@ namespace GTR_Watch_face
             float scale = 1.0f;
             if (panel_Preview.Height < 300) scale = 0.5f;
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
-                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
+                checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
+                checkBox_Shortcuts_Border.Checked, true, 0);
             gPanel.Dispose();
 
             if ((formPreview != null) && (formPreview.Visible))
@@ -1574,7 +1727,7 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_xxlarge.Checked) scalePreview = 2.5f;
                 PreviewToBitmap(gPanelPreview, scalePreview, checkBox_crop.Checked, checkBox_WebW.Checked, 
                     checkBox_WebB.Checked, checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, 
-                    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
+                    checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
                 gPanelPreview.Dispose();
                 
             }
@@ -1582,7 +1735,7 @@ namespace GTR_Watch_face
         
 
 #region выбираем данные для предпросмотра
-        private void SetPreferences1()
+        public void SetPreferences1()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set1.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set1.Value.Month;
@@ -1609,7 +1762,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences2()
+        public void SetPreferences2()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set2.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set2.Value.Month;
@@ -1636,7 +1789,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences3()
+        public void SetPreferences3()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set3.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set3.Value.Month;
@@ -1663,7 +1816,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences4()
+        public void SetPreferences4()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set4.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set4.Value.Month;
@@ -1690,7 +1843,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences5()
+        public void SetPreferences5()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set5.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set5.Value.Month;
@@ -1717,7 +1870,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences6()
+        public void SetPreferences6()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set6.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set6.Value.Month;
@@ -1744,7 +1897,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences7()
+        public void SetPreferences7()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set7.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set7.Value.Month;
@@ -1771,7 +1924,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences8()
+        public void SetPreferences8()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set8.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set8.Value.Month;
@@ -1798,7 +1951,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences9()
+        public void SetPreferences9()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set9.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set9.Value.Month;
@@ -1825,7 +1978,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences10()
+        public void SetPreferences10()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set10.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set10.Value.Month;
@@ -1852,7 +2005,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences11()
+        public void SetPreferences11()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set11.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set11.Value.Month;
@@ -1879,7 +2032,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences12()
+        public void SetPreferences12()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set12.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set12.Value.Month;
@@ -1906,7 +2059,7 @@ namespace GTR_Watch_face
             SetDigitForPrewiev();
         }
 
-        private void SetPreferences13()
+        public void SetPreferences13()
         {
             Watch_Face_Preview_Set.Date.Year = dateTimePicker_Date_Set13.Value.Year;
             Watch_Face_Preview_Set.Date.Month = dateTimePicker_Date_Set13.Value.Month;
@@ -1964,7 +2117,7 @@ namespace GTR_Watch_face
                 Watch_Face_Preview_TwoDigits.Time.Seconds.Tens * 10;
 
             int hour = Watch_Face_Preview_Set.Time.Hours;
-            if (Watch_Face_Preview_Set.Time.Hours > 12)
+            if (Watch_Face_Preview_Set.Time.Hours >= 12)
             {
                 hour = hour - 12;
                 Watch_Face_Preview_TwoDigits.TimePm.Pm = true;
@@ -1973,6 +2126,7 @@ namespace GTR_Watch_face
             {
                 Watch_Face_Preview_TwoDigits.TimePm.Pm = false;
             }
+            if (hour == 0) hour = 12;
             Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens = hour / 10;
             Watch_Face_Preview_TwoDigits.TimePm.Hours.Ones = hour - (int)Watch_Face_Preview_TwoDigits.TimePm.Hours.Tens * 10;
             Watch_Face_Preview_TwoDigits.TimePm.Minutes.Tens = (int)Watch_Face_Preview_Set.Time.Minutes / 10;
@@ -2099,6 +2253,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Background.Height = 1;
         }
@@ -2118,6 +2273,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Time.Height = 1;
         }
@@ -2137,6 +2293,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Date.Height = 1;
         }
@@ -2156,6 +2313,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_AnalogDate.Height = 1;
         }
@@ -2175,6 +2333,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_StepsProgress.Height = 1;
         }
@@ -2188,12 +2347,13 @@ namespace GTR_Watch_face
                 panel_Date.Height = 1;
                 panel_AnalogDate.Height = 1;
                 panel_StepsProgress.Height = 1;
-                panel_Activity.Height = (int)(215 * currentDPI);
+                panel_Activity.Height = (int)(235 * currentDPI);
                 panel_Status.Height = 1;
                 panel_Battery.Height = 1;
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Activity.Height = 1;
         }
@@ -2213,6 +2373,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Status.Height = 1;
         }
@@ -2232,6 +2393,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Battery.Height = 1;
         }
@@ -2251,6 +2413,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = (int)(193 * currentDPI);
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_AnalogClock.Height = 1;
         }
@@ -2270,6 +2433,7 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = (int)(230 * currentDPI);
                 panel_Shortcuts.Height = 1;
+                panel_Animation.Height = 1;
             }
             else panel_Weather.Height = 1;
         }
@@ -2289,8 +2453,29 @@ namespace GTR_Watch_face
                 panel_AnalogClock.Height = 1;
                 panel_Weather.Height = 1;
                 panel_Shortcuts.Height = (int)(145 * currentDPI);
+                panel_Animation.Height = 1;
             }
             else panel_Shortcuts.Height = 1;
+        }
+
+        private void button_Animation_Click(object sender, EventArgs e)
+        {
+            if (panel_Animation.Height == 1)
+            {
+                panel_Background.Height = 1;
+                panel_Time.Height = 1;
+                panel_Date.Height = 1;
+                panel_AnalogDate.Height = 1;
+                panel_StepsProgress.Height = 1;
+                panel_Activity.Height = 1;
+                panel_Status.Height = 1;
+                panel_Battery.Height = 1;
+                panel_AnalogClock.Height = 1;
+                panel_Weather.Height = 1;
+                panel_Shortcuts.Height = 1;
+                panel_Animation.Height = (int)(275 * currentDPI);
+            }
+            else panel_Animation.Height = 1;
         }
         #endregion
 
@@ -3520,6 +3705,77 @@ namespace GTR_Watch_face
             label456.Enabled = b;
             label457.Enabled = b;
         }
+
+        private void checkBox_Animation_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_Animation.Checked;
+            tabControl_Animation.Enabled = b;
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
+            else button_ShowAnimation.Enabled = false;
+        }
+
+        private void checkBox_StaticAnimation_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_StaticAnimation.Checked;
+            numericUpDown_StaticAnimation_X.Enabled = b;
+            numericUpDown_StaticAnimation_Y.Enabled = b;
+            comboBox_StaticAnimation_Image.Enabled = b;
+            numericUpDown_StaticAnimation_Count.Enabled = b;
+
+            numericUpDown_StaticAnimation_CyclesCount.Enabled = b;
+            numericUpDown_StaticAnimation_SpeedAnimation.Enabled = b;
+            numericUpDown_StaticAnimation_TimeAnimation.Enabled = b;
+            numericUpDown_StaticAnimation_Pause.Enabled = b;
+
+            label411.Enabled = b;
+            label416.Enabled = b;
+            label473.Enabled = b;
+            label474.Enabled = b;
+            label475.Enabled = b;
+            label476.Enabled = b;
+            label477.Enabled = b;
+            label478.Enabled = b;
+            label479.Enabled = b;
+
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
+            else button_ShowAnimation.Enabled = false;
+        }
+
+        private void checkBox_MotiomAnimation_CheckedChanged(object sender, EventArgs e)
+        {
+            bool b = checkBox_MotiomAnimation.Checked;
+            comboBox_MotiomAnimation_Image.Enabled = b;
+            dataGridView_MotiomAnimation.Enabled = b;
+            radioButton_MotiomAnimation_StartCoordinates.Enabled = b;
+            radioButton_MotiomAnimation_EndCoordinates.Enabled = b;
+            numericUpDown_MotiomAnimation_StartCoordinates_X.Enabled = b;
+            numericUpDown_MotiomAnimation_StartCoordinates_Y.Enabled = b;
+            numericUpDown_MotiomAnimation_EndCoordinates_X.Enabled = b;
+            numericUpDown_MotiomAnimation_EndCoordinates_Y.Enabled = b;
+
+            groupBox_MotiomAnimation.Enabled = b;
+
+            label480.Enabled = b;
+            label481.Enabled = b;
+            label482.Enabled = b;
+            label484.Enabled = b;
+            label485.Enabled = b;
+
+            if (checkBox_Animation.Checked)
+            {
+                if (checkBox_StaticAnimation.Checked || checkBox_MotiomAnimation.Checked) button_ShowAnimation.Enabled = true;
+                else button_ShowAnimation.Enabled = false;
+            }
+            else button_ShowAnimation.Enabled = false;
+        }
         #endregion
 
         private void comboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -3570,6 +3826,11 @@ namespace GTR_Watch_face
         private void checkBox_Click(object sender, EventArgs e)
         {
             JSON_write();
+            PreviewImage();
+        }
+
+        private void checkBox_ShowSettings_Click(object sender, EventArgs e)
+        {
             PreviewImage();
         }
 
@@ -4141,10 +4402,16 @@ namespace GTR_Watch_face
 
                 formPreview.panel_Preview.Resize += (object senderResize, EventArgs eResize) =>
                 {
-                    Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
-                    Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
-                    Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
-                    Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                    if (Form_Preview.Model_Wath.model_gtr47 != radioButton_47.Checked)
+                        Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                    if (Form_Preview.Model_Wath.model_gtr42 != radioButton_42.Checked)
+                        Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                    if (Form_Preview.Model_Wath.model_gts != radioButton_gts.Checked)
+                        Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+                    if (Form_Preview.Model_Wath.model_TRex != radioButton_TRex.Checked)
+                        Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                    if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
+                        Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
                     Graphics gPanelPreviewResize = formPreview.panel_Preview.CreateGraphics();
                     gPanelPreviewResize.Clear(panel_Preview.BackColor);
                     formPreview.radioButton_CheckedChanged(sender, e);
@@ -4164,7 +4431,7 @@ namespace GTR_Watch_face
 
                     PreviewToBitmap(gPanelPreviewResize, scalePreviewResize, checkBox_crop.Checked,
                         checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
+                        checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
                     gPanelPreviewResize.Dispose();
                 };
 
@@ -4189,12 +4456,23 @@ namespace GTR_Watch_face
                 {
                     button_PreviewBig.Enabled = true;
                 };
+
+                formPreview.KeyDown += (object senderKeyDown, KeyEventArgs eKeyDown) =>
+                {
+                    this.Form1_KeyDown(senderKeyDown, eKeyDown);
+                };
             }
 
-            Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
-            Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
-            Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
-            Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+            if (Form_Preview.Model_Wath.model_gtr47 != radioButton_47.Checked)
+                Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+            if (Form_Preview.Model_Wath.model_gtr42 != radioButton_42.Checked)
+                Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+            if (Form_Preview.Model_Wath.model_gts != radioButton_gts.Checked)
+                Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+            if (Form_Preview.Model_Wath.model_TRex != radioButton_TRex.Checked)
+                Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+            if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
+                Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
             Graphics gPanel = formPreview.panel_Preview.CreateGraphics();
             gPanel.Clear(panel_Preview.BackColor);
             //Pen pen = new Pen(Color.Blue, 1);
@@ -4210,7 +4488,7 @@ namespace GTR_Watch_face
 
             PreviewToBitmap(gPanel, scale, checkBox_crop.Checked, checkBox_WebW.Checked, checkBox_WebB.Checked, 
                 checkBox_border.Checked, checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, 
-                checkBox_Shortcuts_Border.Checked);
+                checkBox_Shortcuts_Border.Checked, true, 0);
             gPanel.Dispose();
 
             button_PreviewBig.Enabled = false;
@@ -5187,12 +5465,14 @@ namespace GTR_Watch_face
                 FileName = Path.GetFileName(fullfilename);
                 FullFileDir = Path.GetDirectoryName(fullfilename);
                 JSON_Modified = false;
-                if (checkBox_JsonWarnings.Checked) jsonWarnings();
+                FormText();
+                if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
             }
         }
 
-        private void jsonWarnings()
+        private void jsonWarnings(String fullfilename)
         {
+            // 3 стрелки для аналоговых часов
             if (Watch_Face.AnalogDialFace != null)
             {
                 int i = 0;
@@ -5203,6 +5483,7 @@ namespace GTR_Watch_face
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+            // разные значения для десятков и единиц
             if (Watch_Face.Time != null)
             {
                 bool err = false;
@@ -5222,6 +5503,7 @@ namespace GTR_Watch_face
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
+            // минуты без часоа
             if (Watch_Face.Time != null)
             {
                 if ((Watch_Face.Time.Minutes != null) && (Watch_Face.Time.Hours == null))
@@ -5236,10 +5518,58 @@ namespace GTR_Watch_face
                 }
             }
 
+            // надпись км для дистанции
             if ((Watch_Face.Activity != null) && (Watch_Face.Activity.Distance != null))
             {
                 if(Watch_Face.Activity.Distance.SuffixImageIndex==null)
                     MessageBox.Show(Properties.FormStrings.Message_WarningDistanceSuffix,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            // индикатор и сегменты для батареи
+            if (Watch_Face.Battery != null)
+            {
+                if ((Watch_Face.Battery.Unknown4 != null) && (Watch_Face.Battery.Icons != null))
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningBatterySegment_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // кооличество картинок для батареи
+            if (Watch_Face.Battery != null)
+            {
+                if ((Watch_Face.Battery.Images != null) && (Watch_Face.Battery.Images.ImagesCount > 10))
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningBatteryCount_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // индикатор и сегменты для прогресса шагов
+            if (Watch_Face.StepsProgress != null)
+            {
+                if ((Watch_Face.StepsProgress.ClockHand != null) && (Watch_Face.StepsProgress.Sliced != null))
+                {
+                    MessageBox.Show(Properties.FormStrings.Message_WarningBatterySegment_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // текущая температура и температура день/ночь
+            //if (Watch_Face.Weather != null && Watch_Face.Weather.Temperature != null)
+            //{
+            //    if ((Watch_Face.Weather.Temperature.Current != null) && (Watch_Face.Weather.Temperature.Today == null))
+            //    {
+            //        MessageBox.Show(Properties.FormStrings.Message_WarningTemperature_Text,
+            //        Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    }
+            //}
+
+            // пробелы в имени
+            if(fullfilename.IndexOf(" ") != -1)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_WarningSpaceInName_Text,
                     Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -5309,24 +5639,24 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(Application.StartupPath + @"Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_gtr42.png");
+                    mask = new Bitmap(@"Mask\mask_gtr42.png");
                 }
                 if (radioButton_gts.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_gts.png");
+                    mask = new Bitmap(@"Mask\mask_gts.png");
                 }
-                if (radioButton_TRex.Checked)
+                if (radioButton_TRex.Checked || radioButton_Verge.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_trex.png");
+                    mask = new Bitmap(@"Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
-                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false);
+                PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 0);
                 if(checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
                 bitmap.Save(saveFileDialog.FileName, ImageFormat.Png);
             }
@@ -5345,21 +5675,21 @@ namespace GTR_Watch_face
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
-                Bitmap mask = new Bitmap(Application.StartupPath + @"Mask\mask_gtr47.png");
+                Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
                 if (radioButton_42.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_gtr42.png");
+                    mask = new Bitmap(@"Mask\mask_gtr42.png");
                 }
                 if (radioButton_gts.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_gts.png");
+                    mask = new Bitmap(@"Mask\mask_gts.png");
                 }
-                if (radioButton_TRex.Checked)
+                if (radioButton_TRex.Checked || radioButton_Verge.Checked)
                 {
                     bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
-                    mask = new Bitmap(Application.StartupPath + @"Mask\mask_trex.png");
+                    mask = new Bitmap(@"Mask\mask_trex.png");
                 }
                 Graphics gPanel = Graphics.FromImage(bitmap);
                 bool save = false;
@@ -5488,7 +5818,7 @@ namespace GTR_Watch_face
                             numericUpDown_WeatherSet_NightTemp.Value = numericUpDown_WeatherSet_Temp.Value - rnd.Next(3, 10);
                             comboBox_WeatherSet_Icon.SelectedIndex = rnd.Next(0, 25);
 
-                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false);
+                            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, true, 0);
                             if (checkBox_crop.Checked) {
                                 bitmap = ApplyMask(bitmap, mask);
                                 gPanel = Graphics.FromImage(bitmap);
@@ -5539,28 +5869,16 @@ namespace GTR_Watch_face
             return image.ToBitmap();
         }
 
-        private void radioButton_47_CheckedChanged(object sender, EventArgs e)
+        private void radioButton_Model_Changed(object sender, EventArgs e)
         {
             if (radioButton_47.Checked)
             {
-                this.Text = "GTR watch face editor";
+                //this.Text = "GTR watch face editor";
                 panel_Preview.Height = 230;
                 panel_Preview.Width = 230;
                 offSet_X = 227;
                 offSet_Y = 227;
-
-                //Properties.Settings.Default.unpack_command_GTR42 = textBox_unpack_command.Text;
-                //Properties.Settings.Default.pack_command_GTR42 = textBox_pack_command.Text;
-                //Properties.Settings.Default.Save();
-                //Program_Settings.unpack_command_GTR42 = textBox_unpack_command.Text;
-                //Program_Settings.pack_command_GTR42 = textBox_pack_command.Text;
-
-                //textBox_unpack_command.Text = "--gtr 47 --file";
-                //textBox_pack_command.Text = "--gtr 47 --file";
-                //if (Properties.Settings.Default.unpack_command.Length > 1)
-                //    textBox_unpack_command.Text = Properties.Settings.Default.unpack_command;
-                //if (Properties.Settings.Default.pack_command.Length > 1)
-                //    textBox_pack_command.Text = Properties.Settings.Default.pack_command;
+                
                 textBox_unpack_command.Text = Program_Settings.unpack_command_GTR47;
                 textBox_pack_command.Text = Program_Settings.pack_command_GTR47;
 
@@ -5570,7 +5888,7 @@ namespace GTR_Watch_face
             }
             else if (radioButton_42.Checked)
             {
-                this.Text = "GTR watch face editor";
+                //this.Text = "GTR watch face editor";
                 panel_Preview.Height = 198;
                 panel_Preview.Width = 198;
                 offSet_X = 195;
@@ -5585,7 +5903,7 @@ namespace GTR_Watch_face
             }
             else if (radioButton_gts.Checked)
             {
-                this.Text = "GTS watch face editor";
+                //this.Text = "GTS watch face editor";
                 panel_Preview.Height = 223;
                 panel_Preview.Width = 176;
                 offSet_X = 174;
@@ -5600,7 +5918,7 @@ namespace GTR_Watch_face
             }
             else if (radioButton_TRex.Checked)
             {
-                this.Text = "T-Rex watch face editor";
+                //this.Text = "T-Rex watch face editor";
                 panel_Preview.Height = 183;
                 panel_Preview.Width = 183;
                 offSet_X = 180;
@@ -5613,13 +5931,35 @@ namespace GTR_Watch_face
                 button_pack.Enabled = true;
                 button_zip.Enabled = true;
             }
+            else if (radioButton_Verge.Checked)
+            {
+                //this.Text = "Verge Lite watch face editor";
+                panel_Preview.Height = 183;
+                panel_Preview.Width = 183;
+                offSet_X = 180;
+                offSet_Y = 180;
+
+                textBox_unpack_command.Text = Program_Settings.unpack_command_Verge;
+                textBox_pack_command.Text = Program_Settings.pack_command_Verge;
+
+                button_unpack.Enabled = true;
+                button_pack.Enabled = true;
+                button_zip.Enabled = true;
+            }
+            FormText();
 
             if ((formPreview != null) && (formPreview.Visible))
             {
-                Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
-                Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
-                Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
-                Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                if (Form_Preview.Model_Wath.model_gtr47 != radioButton_47.Checked)
+                    Form_Preview.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                if (Form_Preview.Model_Wath.model_gtr42 != radioButton_42.Checked)
+                    Form_Preview.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                if (Form_Preview.Model_Wath.model_gts != radioButton_gts.Checked)
+                    Form_Preview.Model_Wath.model_gts = radioButton_gts.Checked;
+                if (Form_Preview.Model_Wath.model_TRex != radioButton_TRex.Checked)
+                    Form_Preview.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                if (Form_Preview.Model_Wath.model_Verge != radioButton_Verge.Checked)
+                    Form_Preview.Model_Wath.model_Verge = radioButton_Verge.Checked;
                 formPreview.radioButton_CheckedChanged(sender, e);
             }
 
@@ -5627,6 +5967,7 @@ namespace GTR_Watch_face
             Program_Settings.Model_GTR42 = radioButton_42.Checked;
             Program_Settings.Model_GTS = radioButton_gts.Checked;
             Program_Settings.Model_TRex = radioButton_TRex.Checked;
+            Program_Settings.Model_Verge = radioButton_Verge.Checked;
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
                 //DefaultValueHandling = DefaultValueHandling.Ignore,
@@ -5634,7 +5975,50 @@ namespace GTR_Watch_face
             });
             File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
 
-        PreviewImage();
+
+            JSON_write();
+            PreviewImage();
+        }
+
+        private void FormText()
+        {
+            //throw new NotImplementedException(); FileName
+            string FormName = "GTR watch face editor";
+            string FormNameSufix = "";
+            if (FileName != null)
+            {
+                FormNameSufix = Path.GetFileNameWithoutExtension(FileName); 
+            }
+            if (radioButton_47.Checked)
+            {
+                FormName = "GTR watch face editor";
+            }
+            else if (radioButton_42.Checked)
+            {
+                FormName = "GTR watch face editor";
+            }
+            else if (radioButton_gts.Checked)
+            {
+                FormName = "GTS watch face editor";
+            }
+            else if (radioButton_TRex.Checked)
+            {
+                FormName = "T-Rex watch face editor";
+            }
+            else if (radioButton_Verge.Checked)
+            {
+                FormName = "Verge Lite watch face editor";
+            }
+
+            if (FormNameSufix.Length == 0)
+            {
+                this.Text = FormName;
+            }
+            else
+            {
+                if (JSON_Modified) FormNameSufix = FormNameSufix + "*";
+                this.Text = FormName + " (" + FormNameSufix + ")";
+            }
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -5655,7 +6039,7 @@ namespace GTR_Watch_face
                 if (formPreview.radioButton_xxlarge.Checked) scalePreviewPaint = 2.5f;
                 PreviewToBitmap(gPanelPreviewPaint, scalePreviewPaint, checkBox_crop.Checked,
                     checkBox_WebW.Checked, checkBox_WebB.Checked, checkBox_border.Checked, 
-                    checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked);
+                    checkBox_Show_Shortcuts.Checked, checkBox_Shortcuts_Area.Checked, checkBox_Shortcuts_Border.Checked, true, 0);
                 gPanelPreviewPaint.Dispose();
             }
         }
@@ -6028,6 +6412,11 @@ namespace GTR_Watch_face
                 Program_Settings.unpack_command_TRex = textBox_unpack_command.Text;
                 Program_Settings.pack_command_TRex = textBox_pack_command.Text;
             }
+            else if (radioButton_Verge.Checked)
+            {
+                Program_Settings.unpack_command_Verge = textBox_unpack_command.Text;
+                Program_Settings.pack_command_Verge = textBox_pack_command.Text;
+            }
 
             string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
             {
@@ -6186,6 +6575,44 @@ namespace GTR_Watch_face
             PreviewImage();
         }
 
+        private void dataGridView_MotiomAnimation_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null && e.ColumnIndex < 11)
+            {
+                Regex my_reg = new Regex(@"[^-\d]");
+                string oldValue = dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                string newValue = my_reg.Replace(oldValue, "");
+                int v = 0;
+                Int32.TryParse(newValue, out v);
+                if (e.ColumnIndex == 6)
+                {
+                    if (v < 100) v = 100;
+                }
+                dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = v;
+                //dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = newValue;
+                if (newValue.Length == 0) dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = null;
+            }
+
+            try
+            {
+                if ((dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[1].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[2].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[3].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[4].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[5].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[6].Value == null) &&
+                    (dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[7].Value == null) && 
+                        (e.RowIndex < dataGridView_MotiomAnimation.Rows.Count - 1))
+                    dataGridView_MotiomAnimation.Rows.RemoveAt(e.RowIndex);
+            }
+            catch (Exception)
+            {
+            }
+        
+            JSON_write();
+            PreviewImage();
+        }
+
         private void dataGridView_IconSet_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
             JSON_write();
@@ -6222,6 +6649,61 @@ namespace GTR_Watch_face
             }
         }
 
+        private void dataGridView_MotiomAnimation_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = sender as DataGridView;
+            if (e.ColumnIndex == -1)
+            {
+                dataGridView.EditMode = DataGridViewEditMode.EditOnKeystrokeOrF2;
+                dataGridView.EndEdit();
+            }
+            else if (dataGridView.EditMode != DataGridViewEditMode.EditOnEnter)
+            {
+                dataGridView.EditMode = DataGridViewEditMode.EditOnEnter;
+                dataGridView.BeginEdit(false);
+            }
+
+            try
+            {
+                for (int i = dataGridView.Rows.Count - 1; i > -1; i--)
+                {
+                    DataGridViewRow row = dataGridView.Rows[i];
+                    if (!row.IsNewRow && row.Cells[1].Value == null && row.Cells[2].Value == null &&
+                        row.Cells[3].Value == null && row.Cells[4].Value == null && row.Cells[5].Value == null &&
+                        row.Cells[6].Value == null && row.Cells[7].Value == null)
+                    {
+                        dataGridView.Rows.Remove(row);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+            }
+
+        }
+
+        private void dataGridView_MotiomAnimation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 11)
+            {
+                DataGridViewCheckBoxCell chBounce = new DataGridViewCheckBoxCell();
+                chBounce = (DataGridViewCheckBoxCell)dataGridView_MotiomAnimation.Rows[e.RowIndex].Cells[11];
+
+                if (chBounce.Value == null)
+                    chBounce.Value = false;
+                switch (chBounce.Value.ToString())
+                {
+                    case "True":
+                        chBounce.Value = false;
+                        break;
+                    case "False":
+                        chBounce.Value = true;
+                        break;
+                }
+                JSON_write();
+            }
+        }
+
         private void dataGridView_IconSet_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             DataGridView dataGridView = sender as DataGridView;
@@ -6240,6 +6722,19 @@ namespace GTR_Watch_face
             if (e.ColumnIndex == 1 && MouseСoordinates.Y >= 0)
             {
                 dataGridView.Rows[e.RowIndex].Cells[1].Value = MouseСoordinates.Y;
+            }
+        }
+
+        private void dataGridView_MotiomAnimation_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridView dataGridView = sender as DataGridView;
+            if ((e.ColumnIndex == 1 || e.ColumnIndex == 3) && MouseСoordinates.X >= 0)
+            {
+                dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MouseСoordinates.X;
+            }
+            if ((e.ColumnIndex == 2 || e.ColumnIndex == 4) && MouseСoordinates.Y >= 0)
+            {
+                dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = MouseСoordinates.Y;
             }
         }
 
@@ -6347,7 +6842,10 @@ namespace GTR_Watch_face
             if (e.Button == MouseButtons.Right)
             {
                 DataGridView dataGridView = sender as DataGridView;
-                dataGridView.CurrentCell = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+                {
+                    dataGridView.CurrentCell = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex]; 
+                }
             }
         }
 
@@ -6375,6 +6873,11 @@ namespace GTR_Watch_face
         private void linkLabel_py_amazfit_tools_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/amazfitbip/py_amazfit_tools/releases/tag/v0.2-beta");
+        }
+
+        private void linkLabel_resunpacker_qzip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/amazfitbip/resunpacker_qzip");
         }
 
         private void linkLabel_help_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -6426,6 +6929,502 @@ namespace GTR_Watch_face
         private void comboBox_WeatherSet_Icon_SelectedIndexChanged(object sender, EventArgs e)
         {
             PreviewImage();
+        }
+
+        private void numericUpDown_StaticAnimation_CyclesCount_ValueChanged(object sender, EventArgs e)
+        {
+            int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
+            int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
+            //int Animation_TimeAnimation = (int)numericUpDown_StaticAnimation_TimeAnimation.Value;
+            int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
+            int Animation_TimeAnimation = (Animation_Count * Animation_CyclesCount * Animation_SpeedAnimation) - Animation_SpeedAnimation;
+            if (Animation_TimeAnimation < 0) Animation_TimeAnimation = 0;
+            if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount != 0)
+                numericUpDown_StaticAnimation_TimeAnimation.Value = Animation_TimeAnimation;
+        }
+
+        private void numericUpDown_StaticAnimation_TimeAnimation_ValueChanged(object sender, EventArgs e)
+        {
+            int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
+            //int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
+            int Animation_TimeAnimation = (int)numericUpDown_StaticAnimation_TimeAnimation.Value;
+            int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
+            int Animation_CyclesCount = (Animation_TimeAnimation + Animation_SpeedAnimation) /
+                (Animation_SpeedAnimation * Animation_Count);
+            if (Animation_CyclesCount != (Animation_TimeAnimation + Animation_SpeedAnimation) / 
+                (float)(Animation_SpeedAnimation * Animation_Count)) Animation_CyclesCount = 0;
+            if (Animation_CyclesCount != (int)numericUpDown_StaticAnimation_CyclesCount.Value)
+                numericUpDown_StaticAnimation_CyclesCount.Value = Animation_CyclesCount;
+
+            JSON_write();
+            JSON_Modified = true;
+            FormText();
+        }
+
+        private void numericUpDown_StaticAnimation_Count_ValueChanged(object sender, EventArgs e)
+        {
+            int Animation_CyclesCount = (int)numericUpDown_StaticAnimation_CyclesCount.Value;
+            if (Animation_CyclesCount != 0)
+            {
+                int Animation_Count = (int)numericUpDown_StaticAnimation_Count.Value;
+                int Animation_SpeedAnimation = (int)numericUpDown_StaticAnimation_SpeedAnimation.Value;
+                int Animation_TimeAnimation = (Animation_Count * Animation_CyclesCount * Animation_SpeedAnimation) - Animation_SpeedAnimation;
+                if (Animation_TimeAnimation < 0) Animation_TimeAnimation = 0;
+                if (Animation_TimeAnimation != (int)numericUpDown_StaticAnimation_TimeAnimation.Value && Animation_CyclesCount != 0)
+                    numericUpDown_StaticAnimation_TimeAnimation.Value = Animation_TimeAnimation;
+            }
+            JSON_write();
+            JSON_Modified = true;
+            FormText();
+        }
+
+        private void radioButton_MotiomAnimation_StartCoordinates_CheckedChanged(object sender, EventArgs e)
+        {
+            PreviewImage();
+        }
+
+        private void contextMenuStrip_XY_InAnimationTable_Opening(object sender, CancelEventArgs e)
+        {
+            if ((MouseСoordinates.X < 0) || (MouseСoordinates.Y < 0))
+            {
+                contextMenuStrip_XY_InAnimationTable.Items[0].Enabled = false;
+                contextMenuStrip_XY_InAnimationTable.Items[1].Enabled = false;
+            }
+            else
+            {
+                contextMenuStrip_XY_InAnimationTable.Items[0].Enabled = true;
+                contextMenuStrip_XY_InAnimationTable.Items[1].Enabled = true;
+            }
+            decimal i = 0;
+            if ((Clipboard.ContainsText() == true) && (decimal.TryParse(Clipboard.GetText(), out i)))
+            {
+                contextMenuStrip_XY_InAnimationTable.Items[4].Enabled = true;
+            }
+            else
+            {
+                contextMenuStrip_XY_InAnimationTable.Items[4].Enabled = false;
+            }
+        }
+
+        private void вставитьToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    DataGridViewCell cell = dataGridView.CurrentCell;
+                    //Если в буфере обмен содержится текст
+                    if (Clipboard.ContainsText() == true)
+                    {
+                        //Извлекаем (точнее копируем) его и сохраняем в переменную
+                        decimal i = 0;
+                        if (decimal.TryParse(Clipboard.GetText(), out i))
+                        {
+                            cell.Value = i;
+                            int x = dataGridView.CurrentCellAddress.X;
+                            int y = dataGridView.CurrentCellAddress.Y;
+                            dataGridView.CurrentCell = dataGridView.Rows[0].Cells[1];
+                            dataGridView.CurrentCell = dataGridView.Rows[y].Cells[x];
+                            dataGridView.BeginEdit(false);
+                            JSON_write();
+                            PreviewImage();
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void вставитьНачальныеКоординатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Try to cast the sender to a ToolStripItem
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    DataGridViewRow row = dataGridView.CurrentRow;
+                    row.Cells[1].Value = MouseСoordinates.X;
+                    row.Cells[2].Value = MouseСoordinates.Y;
+
+                    // копируем данные в поля для редактирования
+                    MotiomAnimation_Update = true;
+                    int StartCoordinates_X = 0;
+                    int StartCoordinates_Y = 0;
+                    int EndCoordinates_X = 0;
+                    int EndCoordinates_Y = 0;
+                    int ImageIndex = 0;
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+                    comboBox_MotiomAnimation_Image.Text = "";
+
+                    if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
+                    if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
+                    if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
+                    if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
+
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+
+                    if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                    {
+                        comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
+                    }
+                    else
+                    {
+                        comboBox_MotiomAnimation_Image.Text = "";
+                    }
+                    MotiomAnimation_Update = false;
+
+                    JSON_write();
+                    PreviewImage();
+                }
+            }
+        }
+
+        private void вставитьКонечныеКоординатыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Try to cast the sender to a ToolStripItem
+            ToolStripItem menuItem = sender as ToolStripItem;
+            if (menuItem != null)
+            {
+                // Retrieve the ContextMenuStrip that owns this ToolStripItem
+                ContextMenuStrip owner = menuItem.Owner as ContextMenuStrip;
+                if (owner != null)
+                {
+                    // Get the control that is displaying this context menu
+                    Control sourceControl = owner.SourceControl;
+                    DataGridView dataGridView = sourceControl as DataGridView;
+                    DataGridViewRow row = dataGridView.CurrentRow;
+                    row.Cells[3].Value = MouseСoordinates.X;
+                    row.Cells[4].Value = MouseСoordinates.Y;
+
+                    // копируем данные в поля для редактирования
+                    MotiomAnimation_Update = true;
+                    int StartCoordinates_X = 0;
+                    int StartCoordinates_Y = 0;
+                    int EndCoordinates_X = 0;
+                    int EndCoordinates_Y = 0;
+                    int ImageIndex = 0;
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+                    comboBox_MotiomAnimation_Image.Text = "";
+
+                    if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
+                    if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
+                    if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
+                    if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
+
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+
+                    if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                    {
+                        comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
+                    }
+                    else
+                    {
+                        comboBox_MotiomAnimation_Image.Text = "";
+                    }
+                    MotiomAnimation_Update = false;
+
+                    JSON_write();
+                    PreviewImage();
+                }
+            }
+        }
+
+        // копируем данные из полей для редактирования
+        private void comboBox_MotiomAnimation_Image_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (MotiomAnimation_Update) return;
+            DataGridViewRow row = dataGridView_MotiomAnimation.CurrentRow;
+            if (row != null)
+            {
+                row.Cells[5].Value = comboBox_MotiomAnimation_Image.Text;
+
+                JSON_write();
+                PreviewImage(); 
+            }
+        }
+
+        // копируем данные из полей для редактирования
+        private void numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged(object sender, EventArgs e)
+        {
+            if (MotiomAnimation_Update) return;
+            DataGridViewRow row = dataGridView_MotiomAnimation.CurrentRow;
+            if (row != null)
+            {
+                row.Cells[1].Value = numericUpDown_MotiomAnimation_StartCoordinates_X.Value;
+                row.Cells[2].Value = numericUpDown_MotiomAnimation_StartCoordinates_Y.Value;
+                row.Cells[3].Value = numericUpDown_MotiomAnimation_EndCoordinates_X.Value;
+                row.Cells[4].Value = numericUpDown_MotiomAnimation_EndCoordinates_Y.Value;
+
+                JSON_write();
+                PreviewImage(); 
+            }
+        }
+
+        private void dataGridView_MotiomAnimation_SelectionChanged(object sender, EventArgs e)
+        {
+            MotiomAnimation_Update = true;
+            int StartCoordinates_X = 0;
+            int StartCoordinates_Y = 0;
+            int EndCoordinates_X = 0;
+            int EndCoordinates_Y = 0;
+            int ImageIndex = 0;
+            numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+            numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+            numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+            numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+            comboBox_MotiomAnimation_Image.Text = "";
+
+            if (dataGridView_MotiomAnimation.SelectedCells.Count > 0)
+            {
+                int RowIndex = dataGridView_MotiomAnimation.SelectedCells[0].RowIndex;
+                if (!dataGridView_MotiomAnimation.Rows[RowIndex].IsNewRow)
+                {
+                    DataGridViewRow row = dataGridView_MotiomAnimation.Rows[RowIndex];
+                    if (row.Cells[1].Value != null) Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X);
+                    if (row.Cells[2].Value != null) Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y);
+                    if (row.Cells[3].Value != null) Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X);
+                    if (row.Cells[4].Value != null) Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y);
+
+                    numericUpDown_MotiomAnimation_StartCoordinates_X.Value = StartCoordinates_X;
+                    numericUpDown_MotiomAnimation_StartCoordinates_Y.Value = StartCoordinates_Y;
+                    numericUpDown_MotiomAnimation_EndCoordinates_X.Value = EndCoordinates_X;
+                    numericUpDown_MotiomAnimation_EndCoordinates_Y.Value = EndCoordinates_Y;
+
+                    if (row.Cells[5].Value != null && Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex))
+                    {
+                        comboBoxSetText(comboBox_MotiomAnimation_Image, ImageIndex);
+                    }
+                    else
+                    {
+                        comboBox_MotiomAnimation_Image.Text = "";
+                    }
+                }
+            }
+            MotiomAnimation_Update = false;
+        }
+
+        private void button_ShowAnimation_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(Convert.ToInt32(454), Convert.ToInt32(454), PixelFormat.Format32bppArgb);
+            Bitmap mask = new Bitmap(@"Mask\mask_gtr47.png");
+            if (radioButton_42.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(390), Convert.ToInt32(390), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(@"Mask\mask_gtr42.png");
+            }
+            if (radioButton_gts.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(348), Convert.ToInt32(442), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(@"Mask\mask_gts.png");
+            }
+            if (radioButton_TRex.Checked || radioButton_Verge.Checked)
+            {
+                bitmap = new Bitmap(Convert.ToInt32(360), Convert.ToInt32(360), PixelFormat.Format32bppArgb);
+                mask = new Bitmap(@"Mask\mask_trex.png");
+            }
+            Graphics gPanel = Graphics.FromImage(bitmap);
+            PreviewToBitmap(gPanel, 1.0f, false, false, false, false, false, false, false, false, 1);
+            if (checkBox_crop.Checked) bitmap = ApplyMask(bitmap, mask);
+            Image loadedImage = null;
+
+            List<ClassMotiomAnimation> MotiomAnimation = new List<ClassMotiomAnimation>();
+            if (checkBox_MotiomAnimation.Checked)
+            {
+                foreach (DataGridViewRow row in dataGridView_MotiomAnimation.Rows)
+                {
+                    if (MotiomAnimation.Count >= 4) break;
+                    int StartCoordinates_X = 0;
+                    int StartCoordinates_Y = 0;
+                    int EndCoordinates_X = 0;
+                    int EndCoordinates_Y = 0;
+                    int ImageIndex = 0;
+                    int SpeedAnimation = 0;
+                    int TimeAnimation = 0;
+                    bool Bounce_b = false;
+                    if (row.Cells[1].Value != null && row.Cells[2].Value != null && row.Cells[3].Value != null &&
+                        row.Cells[4].Value != null && row.Cells[5].Value != null && row.Cells[6].Value != null)
+                    {
+                        if (Int32.TryParse(row.Cells[1].Value.ToString(), out StartCoordinates_X) &&
+                            Int32.TryParse(row.Cells[2].Value.ToString(), out StartCoordinates_Y) &&
+                            Int32.TryParse(row.Cells[3].Value.ToString(), out EndCoordinates_X) &&
+                            Int32.TryParse(row.Cells[4].Value.ToString(), out EndCoordinates_Y) &&
+                            Int32.TryParse(row.Cells[5].Value.ToString(), out ImageIndex) &&
+                            Int32.TryParse(row.Cells[6].Value.ToString(), out SpeedAnimation))
+                        {
+                            if (row.Cells[7].Value != null) Int32.TryParse(row.Cells[7].Value.ToString(), out TimeAnimation);
+                            if (row.Cells[11].Value != null) Boolean.TryParse(row.Cells[11].Value.ToString(), out Bounce_b);
+                            using (FileStream stream = new FileStream(ListImagesFullName[ImageIndex], FileMode.Open, FileAccess.Read))
+                            {
+                                loadedImage = Image.FromStream(stream);
+                            }
+
+                            ClassMotiomAnimation motiomAnimation = new ClassMotiomAnimation(new Bitmap(loadedImage),
+                                StartCoordinates_X, StartCoordinates_Y, EndCoordinates_X, EndCoordinates_Y,
+                                SpeedAnimation, TimeAnimation, Bounce_b);
+                            //ClassMotiomAnimation motiomAnimation = new ClassMotiomAnimation(new Bitmap(ListImagesFullName[ImageIndex]),
+                            //     StartCoordinates_X, StartCoordinates_Y, EndCoordinates_X, EndCoordinates_Y,
+                            //     SpeedAnimation, TimeAnimation, Bounce_b);
+
+                            MotiomAnimation.Add(motiomAnimation);
+                        }
+                    }
+                } 
+            }
+
+            ClassStaticAnimation StaticAnimation = null;
+            List<Bitmap> Images = new List<Bitmap>();
+            if (checkBox_StaticAnimation.Checked && comboBox_StaticAnimation_Image.SelectedIndex >= 0)
+            {
+                for (int i = comboBox_StaticAnimation_Image.SelectedIndex;
+                    i < (comboBox_StaticAnimation_Image.SelectedIndex + (int)numericUpDown_StaticAnimation_Count.Value); i++)
+                {
+                    using (FileStream stream = new FileStream(ListImagesFullName[i], FileMode.Open, FileAccess.Read))
+                    {
+                        loadedImage = Image.FromStream(stream);
+                    }
+                    if (i < ListImagesFullName.Count) Images.Add(new Bitmap(loadedImage));
+                    //if (i < ListImagesFullName.Count) Images.Add(new Bitmap(ListImagesFullName[i]));
+                }
+            }
+            if (loadedImage !=null) loadedImage.Dispose();
+            if (Images.Count > 0)
+            {
+                StaticAnimation = new ClassStaticAnimation(Images, (int)numericUpDown_StaticAnimation_X.Value,
+                    (int)numericUpDown_StaticAnimation_Y.Value, (int)numericUpDown_StaticAnimation_SpeedAnimation.Value,
+                    (int)numericUpDown_StaticAnimation_TimeAnimation.Value, (int)numericUpDown_StaticAnimation_Pause.Value);
+
+            }
+
+            if (MotiomAnimation.Count > 0 || StaticAnimation != null)
+            {
+                FormAnimation formAnimation = new FormAnimation(bitmap, MotiomAnimation, StaticAnimation);
+                formAnimation.Owner = this;
+                if (FormAnimation.Model_Wath.model_gtr47 != radioButton_47.Checked)
+                    FormAnimation.Model_Wath.model_gtr47 = radioButton_47.Checked;
+                if (FormAnimation.Model_Wath.model_gtr42 != radioButton_42.Checked)
+                    FormAnimation.Model_Wath.model_gtr42 = radioButton_42.Checked;
+                if (FormAnimation.Model_Wath.model_gts != radioButton_gts.Checked)
+                    FormAnimation.Model_Wath.model_gts = radioButton_gts.Checked;
+                if (FormAnimation.Model_Wath.model_TRex != radioButton_TRex.Checked)
+                    FormAnimation.Model_Wath.model_TRex = radioButton_TRex.Checked;
+                if (FormAnimation.Model_Wath.model_Verge != radioButton_Verge.Checked)
+                    FormAnimation.Model_Wath.model_Verge = radioButton_Verge.Checked;
+
+                switch (comboBox_Animation_Preview_Speed.SelectedIndex)
+                {
+                    case 0:
+                        formAnimation.timer1.Interval = 20;
+                        break;
+                    case 1:
+                        formAnimation.timer1.Interval = 25;
+                        break;
+                    case 2:
+                        formAnimation.timer1.Interval = 33;
+                        break;
+                    case 3:
+                        formAnimation.timer1.Interval = 50;
+                        break;
+                    case 4:
+                        formAnimation.timer1.Interval = 100;
+                        break;
+                }
+                formAnimation.ShowDialog(); 
+            }
+
+            //formAnimation.FormClosed += (object senderClosed, FormClosedEventArgs eClosed) =>
+            //{
+            //    MotiomAnimation.Clear();
+            //    StaticAnimation = null;
+            //};
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.S)       // Ctrl-S Save
+            {
+                // Do what you want here
+                if (FileName != null)
+                {
+                    string fullfilename = Path.Combine(FullFileDir, FileName);
+                    if(File.Exists(fullfilename)) File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+
+                    JSON_Modified = false;
+                    FormText();
+                    if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                }
+                else
+                {
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.InitialDirectory = FullFileDir;
+                    saveFileDialog.FileName = FileName;
+                    saveFileDialog.Filter = "Json files (*.json) | *.json";
+
+                    //openFileDialog.Filter = "Binary File (*.bin)|*.bin";
+                    ////openFileDialog1.FilterIndex = 2;
+                    saveFileDialog.RestoreDirectory = true;
+                    saveFileDialog.Title = Properties.FormStrings.Dialog_Title_Pack;
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string fullfilename = saveFileDialog.FileName;
+                        File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+
+                        FileName = Path.GetFileName(fullfilename);
+                        FullFileDir = Path.GetDirectoryName(fullfilename);
+                        JSON_Modified = false;
+                        FormText();
+                        if (checkBox_JsonWarnings.Checked) jsonWarnings(fullfilename);
+                    }
+                }
+                e.SuppressKeyPress = true;  // Stops other controls on the form receiving event.
+            }
+        }
+
+        private void comboBox_Animation_Preview_Speed_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Settings_Load) return;
+
+            Program_Settings.Animation_Preview_Speed = comboBox_Animation_Preview_Speed.SelectedIndex;
+            //string JSON_String = JObject.FromObject(Program_Settings).ToString();
+            string JSON_String = JsonConvert.SerializeObject(Program_Settings, Formatting.Indented, new JsonSerializerSettings
+            {
+                //DefaultValueHandling = DefaultValueHandling.Ignore,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+            File.WriteAllText(Application.StartupPath + @"\Settings.json", JSON_String, Encoding.UTF8);
+            //File.WriteAllText(fullfilename, richTextBox_JSON.Text, Encoding.UTF8);
+        }
+
+        private void dataGridView_MotiomAnimation_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            if(dataGridView_MotiomAnimation.Rows.Count > 5)
+            {
+                MessageBox.Show(Properties.FormStrings.Message_WarningAnimationCoun_Text,
+                    Properties.FormStrings.Message_Warning_Caption, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

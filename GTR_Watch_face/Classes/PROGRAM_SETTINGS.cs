@@ -23,6 +23,7 @@
         public bool Model_GTR42 = false;
         public bool Model_GTS = false;
         public bool Model_TRex = false;
+        public bool Model_Verge = false;
 
         public bool ShowBorder = false;
         public bool Crop = true;
@@ -32,6 +33,7 @@
         public bool Shortcuts_Border = true;
         public float Scale = 1f;
         public float Gif_Speed = 1f;
+        public int Animation_Preview_Speed = 4;
 
         public string pack_unpack_dir { get; set; }
         public string unpack_command_GTR47 = "--gtr 47 --file";
@@ -42,6 +44,8 @@
         public string pack_command_GTS = "--gts --file";
         public string unpack_command_TRex = "--trex --file";
         public string pack_command_TRex = "--trex --file";
+        public string unpack_command_Verge = "--file";
+        public string pack_command_Verge = "--file";
 
         public string language { get; set; }
     }

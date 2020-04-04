@@ -286,6 +286,15 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Путь к программе не должен содержать пробелы. Желательно поместить программу в корень диска..
+        /// </summary>
+        public static string Message_Error_SpaceInProgrammName_Text {
+            get {
+                return ResourceManager.GetString("Message_Error_SpaceInProgrammName_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Некоторые изображения могут вызывать ошибки (.
         /// </summary>
         public static string Message_ErrorImage_Text1 {
@@ -484,6 +493,33 @@ namespace GTR_Watch_face.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Количество элементов для анимации не может быть больше 4..
+        /// </summary>
+        public static string Message_WarningAnimationCoun_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningAnimationCoun_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Не рекомендуется использовать больше 10 картинок для отображения заряда батареи..
+        /// </summary>
+        public static string Message_WarningBatteryCount_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningBatteryCount_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Не рекомендуется отображение в виде стрелочного индикатора совместно с отображением сегментами для одного элемента..
+        /// </summary>
+        public static string Message_WarningBatterySegment_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningBatterySegment_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Не рекомендуется использовать отображение расстояния без суффикса..
         /// </summary>
         public static string Message_WarningDistanceSuffix {
@@ -507,6 +543,24 @@ namespace GTR_Watch_face.Properties {
         public static string Message_WarningOnlySec_Text {
             get {
                 return ResourceManager.GetString("Message_WarningOnlySec_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Имя файла и путь к нему не должны содержать пробелов..
+        /// </summary>
+        public static string Message_WarningSpaceInName_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningSpaceInName_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Отображение текущей температуры может не работать без отображения дневной и ночной температуры..
+        /// </summary>
+        public static string Message_WarningTemperature_Text {
+            get {
+                return ResourceManager.GetString("Message_WarningTemperature_Text", resourceCulture);
             }
         }
         

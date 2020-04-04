@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace GTR_Watch_face
 {
@@ -134,7 +135,7 @@ namespace GTR_Watch_face
         public ImageSet Images { get; set; }
         /// <summary>Процент заряда в виде набора картинок и координат к ним</summary>
         public IconSet Icons { get; set; }
-        /// <summary>Индикатор</summary>
+        /// <summary>Стрелочный индикатор</summary>
         public ClockHand Unknown4 { get; set; }
         /// <summary>Иконка %</summary>
         public ImageW Percent { get; set; }
@@ -153,6 +154,15 @@ namespace GTR_Watch_face
         /// <summary>Секундная стрелка</summary>
         public ClockHand Seconds { get; set; }
         public ImageW SecCenterImage { get; set; }
+    }
+
+    public class Animation
+    {
+        /// <summary>Перемещение по координатам</summary>
+        public List<MotiomAnimation> Unknown11_1 { get; set; }
+        /// <summary>Покадровая анимация</summary>
+        public StaticAnimation Unknown11_2 { get; set; }
+        public List<StaticAnimation> Unknown11_02_temp { get; set; }
     }
 
     public class Weather

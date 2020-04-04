@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_zip_unpack = new System.Windows.Forms.Button();
@@ -360,19 +361,78 @@
             this.button_SaveJson = new System.Windows.Forms.Button();
             this.button_TextToJson = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel_Shortcuts = new System.Windows.Forms.Panel();
-            this.tabControl_Shortcuts = new System.Windows.Forms.TabControl();
-            this.tabPage46 = new System.Windows.Forms.TabPage();
-            this.numericUpDown_Shortcuts_Steps_Width = new System.Windows.Forms.NumericUpDown();
-            this.contextMenuStrip_X = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.вставитьКоординатуХToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.numericUpDown_Shortcuts_Steps_Y = new System.Windows.Forms.NumericUpDown();
+            this.panel_Animation = new System.Windows.Forms.Panel();
+            this.button_ShowAnimation = new System.Windows.Forms.Button();
+            this.tabControl_Animation = new System.Windows.Forms.TabControl();
+            this.tabPage53 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_StaticAnimation_SpeedAnimation = new System.Windows.Forms.NumericUpDown();
+            this.label479 = new System.Windows.Forms.Label();
+            this.numericUpDown_StaticAnimation_CyclesCount = new System.Windows.Forms.NumericUpDown();
+            this.label476 = new System.Windows.Forms.Label();
+            this.numericUpDown_StaticAnimation_Pause = new System.Windows.Forms.NumericUpDown();
+            this.label478 = new System.Windows.Forms.Label();
+            this.numericUpDown_StaticAnimation_TimeAnimation = new System.Windows.Forms.NumericUpDown();
+            this.label477 = new System.Windows.Forms.Label();
+            this.comboBox_StaticAnimation_Image = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_StaticAnimation_Count = new System.Windows.Forms.NumericUpDown();
+            this.label411 = new System.Windows.Forms.Label();
+            this.numericUpDown_StaticAnimation_Y = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip_Y = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.копироватьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.вставитьToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.numericUpDown_StaticAnimation_X = new System.Windows.Forms.NumericUpDown();
+            this.contextMenuStrip_X = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.вставитьКоординатуХToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.копироватьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBox_StaticAnimation = new System.Windows.Forms.CheckBox();
+            this.label416 = new System.Windows.Forms.Label();
+            this.label473 = new System.Windows.Forms.Label();
+            this.label474 = new System.Windows.Forms.Label();
+            this.label475 = new System.Windows.Forms.Label();
+            this.tabPage54 = new System.Windows.Forms.TabPage();
+            this.groupBox_MotiomAnimation = new System.Windows.Forms.GroupBox();
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X = new System.Windows.Forms.NumericUpDown();
+            this.radioButton_MotiomAnimation_EndCoordinates = new System.Windows.Forms.RadioButton();
+            this.label480 = new System.Windows.Forms.Label();
+            this.label484 = new System.Windows.Forms.Label();
+            this.comboBox_MotiomAnimation_Image = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X = new System.Windows.Forms.NumericUpDown();
+            this.radioButton_MotiomAnimation_StartCoordinates = new System.Windows.Forms.RadioButton();
+            this.label482 = new System.Windows.Forms.Label();
+            this.label481 = new System.Windows.Forms.Label();
+            this.label485 = new System.Windows.Forms.Label();
+            this.dataGridView_MotiomAnimation = new System.Windows.Forms.DataGridView();
+            this.AnimationColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AnimationColumn12 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.contextMenuStrip_XY_InAnimationTable = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.вставитьНачальныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьКонечныеКоординатыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.копироватьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.вставитьToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьСтрокуToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBox_MotiomAnimation = new System.Windows.Forms.CheckBox();
+            this.checkBox_Animation = new System.Windows.Forms.CheckBox();
+            this.button_Animation = new System.Windows.Forms.Button();
+            this.panel_Shortcuts = new System.Windows.Forms.Panel();
+            this.tabControl_Shortcuts = new System.Windows.Forms.TabControl();
+            this.tabPage46 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_Shortcuts_Steps_Width = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Shortcuts_Steps_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Shortcuts_Steps_X = new System.Windows.Forms.NumericUpDown();
             this.checkBox_Shortcuts_Steps = new System.Windows.Forms.CheckBox();
             this.label435 = new System.Windows.Forms.Label();
@@ -641,6 +701,8 @@
             this.label206 = new System.Windows.Forms.Label();
             this.checkBox_Battery_Scale = new System.Windows.Forms.CheckBox();
             this.tabPage35 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_Battery_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Battery_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_Battery_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label374 = new System.Windows.Forms.Label();
             this.numericUpDown_Battery_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
@@ -651,9 +713,7 @@
             this.label369 = new System.Windows.Forms.Label();
             this.comboBox_Battery_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label370 = new System.Windows.Forms.Label();
-            this.numericUpDown_Battery_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label371 = new System.Windows.Forms.Label();
-            this.numericUpDown_Battery_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label372 = new System.Windows.Forms.Label();
             this.checkBox_Battery_ClockHand = new System.Windows.Forms.CheckBox();
             this.tabPage42 = new System.Windows.Forms.TabPage();
@@ -718,11 +778,11 @@
             this.label403 = new System.Windows.Forms.Label();
             this.tabControl_Activity = new System.Windows.Forms.TabControl();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ActivitySteps_Spacing = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivitySteps_EndCorner_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivitySteps_Count = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivitySteps_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivitySteps_StartCorner_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivitySteps_Spacing = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ActivitySteps = new System.Windows.Forms.CheckBox();
             this.label122 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
@@ -738,15 +798,15 @@
             this.label130 = new System.Windows.Forms.Label();
             this.label131 = new System.Windows.Forms.Label();
             this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.comboBox_ActivityDistance_Decimal = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_ActivityDistance_Spacing = new System.Windows.Forms.NumericUpDown();
             this.comboBox_ActivityDistance_Suffix = new System.Windows.Forms.ComboBox();
             this.label173 = new System.Windows.Forms.Label();
-            this.comboBox_ActivityDistance_Decimal = new System.Windows.Forms.ComboBox();
             this.label172 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityDistance_EndCorner_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityDistance_Count = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityDistance_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityDistance_StartCorner_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityDistance_Spacing = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ActivityDistance = new System.Windows.Forms.CheckBox();
             this.label132 = new System.Windows.Forms.Label();
             this.label133 = new System.Windows.Forms.Label();
@@ -761,68 +821,70 @@
             this.label139 = new System.Windows.Forms.Label();
             this.label140 = new System.Windows.Forms.Label();
             this.label141 = new System.Windows.Forms.Label();
+            this.tabPage55 = new System.Windows.Forms.TabPage();
+            this.tabControl8 = new System.Windows.Forms.TabControl();
             this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ActivityPuls_EndCorner_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityPuls_EndCorner_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityPuls_Count = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityPuls_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityPuls_StartCorner_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityPuls_Spacing = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ActivityPuls = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_ActivityPuls_Count = new System.Windows.Forms.NumericUpDown();
+            this.label151 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityPuls_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
+            this.label150 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityPuls_StartCorner_X = new System.Windows.Forms.NumericUpDown();
+            this.label149 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityPuls_Spacing = new System.Windows.Forms.NumericUpDown();
+            this.label148 = new System.Windows.Forms.Label();
+            this.label147 = new System.Windows.Forms.Label();
             this.label142 = new System.Windows.Forms.Label();
+            this.comboBox_ActivityPuls_Image = new System.Windows.Forms.ComboBox();
             this.label143 = new System.Windows.Forms.Label();
             this.comboBox_ActivityPuls_Alignment = new System.Windows.Forms.ComboBox();
+            this.label146 = new System.Windows.Forms.Label();
             this.label144 = new System.Windows.Forms.Label();
             this.label145 = new System.Windows.Forms.Label();
-            this.label146 = new System.Windows.Forms.Label();
-            this.numericUpDown_ActivityPuls_EndCorner_Y = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_ActivityPuls_Image = new System.Windows.Forms.ComboBox();
-            this.label147 = new System.Windows.Forms.Label();
-            this.label148 = new System.Windows.Forms.Label();
-            this.label149 = new System.Windows.Forms.Label();
-            this.label150 = new System.Windows.Forms.Label();
-            this.label151 = new System.Windows.Forms.Label();
             this.tabPage44 = new System.Windows.Forms.TabPage();
-            this.numericUpDown_ActivityPulsScale_ImageY = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityPulsScale_ImageX = new System.Windows.Forms.NumericUpDown();
-            this.label430 = new System.Windows.Forms.Label();
-            this.label431 = new System.Windows.Forms.Label();
-            this.checkBox_ActivityPulsScale_Image = new System.Windows.Forms.CheckBox();
             this.comboBox_ActivityPulsScale_Image = new System.Windows.Forms.ComboBox();
             this.comboBox_ActivityPulsScale_Flatness = new System.Windows.Forms.ComboBox();
-            this.label417 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityPulsScale_EndAngle = new System.Windows.Forms.NumericUpDown();
-            this.label418 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityPulsScale_StartAngle = new System.Windows.Forms.NumericUpDown();
-            this.label419 = new System.Windows.Forms.Label();
             this.comboBox_ActivityPulsScale_Color = new System.Windows.Forms.ComboBox();
-            this.label420 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityPulsScale_Width = new System.Windows.Forms.NumericUpDown();
-            this.label421 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityPulsScale_Radius_Y = new System.Windows.Forms.NumericUpDown();
-            this.label422 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityPulsScale_Radius_X = new System.Windows.Forms.NumericUpDown();
-            this.label423 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityPulsScale_Center_Y = new System.Windows.Forms.NumericUpDown();
-            this.label424 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityPulsScale_Center_X = new System.Windows.Forms.NumericUpDown();
-            this.label425 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityPulsScale_ImageY = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ActivityPulsScale = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_ActivityPulsScale_ImageX = new System.Windows.Forms.NumericUpDown();
+            this.label425 = new System.Windows.Forms.Label();
+            this.label430 = new System.Windows.Forms.Label();
+            this.label431 = new System.Windows.Forms.Label();
+            this.label424 = new System.Windows.Forms.Label();
+            this.checkBox_ActivityPulsScale_Image = new System.Windows.Forms.CheckBox();
+            this.label423 = new System.Windows.Forms.Label();
+            this.label417 = new System.Windows.Forms.Label();
+            this.label422 = new System.Windows.Forms.Label();
+            this.label418 = new System.Windows.Forms.Label();
+            this.label421 = new System.Windows.Forms.Label();
+            this.label419 = new System.Windows.Forms.Label();
+            this.label420 = new System.Windows.Forms.Label();
             this.tabPage51 = new System.Windows.Forms.TabPage();
-            this.numericUpDown_Pulse_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
-            this.label466 = new System.Windows.Forms.Label();
-            this.numericUpDown_Pulse_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
-            this.label467 = new System.Windows.Forms.Label();
-            this.numericUpDown_Pulse_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
-            this.label468 = new System.Windows.Forms.Label();
-            this.numericUpDown_Pulse_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
-            this.label469 = new System.Windows.Forms.Label();
-            this.comboBox_Pulse_ClockHand_Image = new System.Windows.Forms.ComboBox();
-            this.label470 = new System.Windows.Forms.Label();
             this.numericUpDown_Pulse_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
-            this.label471 = new System.Windows.Forms.Label();
             this.numericUpDown_Pulse_ClockHand_X = new System.Windows.Forms.NumericUpDown();
-            this.label472 = new System.Windows.Forms.Label();
+            this.comboBox_Pulse_ClockHand_Image = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Pulse_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Pulse_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Pulse_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Pulse_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
             this.checkBox_Pulse_ClockHand = new System.Windows.Forms.CheckBox();
+            this.label466 = new System.Windows.Forms.Label();
+            this.label472 = new System.Windows.Forms.Label();
+            this.label467 = new System.Windows.Forms.Label();
+            this.label471 = new System.Windows.Forms.Label();
+            this.label468 = new System.Windows.Forms.Label();
+            this.label470 = new System.Windows.Forms.Label();
+            this.label469 = new System.Windows.Forms.Label();
             this.tabPage45 = new System.Windows.Forms.TabPage();
             this.checkBox_ActivityPuls_IconSet = new System.Windows.Forms.CheckBox();
             this.comboBox_ActivityPuls_IconSet_Image = new System.Windows.Forms.ComboBox();
@@ -830,68 +892,70 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label121 = new System.Windows.Forms.Label();
+            this.tabPage59 = new System.Windows.Forms.TabPage();
+            this.tabControl9 = new System.Windows.Forms.TabControl();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.numericUpDown_ActivityCalories_EndCorner_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityCalories_Count = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityCalories_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityCalories_StartCorner_X = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityCalories_Spacing = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ActivityCalories = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_ActivityCalories_Count = new System.Windows.Forms.NumericUpDown();
+            this.label161 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityCalories_StartCorner_Y = new System.Windows.Forms.NumericUpDown();
+            this.label160 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityCalories_StartCorner_X = new System.Windows.Forms.NumericUpDown();
+            this.label159 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityCalories_Spacing = new System.Windows.Forms.NumericUpDown();
+            this.label158 = new System.Windows.Forms.Label();
+            this.label157 = new System.Windows.Forms.Label();
             this.label152 = new System.Windows.Forms.Label();
+            this.comboBox_ActivityCalories_Image = new System.Windows.Forms.ComboBox();
             this.label153 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityCalories_EndCorner_Y = new System.Windows.Forms.NumericUpDown();
             this.comboBox_ActivityCalories_Alignment = new System.Windows.Forms.ComboBox();
+            this.label156 = new System.Windows.Forms.Label();
             this.label154 = new System.Windows.Forms.Label();
             this.label155 = new System.Windows.Forms.Label();
-            this.label156 = new System.Windows.Forms.Label();
-            this.numericUpDown_ActivityCalories_EndCorner_Y = new System.Windows.Forms.NumericUpDown();
-            this.comboBox_ActivityCalories_Image = new System.Windows.Forms.ComboBox();
-            this.label157 = new System.Windows.Forms.Label();
-            this.label158 = new System.Windows.Forms.Label();
-            this.label159 = new System.Windows.Forms.Label();
-            this.label160 = new System.Windows.Forms.Label();
-            this.label161 = new System.Windows.Forms.Label();
             this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.numericUpDown_ActivityCaloriesScale_ImageY = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown_ActivityCaloriesScale_ImageX = new System.Windows.Forms.NumericUpDown();
-            this.label426 = new System.Windows.Forms.Label();
-            this.label427 = new System.Windows.Forms.Label();
-            this.checkBox_ActivityCaloriesScale_Image = new System.Windows.Forms.CheckBox();
             this.comboBox_ActivityCaloriesScale_Image = new System.Windows.Forms.ComboBox();
             this.comboBox_ActivityCaloriesScale_Flatness = new System.Windows.Forms.ComboBox();
-            this.label112 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityCaloriesScale_EndAngle = new System.Windows.Forms.NumericUpDown();
-            this.label113 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityCaloriesScale_StartAngle = new System.Windows.Forms.NumericUpDown();
-            this.label114 = new System.Windows.Forms.Label();
-            this.comboBox_ActivityCaloriesScale_Color = new System.Windows.Forms.ComboBox();
-            this.label115 = new System.Windows.Forms.Label();
-            this.numericUpDown_ActivityCaloriesScale_Width = new System.Windows.Forms.NumericUpDown();
-            this.label116 = new System.Windows.Forms.Label();
-            this.numericUpDown_ActivityCaloriesScale_Radius_Y = new System.Windows.Forms.NumericUpDown();
-            this.label117 = new System.Windows.Forms.Label();
-            this.numericUpDown_ActivityCaloriesScale_Radius_X = new System.Windows.Forms.NumericUpDown();
-            this.label118 = new System.Windows.Forms.Label();
             this.numericUpDown_ActivityCaloriesScale_Center_Y = new System.Windows.Forms.NumericUpDown();
-            this.label119 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityCaloriesScale_Radius_Y = new System.Windows.Forms.NumericUpDown();
+            this.comboBox_ActivityCaloriesScale_Color = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_ActivityCaloriesScale_Width = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ActivityCaloriesScale_Radius_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityCaloriesScale_Center_X = new System.Windows.Forms.NumericUpDown();
-            this.label120 = new System.Windows.Forms.Label();
+            this.numericUpDown_ActivityCaloriesScale_ImageY = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ActivityCaloriesScale = new System.Windows.Forms.CheckBox();
+            this.numericUpDown_ActivityCaloriesScale_ImageX = new System.Windows.Forms.NumericUpDown();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label426 = new System.Windows.Forms.Label();
+            this.label427 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.checkBox_ActivityCaloriesScale_Image = new System.Windows.Forms.CheckBox();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
             this.tabPage52 = new System.Windows.Forms.TabPage();
-            this.numericUpDown_Calories_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
-            this.label458 = new System.Windows.Forms.Label();
-            this.numericUpDown_Calories_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
-            this.label459 = new System.Windows.Forms.Label();
-            this.numericUpDown_Calories_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
-            this.label461 = new System.Windows.Forms.Label();
-            this.numericUpDown_Calories_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
-            this.label462 = new System.Windows.Forms.Label();
-            this.comboBox_Calories_ClockHand_Image = new System.Windows.Forms.ComboBox();
-            this.label463 = new System.Windows.Forms.Label();
             this.numericUpDown_Calories_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
-            this.label464 = new System.Windows.Forms.Label();
             this.numericUpDown_Calories_ClockHand_X = new System.Windows.Forms.NumericUpDown();
-            this.label465 = new System.Windows.Forms.Label();
+            this.comboBox_Calories_ClockHand_Image = new System.Windows.Forms.ComboBox();
+            this.numericUpDown_Calories_ClockHand_Offset_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Calories_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Calories_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_Calories_ClockHand_Offset_X = new System.Windows.Forms.NumericUpDown();
             this.checkBox_Calories_ClockHand = new System.Windows.Forms.CheckBox();
+            this.label458 = new System.Windows.Forms.Label();
+            this.label465 = new System.Windows.Forms.Label();
+            this.label459 = new System.Windows.Forms.Label();
+            this.label464 = new System.Windows.Forms.Label();
+            this.label461 = new System.Windows.Forms.Label();
+            this.label463 = new System.Windows.Forms.Label();
+            this.label462 = new System.Windows.Forms.Label();
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.numericUpDown_ActivityStar_Y = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ActivityStar_X = new System.Windows.Forms.NumericUpDown();
@@ -932,6 +996,8 @@
             this.numericUpDown_StepsProgress_Width = new System.Windows.Forms.NumericUpDown();
             this.label108 = new System.Windows.Forms.Label();
             this.tabPage37 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_StProg_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_StProg_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.checkBox_StProg_ClockHand = new System.Windows.Forms.CheckBox();
             this.numericUpDown_StProg_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label375 = new System.Windows.Forms.Label();
@@ -943,9 +1009,7 @@
             this.label378 = new System.Windows.Forms.Label();
             this.comboBox_StProg_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label379 = new System.Windows.Forms.Label();
-            this.numericUpDown_StProg_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label380 = new System.Windows.Forms.Label();
-            this.numericUpDown_StProg_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label381 = new System.Windows.Forms.Label();
             this.tabPage41 = new System.Windows.Forms.TabPage();
             this.checkBox_SPSliced = new System.Windows.Forms.CheckBox();
@@ -958,6 +1022,8 @@
             this.panel_AnalogDate = new System.Windows.Forms.Panel();
             this.tabControl7 = new System.Windows.Forms.TabControl();
             this.tabPage38 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ADDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ADDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.checkBox_ADDay_ClockHand = new System.Windows.Forms.CheckBox();
             this.numericUpDown_ADDay_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label396 = new System.Windows.Forms.Label();
@@ -969,11 +1035,11 @@
             this.label399 = new System.Windows.Forms.Label();
             this.comboBox_ADDay_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label400 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label401 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label402 = new System.Windows.Forms.Label();
             this.tabPage39 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ADWeekDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ADWeekDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ADWeekDay_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label389 = new System.Windows.Forms.Label();
             this.numericUpDown_ADWeekDay_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
@@ -984,12 +1050,12 @@
             this.label392 = new System.Windows.Forms.Label();
             this.comboBox_ADWeekDay_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label393 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADWeekDay_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label394 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADWeekDay_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label395 = new System.Windows.Forms.Label();
             this.checkBox_ADWeekDay_ClockHand = new System.Windows.Forms.CheckBox();
             this.tabPage40 = new System.Windows.Forms.TabPage();
+            this.numericUpDown_ADMonth_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_ADMonth_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_ADMonth_ClockHand_EndAngle = new System.Windows.Forms.NumericUpDown();
             this.label382 = new System.Windows.Forms.Label();
             this.numericUpDown_ADMonth_ClockHand_StartAngle = new System.Windows.Forms.NumericUpDown();
@@ -1000,9 +1066,7 @@
             this.label385 = new System.Windows.Forms.Label();
             this.comboBox_ADMonth_ClockHand_Image = new System.Windows.Forms.ComboBox();
             this.label386 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADMonth_ClockHand_Y = new System.Windows.Forms.NumericUpDown();
             this.label387 = new System.Windows.Forms.Label();
-            this.numericUpDown_ADMonth_ClockHand_X = new System.Windows.Forms.NumericUpDown();
             this.label388 = new System.Windows.Forms.Label();
             this.checkBox_ADMonth_ClockHand = new System.Windows.Forms.CheckBox();
             this.button_AnalogDate = new System.Windows.Forms.Button();
@@ -1216,6 +1280,8 @@
             this.button_Background = new System.Windows.Forms.Button();
             this.richTextBox_JSON = new System.Windows.Forms.RichTextBox();
             this.tabPage33 = new System.Windows.Forms.TabPage();
+            this.comboBox_Animation_Preview_Speed = new System.Windows.Forms.ComboBox();
+            this.label483 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.checkBox_Shortcuts_Border = new System.Windows.Forms.CheckBox();
             this.checkBox_Shortcuts_Area = new System.Windows.Forms.CheckBox();
@@ -1243,13 +1309,13 @@
             this.radioButton_Settings_Unpack_Save = new System.Windows.Forms.RadioButton();
             this.radioButton_Settings_Unpack_Dialog = new System.Windows.Forms.RadioButton();
             this.tabPage43 = new System.Windows.Forms.TabPage();
+            this.linkLabel_resunpacker_qzip = new System.Windows.Forms.LinkLabel();
             this.label_TranslateHelp = new System.Windows.Forms.Label();
             this.label415 = new System.Windows.Forms.Label();
             this.label414 = new System.Windows.Forms.Label();
             this.label412 = new System.Windows.Forms.Label();
             this.linkLabel_help = new System.Windows.Forms.LinkLabel();
             this.label413 = new System.Windows.Forms.Label();
-            this.label_Res_PackerUnpacker = new System.Windows.Forms.Label();
             this.linkLabel_py_amazfit_tools = new System.Windows.Forms.LinkLabel();
             this.label410 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -1280,6 +1346,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox_Show_Shortcuts = new System.Windows.Forms.CheckBox();
             this.radioButton_TRex = new System.Windows.Forms.RadioButton();
+            this.radioButton_Verge = new System.Windows.Forms.RadioButton();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.colorDialog_Pulse = new System.Windows.Forms.ColorDialog();
             this.colorDialog_Calories = new System.Windows.Forms.ColorDialog();
@@ -1386,13 +1453,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel_Animation.SuspendLayout();
+            this.tabControl_Animation.SuspendLayout();
+            this.tabPage53.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_SpeedAnimation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_CyclesCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_Pause)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_TimeAnimation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_Count)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_Y)).BeginInit();
+            this.contextMenuStrip_Y.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_X)).BeginInit();
+            this.contextMenuStrip_X.SuspendLayout();
+            this.tabPage54.SuspendLayout();
+            this.groupBox_MotiomAnimation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MotiomAnimation)).BeginInit();
+            this.contextMenuStrip_XY_InAnimationTable.SuspendLayout();
             this.panel_Shortcuts.SuspendLayout();
             this.tabControl_Shortcuts.SuspendLayout();
             this.tabPage46.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Width)).BeginInit();
-            this.contextMenuStrip_X.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Y)).BeginInit();
-            this.contextMenuStrip_Y.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Height)).BeginInit();
             this.tabPage47.SuspendLayout();
@@ -1496,12 +1581,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_X)).BeginInit();
             this.tabPage35.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).BeginInit();
             this.tabPage42.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Battery_IconSet)).BeginInit();
             this.contextMenuStrip_XY_InTable.SuspendLayout();
@@ -1522,29 +1607,29 @@
             this.panel_Activity.SuspendLayout();
             this.tabControl_Activity.SuspendLayout();
             this.tabPage12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_EndCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_StartCorner_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_StartCorner_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_EndCorner_Y)).BeginInit();
             this.tabPage13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_EndCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_StartCorner_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_StartCorner_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_EndCorner_Y)).BeginInit();
+            this.tabPage55.SuspendLayout();
+            this.tabControl8.SuspendLayout();
             this.tabPage14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_EndCorner_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_EndCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_Count)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_StartCorner_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_StartCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_Spacing)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_EndCorner_Y)).BeginInit();
             this.tabPage44.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Width)).BeginInit();
@@ -1552,15 +1637,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Radius_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Center_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Center_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageX)).BeginInit();
             this.tabPage51.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_EndAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_StartAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_EndAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_StartAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_X)).BeginInit();
             this.tabPage45.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ActivityPuls_IconSet)).BeginInit();
+            this.tabPage59.SuspendLayout();
+            this.tabControl9.SuspendLayout();
             this.tabPage15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCalories_EndCorner_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCalories_Count)).BeginInit();
@@ -1569,22 +1658,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCalories_Spacing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCalories_EndCorner_Y)).BeginInit();
             this.tabPage11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageY)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_StartAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Width)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Radius_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Radius_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Center_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Radius_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Width)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Radius_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Center_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageX)).BeginInit();
             this.tabPage52.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_EndAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_StartAngle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_X)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_EndAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_StartAngle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_X)).BeginInit();
             this.tabPage16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_X)).BeginInit();
@@ -1601,37 +1690,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).BeginInit();
             this.tabPage37.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).BeginInit();
             this.tabPage41.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SPSliced)).BeginInit();
             this.panel_AnalogDate.SuspendLayout();
             this.tabControl7.SuspendLayout();
             this.tabPage38.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).BeginInit();
             this.tabPage39.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).BeginInit();
             this.tabPage40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_EndAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_StartAngle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_X)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).BeginInit();
             this.panel_Date.SuspendLayout();
             this.tabControl_Date.SuspendLayout();
             this.tabPage8.SuspendLayout();
@@ -5269,6 +5358,8 @@
             // panel2
             // 
             resources.ApplyResources(this.panel2, "panel2");
+            this.panel2.Controls.Add(this.panel_Animation);
+            this.panel2.Controls.Add(this.button_Animation);
             this.panel2.Controls.Add(this.panel_Shortcuts);
             this.panel2.Controls.Add(this.button_Shortcuts);
             this.panel2.Controls.Add(this.panel_Weather);
@@ -5293,6 +5384,680 @@
             this.panel2.Controls.Add(this.button_Background);
             this.panel2.Name = "panel2";
             this.helpProvider1.SetShowHelp(this.panel2, ((bool)(resources.GetObject("panel2.ShowHelp"))));
+            // 
+            // panel_Animation
+            // 
+            this.panel_Animation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Animation.Controls.Add(this.button_ShowAnimation);
+            this.panel_Animation.Controls.Add(this.tabControl_Animation);
+            this.panel_Animation.Controls.Add(this.checkBox_Animation);
+            resources.ApplyResources(this.panel_Animation, "panel_Animation");
+            this.panel_Animation.Name = "panel_Animation";
+            this.helpProvider1.SetShowHelp(this.panel_Animation, ((bool)(resources.GetObject("panel_Animation.ShowHelp"))));
+            // 
+            // button_ShowAnimation
+            // 
+            resources.ApplyResources(this.button_ShowAnimation, "button_ShowAnimation");
+            this.button_ShowAnimation.Name = "button_ShowAnimation";
+            this.helpProvider1.SetShowHelp(this.button_ShowAnimation, ((bool)(resources.GetObject("button_ShowAnimation.ShowHelp"))));
+            this.button_ShowAnimation.UseVisualStyleBackColor = true;
+            this.button_ShowAnimation.Click += new System.EventHandler(this.button_ShowAnimation_Click);
+            // 
+            // tabControl_Animation
+            // 
+            this.tabControl_Animation.Controls.Add(this.tabPage53);
+            this.tabControl_Animation.Controls.Add(this.tabPage54);
+            resources.ApplyResources(this.tabControl_Animation, "tabControl_Animation");
+            this.tabControl_Animation.Name = "tabControl_Animation";
+            this.tabControl_Animation.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.tabControl_Animation, ((bool)(resources.GetObject("tabControl_Animation.ShowHelp"))));
+            // 
+            // tabPage53
+            // 
+            this.tabPage53.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage53.Controls.Add(this.numericUpDown_StaticAnimation_SpeedAnimation);
+            this.tabPage53.Controls.Add(this.label479);
+            this.tabPage53.Controls.Add(this.numericUpDown_StaticAnimation_CyclesCount);
+            this.tabPage53.Controls.Add(this.label476);
+            this.tabPage53.Controls.Add(this.numericUpDown_StaticAnimation_Pause);
+            this.tabPage53.Controls.Add(this.label478);
+            this.tabPage53.Controls.Add(this.numericUpDown_StaticAnimation_TimeAnimation);
+            this.tabPage53.Controls.Add(this.label477);
+            this.tabPage53.Controls.Add(this.comboBox_StaticAnimation_Image);
+            this.tabPage53.Controls.Add(this.numericUpDown_StaticAnimation_Count);
+            this.tabPage53.Controls.Add(this.label411);
+            this.tabPage53.Controls.Add(this.numericUpDown_StaticAnimation_Y);
+            this.tabPage53.Controls.Add(this.numericUpDown_StaticAnimation_X);
+            this.tabPage53.Controls.Add(this.checkBox_StaticAnimation);
+            this.tabPage53.Controls.Add(this.label416);
+            this.tabPage53.Controls.Add(this.label473);
+            this.tabPage53.Controls.Add(this.label474);
+            this.tabPage53.Controls.Add(this.label475);
+            resources.ApplyResources(this.tabPage53, "tabPage53");
+            this.tabPage53.Name = "tabPage53";
+            this.helpProvider1.SetShowHelp(this.tabPage53, ((bool)(resources.GetObject("tabPage53.ShowHelp"))));
+            // 
+            // numericUpDown_StaticAnimation_SpeedAnimation
+            // 
+            resources.ApplyResources(this.numericUpDown_StaticAnimation_SpeedAnimation, "numericUpDown_StaticAnimation_SpeedAnimation");
+            this.numericUpDown_StaticAnimation_SpeedAnimation.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_SpeedAnimation.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_SpeedAnimation.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_SpeedAnimation.Name = "numericUpDown_StaticAnimation_SpeedAnimation";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_SpeedAnimation, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_SpeedAnimation.ShowHelp"))));
+            this.numericUpDown_StaticAnimation_SpeedAnimation.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_SpeedAnimation.ValueChanged += new System.EventHandler(this.numericUpDown_StaticAnimation_Count_ValueChanged);
+            // 
+            // label479
+            // 
+            resources.ApplyResources(this.label479, "label479");
+            this.label479.Name = "label479";
+            this.helpProvider1.SetShowHelp(this.label479, ((bool)(resources.GetObject("label479.ShowHelp"))));
+            // 
+            // numericUpDown_StaticAnimation_CyclesCount
+            // 
+            resources.ApplyResources(this.numericUpDown_StaticAnimation_CyclesCount, "numericUpDown_StaticAnimation_CyclesCount");
+            this.numericUpDown_StaticAnimation_CyclesCount.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_CyclesCount.Name = "numericUpDown_StaticAnimation_CyclesCount";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_CyclesCount, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_CyclesCount.ShowHelp"))));
+            this.numericUpDown_StaticAnimation_CyclesCount.ValueChanged += new System.EventHandler(this.numericUpDown_StaticAnimation_CyclesCount_ValueChanged);
+            // 
+            // label476
+            // 
+            resources.ApplyResources(this.label476, "label476");
+            this.label476.Name = "label476";
+            this.helpProvider1.SetShowHelp(this.label476, ((bool)(resources.GetObject("label476.ShowHelp"))));
+            // 
+            // numericUpDown_StaticAnimation_Pause
+            // 
+            resources.ApplyResources(this.numericUpDown_StaticAnimation_Pause, "numericUpDown_StaticAnimation_Pause");
+            this.numericUpDown_StaticAnimation_Pause.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_Pause.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_Pause.Name = "numericUpDown_StaticAnimation_Pause";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_Pause, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_Pause.ShowHelp"))));
+            this.numericUpDown_StaticAnimation_Pause.ValueChanged += new System.EventHandler(this.numericUpDown_StaticAnimation_Count_ValueChanged);
+            // 
+            // label478
+            // 
+            resources.ApplyResources(this.label478, "label478");
+            this.label478.Name = "label478";
+            this.helpProvider1.SetShowHelp(this.label478, ((bool)(resources.GetObject("label478.ShowHelp"))));
+            // 
+            // numericUpDown_StaticAnimation_TimeAnimation
+            // 
+            resources.ApplyResources(this.numericUpDown_StaticAnimation_TimeAnimation, "numericUpDown_StaticAnimation_TimeAnimation");
+            this.numericUpDown_StaticAnimation_TimeAnimation.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_TimeAnimation.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_TimeAnimation.Name = "numericUpDown_StaticAnimation_TimeAnimation";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_TimeAnimation, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_TimeAnimation.ShowHelp"))));
+            this.numericUpDown_StaticAnimation_TimeAnimation.ValueChanged += new System.EventHandler(this.numericUpDown_StaticAnimation_TimeAnimation_ValueChanged);
+            // 
+            // label477
+            // 
+            resources.ApplyResources(this.label477, "label477");
+            this.label477.Name = "label477";
+            this.helpProvider1.SetShowHelp(this.label477, ((bool)(resources.GetObject("label477.ShowHelp"))));
+            // 
+            // comboBox_StaticAnimation_Image
+            // 
+            this.comboBox_StaticAnimation_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_StaticAnimation_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_StaticAnimation_Image, "comboBox_StaticAnimation_Image");
+            this.comboBox_StaticAnimation_Image.FormattingEnabled = true;
+            this.comboBox_StaticAnimation_Image.Name = "comboBox_StaticAnimation_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_StaticAnimation_Image, ((bool)(resources.GetObject("comboBox_StaticAnimation_Image.ShowHelp"))));
+            this.comboBox_StaticAnimation_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_StaticAnimation_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_StaticAnimation_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_StaticAnimation_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_StaticAnimation_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_StaticAnimation_Count
+            // 
+            resources.ApplyResources(this.numericUpDown_StaticAnimation_Count, "numericUpDown_StaticAnimation_Count");
+            this.numericUpDown_StaticAnimation_Count.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_Count.Name = "numericUpDown_StaticAnimation_Count";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_Count, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_Count.ShowHelp"))));
+            this.numericUpDown_StaticAnimation_Count.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_Count.ValueChanged += new System.EventHandler(this.numericUpDown_StaticAnimation_Count_ValueChanged);
+            // 
+            // label411
+            // 
+            resources.ApplyResources(this.label411, "label411");
+            this.label411.Name = "label411";
+            this.helpProvider1.SetShowHelp(this.label411, ((bool)(resources.GetObject("label411.ShowHelp"))));
+            // 
+            // numericUpDown_StaticAnimation_Y
+            // 
+            this.numericUpDown_StaticAnimation_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_StaticAnimation_Y, "numericUpDown_StaticAnimation_Y");
+            this.numericUpDown_StaticAnimation_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StaticAnimation_Y.Name = "numericUpDown_StaticAnimation_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_Y, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_Y.ShowHelp"))));
+            this.numericUpDown_StaticAnimation_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_StaticAnimation_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // contextMenuStrip_Y
+            // 
+            this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.копироватьToolStripMenuItem1,
+            this.вставитьToolStripMenuItem1});
+            this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
+            this.helpProvider1.SetShowHelp(this.contextMenuStrip_Y, ((bool)(resources.GetObject("contextMenuStrip_Y.ShowHelp"))));
+            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
+            this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
+            // 
+            // toolStripMenuItem1
+            // 
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
+            // 
+            // копироватьToolStripMenuItem1
+            // 
+            resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
+            this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
+            this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
+            // 
+            // вставитьToolStripMenuItem1
+            // 
+            resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
+            this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
+            this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
+            // 
+            // numericUpDown_StaticAnimation_X
+            // 
+            this.numericUpDown_StaticAnimation_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_StaticAnimation_X, "numericUpDown_StaticAnimation_X");
+            this.numericUpDown_StaticAnimation_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StaticAnimation_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StaticAnimation_X.Name = "numericUpDown_StaticAnimation_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StaticAnimation_X, ((bool)(resources.GetObject("numericUpDown_StaticAnimation_X.ShowHelp"))));
+            this.numericUpDown_StaticAnimation_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_StaticAnimation_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // contextMenuStrip_X
+            // 
+            this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вставитьКоординатуХToolStripMenuItem,
+            this.копироватьToolStripMenuItem,
+            this.вставитьToolStripMenuItem});
+            this.contextMenuStrip_X.Name = "contextMenuStrip_X";
+            this.helpProvider1.SetShowHelp(this.contextMenuStrip_X, ((bool)(resources.GetObject("contextMenuStrip_X.ShowHelp"))));
+            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
+            this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
+            // 
+            // вставитьКоординатуХToolStripMenuItem
+            // 
+            resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
+            this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
+            this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
+            // 
+            // копироватьToolStripMenuItem
+            // 
+            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
+            this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
+            this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
+            // 
+            // вставитьToolStripMenuItem
+            // 
+            resources.ApplyResources(this.вставитьToolStripMenuItem, "вставитьToolStripMenuItem");
+            this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
+            this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
+            // 
+            // checkBox_StaticAnimation
+            // 
+            resources.ApplyResources(this.checkBox_StaticAnimation, "checkBox_StaticAnimation");
+            this.checkBox_StaticAnimation.Name = "checkBox_StaticAnimation";
+            this.helpProvider1.SetShowHelp(this.checkBox_StaticAnimation, ((bool)(resources.GetObject("checkBox_StaticAnimation.ShowHelp"))));
+            this.checkBox_StaticAnimation.UseVisualStyleBackColor = true;
+            this.checkBox_StaticAnimation.CheckedChanged += new System.EventHandler(this.checkBox_StaticAnimation_CheckedChanged);
+            this.checkBox_StaticAnimation.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // label416
+            // 
+            resources.ApplyResources(this.label416, "label416");
+            this.label416.Name = "label416";
+            this.helpProvider1.SetShowHelp(this.label416, ((bool)(resources.GetObject("label416.ShowHelp"))));
+            // 
+            // label473
+            // 
+            resources.ApplyResources(this.label473, "label473");
+            this.label473.Name = "label473";
+            this.helpProvider1.SetShowHelp(this.label473, ((bool)(resources.GetObject("label473.ShowHelp"))));
+            // 
+            // label474
+            // 
+            resources.ApplyResources(this.label474, "label474");
+            this.label474.Name = "label474";
+            this.helpProvider1.SetShowHelp(this.label474, ((bool)(resources.GetObject("label474.ShowHelp"))));
+            // 
+            // label475
+            // 
+            resources.ApplyResources(this.label475, "label475");
+            this.label475.Name = "label475";
+            this.helpProvider1.SetShowHelp(this.label475, ((bool)(resources.GetObject("label475.ShowHelp"))));
+            // 
+            // tabPage54
+            // 
+            this.tabPage54.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage54.Controls.Add(this.groupBox_MotiomAnimation);
+            this.tabPage54.Controls.Add(this.dataGridView_MotiomAnimation);
+            this.tabPage54.Controls.Add(this.checkBox_MotiomAnimation);
+            resources.ApplyResources(this.tabPage54, "tabPage54");
+            this.tabPage54.Name = "tabPage54";
+            this.helpProvider1.SetShowHelp(this.tabPage54, ((bool)(resources.GetObject("tabPage54.ShowHelp"))));
+            // 
+            // groupBox_MotiomAnimation
+            // 
+            this.groupBox_MotiomAnimation.Controls.Add(this.numericUpDown_MotiomAnimation_EndCoordinates_Y);
+            this.groupBox_MotiomAnimation.Controls.Add(this.numericUpDown_MotiomAnimation_StartCoordinates_Y);
+            this.groupBox_MotiomAnimation.Controls.Add(this.numericUpDown_MotiomAnimation_StartCoordinates_X);
+            this.groupBox_MotiomAnimation.Controls.Add(this.radioButton_MotiomAnimation_EndCoordinates);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label480);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label484);
+            this.groupBox_MotiomAnimation.Controls.Add(this.comboBox_MotiomAnimation_Image);
+            this.groupBox_MotiomAnimation.Controls.Add(this.numericUpDown_MotiomAnimation_EndCoordinates_X);
+            this.groupBox_MotiomAnimation.Controls.Add(this.radioButton_MotiomAnimation_StartCoordinates);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label482);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label481);
+            this.groupBox_MotiomAnimation.Controls.Add(this.label485);
+            resources.ApplyResources(this.groupBox_MotiomAnimation, "groupBox_MotiomAnimation");
+            this.groupBox_MotiomAnimation.Name = "groupBox_MotiomAnimation";
+            this.helpProvider1.SetShowHelp(this.groupBox_MotiomAnimation, ((bool)(resources.GetObject("groupBox_MotiomAnimation.ShowHelp"))));
+            this.groupBox_MotiomAnimation.TabStop = false;
+            this.groupBox_MotiomAnimation.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            // 
+            // numericUpDown_MotiomAnimation_EndCoordinates_Y
+            // 
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_MotiomAnimation_EndCoordinates_Y, "numericUpDown_MotiomAnimation_EndCoordinates_Y");
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.Name = "numericUpDown_MotiomAnimation_EndCoordinates_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_EndCoordinates_Y, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_EndCoordinates_Y.ShowHelp"))));
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            this.numericUpDown_MotiomAnimation_EndCoordinates_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // numericUpDown_MotiomAnimation_StartCoordinates_Y
+            // 
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_MotiomAnimation_StartCoordinates_Y, "numericUpDown_MotiomAnimation_StartCoordinates_Y");
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.Name = "numericUpDown_MotiomAnimation_StartCoordinates_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_StartCoordinates_Y, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_StartCoordinates_Y.ShowHelp"))));
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            this.numericUpDown_MotiomAnimation_StartCoordinates_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
+            // 
+            // numericUpDown_MotiomAnimation_StartCoordinates_X
+            // 
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_MotiomAnimation_StartCoordinates_X, "numericUpDown_MotiomAnimation_StartCoordinates_X");
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.Name = "numericUpDown_MotiomAnimation_StartCoordinates_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_StartCoordinates_X, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_StartCoordinates_X.ShowHelp"))));
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            this.numericUpDown_MotiomAnimation_StartCoordinates_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // radioButton_MotiomAnimation_EndCoordinates
+            // 
+            resources.ApplyResources(this.radioButton_MotiomAnimation_EndCoordinates, "radioButton_MotiomAnimation_EndCoordinates");
+            this.radioButton_MotiomAnimation_EndCoordinates.Name = "radioButton_MotiomAnimation_EndCoordinates";
+            this.helpProvider1.SetShowHelp(this.radioButton_MotiomAnimation_EndCoordinates, ((bool)(resources.GetObject("radioButton_MotiomAnimation_EndCoordinates.ShowHelp"))));
+            this.radioButton_MotiomAnimation_EndCoordinates.UseVisualStyleBackColor = true;
+            // 
+            // label480
+            // 
+            resources.ApplyResources(this.label480, "label480");
+            this.label480.Name = "label480";
+            this.helpProvider1.SetShowHelp(this.label480, ((bool)(resources.GetObject("label480.ShowHelp"))));
+            // 
+            // label484
+            // 
+            resources.ApplyResources(this.label484, "label484");
+            this.label484.Name = "label484";
+            this.helpProvider1.SetShowHelp(this.label484, ((bool)(resources.GetObject("label484.ShowHelp"))));
+            // 
+            // comboBox_MotiomAnimation_Image
+            // 
+            this.comboBox_MotiomAnimation_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_MotiomAnimation_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_MotiomAnimation_Image, "comboBox_MotiomAnimation_Image");
+            this.comboBox_MotiomAnimation_Image.FormattingEnabled = true;
+            this.comboBox_MotiomAnimation_Image.Name = "comboBox_MotiomAnimation_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_MotiomAnimation_Image, ((bool)(resources.GetObject("comboBox_MotiomAnimation_Image.ShowHelp"))));
+            this.comboBox_MotiomAnimation_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_MotiomAnimation_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_MotiomAnimation_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_MotiomAnimation_Image_SelectedIndexChanged);
+            this.comboBox_MotiomAnimation_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_MotiomAnimation_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_MotiomAnimation_EndCoordinates_X
+            // 
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_MotiomAnimation_EndCoordinates_X, "numericUpDown_MotiomAnimation_EndCoordinates_X");
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.Name = "numericUpDown_MotiomAnimation_EndCoordinates_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_MotiomAnimation_EndCoordinates_X, ((bool)(resources.GetObject("numericUpDown_MotiomAnimation_EndCoordinates_X.ShowHelp"))));
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.ValueChanged += new System.EventHandler(this.numericUpDown_MotiomAnimation_StartCoordinates_X_ValueChanged);
+            this.numericUpDown_MotiomAnimation_EndCoordinates_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // radioButton_MotiomAnimation_StartCoordinates
+            // 
+            resources.ApplyResources(this.radioButton_MotiomAnimation_StartCoordinates, "radioButton_MotiomAnimation_StartCoordinates");
+            this.radioButton_MotiomAnimation_StartCoordinates.Checked = true;
+            this.radioButton_MotiomAnimation_StartCoordinates.Name = "radioButton_MotiomAnimation_StartCoordinates";
+            this.helpProvider1.SetShowHelp(this.radioButton_MotiomAnimation_StartCoordinates, ((bool)(resources.GetObject("radioButton_MotiomAnimation_StartCoordinates.ShowHelp"))));
+            this.radioButton_MotiomAnimation_StartCoordinates.TabStop = true;
+            this.radioButton_MotiomAnimation_StartCoordinates.UseVisualStyleBackColor = true;
+            this.radioButton_MotiomAnimation_StartCoordinates.CheckedChanged += new System.EventHandler(this.radioButton_MotiomAnimation_StartCoordinates_CheckedChanged);
+            // 
+            // label482
+            // 
+            resources.ApplyResources(this.label482, "label482");
+            this.label482.Name = "label482";
+            this.helpProvider1.SetShowHelp(this.label482, ((bool)(resources.GetObject("label482.ShowHelp"))));
+            // 
+            // label481
+            // 
+            resources.ApplyResources(this.label481, "label481");
+            this.label481.Name = "label481";
+            this.helpProvider1.SetShowHelp(this.label481, ((bool)(resources.GetObject("label481.ShowHelp"))));
+            // 
+            // label485
+            // 
+            resources.ApplyResources(this.label485, "label485");
+            this.label485.Name = "label485";
+            this.helpProvider1.SetShowHelp(this.label485, ((bool)(resources.GetObject("label485.ShowHelp"))));
+            // 
+            // dataGridView_MotiomAnimation
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_MotiomAnimation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_MotiomAnimation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_MotiomAnimation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AnimationColumn1,
+            this.AnimationColumn2,
+            this.AnimationColumn3,
+            this.AnimationColumn4,
+            this.AnimationColumn5,
+            this.AnimationColumn6,
+            this.AnimationColumn7,
+            this.AnimationColumn8,
+            this.AnimationColumn9,
+            this.AnimationColumn10,
+            this.AnimationColumn11,
+            this.AnimationColumn12});
+            this.dataGridView_MotiomAnimation.ContextMenuStrip = this.contextMenuStrip_XY_InAnimationTable;
+            resources.ApplyResources(this.dataGridView_MotiomAnimation, "dataGridView_MotiomAnimation");
+            this.dataGridView_MotiomAnimation.Name = "dataGridView_MotiomAnimation";
+            this.dataGridView_MotiomAnimation.RowTemplate.Height = 18;
+            this.helpProvider1.SetShowHelp(this.dataGridView_MotiomAnimation, ((bool)(resources.GetObject("dataGridView_MotiomAnimation.ShowHelp"))));
+            this.dataGridView_MotiomAnimation.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MotiomAnimation_CellClick);
+            this.dataGridView_MotiomAnimation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MotiomAnimation_CellContentClick);
+            this.dataGridView_MotiomAnimation.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MotiomAnimation_CellEndEdit);
+            this.dataGridView_MotiomAnimation.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_MotiomAnimation_CellMouseDoubleClick);
+            this.dataGridView_MotiomAnimation.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_IconSet_CellMouseDown);
+            this.dataGridView_MotiomAnimation.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridView_IconSet_RowPrePaint);
+            this.dataGridView_MotiomAnimation.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataGridView_MotiomAnimation_RowsAdded);
+            this.dataGridView_MotiomAnimation.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_IconSet_RowsRemoved);
+            this.dataGridView_MotiomAnimation.SelectionChanged += new System.EventHandler(this.dataGridView_MotiomAnimation_SelectionChanged);
+            // 
+            // AnimationColumn1
+            // 
+            resources.ApplyResources(this.AnimationColumn1, "AnimationColumn1");
+            this.AnimationColumn1.Name = "AnimationColumn1";
+            this.AnimationColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn2
+            // 
+            resources.ApplyResources(this.AnimationColumn2, "AnimationColumn2");
+            this.AnimationColumn2.Name = "AnimationColumn2";
+            this.AnimationColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn3
+            // 
+            resources.ApplyResources(this.AnimationColumn3, "AnimationColumn3");
+            this.AnimationColumn3.Name = "AnimationColumn3";
+            this.AnimationColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn4
+            // 
+            resources.ApplyResources(this.AnimationColumn4, "AnimationColumn4");
+            this.AnimationColumn4.Name = "AnimationColumn4";
+            this.AnimationColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn5
+            // 
+            resources.ApplyResources(this.AnimationColumn5, "AnimationColumn5");
+            this.AnimationColumn5.Name = "AnimationColumn5";
+            this.AnimationColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn6
+            // 
+            resources.ApplyResources(this.AnimationColumn6, "AnimationColumn6");
+            this.AnimationColumn6.Name = "AnimationColumn6";
+            this.AnimationColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn7
+            // 
+            resources.ApplyResources(this.AnimationColumn7, "AnimationColumn7");
+            this.AnimationColumn7.Name = "AnimationColumn7";
+            this.AnimationColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn8
+            // 
+            resources.ApplyResources(this.AnimationColumn8, "AnimationColumn8");
+            this.AnimationColumn8.Name = "AnimationColumn8";
+            this.AnimationColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn9
+            // 
+            resources.ApplyResources(this.AnimationColumn9, "AnimationColumn9");
+            this.AnimationColumn9.Name = "AnimationColumn9";
+            this.AnimationColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn10
+            // 
+            resources.ApplyResources(this.AnimationColumn10, "AnimationColumn10");
+            this.AnimationColumn10.Name = "AnimationColumn10";
+            this.AnimationColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn11
+            // 
+            resources.ApplyResources(this.AnimationColumn11, "AnimationColumn11");
+            this.AnimationColumn11.Name = "AnimationColumn11";
+            this.AnimationColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // AnimationColumn12
+            // 
+            resources.ApplyResources(this.AnimationColumn12, "AnimationColumn12");
+            this.AnimationColumn12.Name = "AnimationColumn12";
+            // 
+            // contextMenuStrip_XY_InAnimationTable
+            // 
+            this.contextMenuStrip_XY_InAnimationTable.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.вставитьНачальныеКоординатыToolStripMenuItem,
+            this.вставитьКонечныеКоординатыToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.копироватьToolStripMenuItem3,
+            this.вставитьToolStripMenuItem3,
+            this.удалитьСтрокуToolStripMenuItem1});
+            this.contextMenuStrip_XY_InAnimationTable.Name = "contextMenuStrip_XY_InAnimationTable";
+            this.helpProvider1.SetShowHelp(this.contextMenuStrip_XY_InAnimationTable, ((bool)(resources.GetObject("contextMenuStrip_XY_InAnimationTable.ShowHelp"))));
+            resources.ApplyResources(this.contextMenuStrip_XY_InAnimationTable, "contextMenuStrip_XY_InAnimationTable");
+            this.contextMenuStrip_XY_InAnimationTable.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_XY_InAnimationTable_Opening);
+            // 
+            // вставитьНачальныеКоординатыToolStripMenuItem
+            // 
+            this.вставитьНачальныеКоординатыToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
+            this.вставитьНачальныеКоординатыToolStripMenuItem.Name = "вставитьНачальныеКоординатыToolStripMenuItem";
+            resources.ApplyResources(this.вставитьНачальныеКоординатыToolStripMenuItem, "вставитьНачальныеКоординатыToolStripMenuItem");
+            this.вставитьНачальныеКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьНачальныеКоординатыToolStripMenuItem_Click);
+            // 
+            // вставитьКонечныеКоординатыToolStripMenuItem
+            // 
+            this.вставитьКонечныеКоординатыToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
+            this.вставитьКонечныеКоординатыToolStripMenuItem.Name = "вставитьКонечныеКоординатыToolStripMenuItem";
+            resources.ApplyResources(this.вставитьКонечныеКоординатыToolStripMenuItem, "вставитьКонечныеКоординатыToolStripMenuItem");
+            this.вставитьКонечныеКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьКонечныеКоординатыToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // копироватьToolStripMenuItem3
+            // 
+            this.копироватьToolStripMenuItem3.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
+            this.копироватьToolStripMenuItem3.Name = "копироватьToolStripMenuItem3";
+            resources.ApplyResources(this.копироватьToolStripMenuItem3, "копироватьToolStripMenuItem3");
+            this.копироватьToolStripMenuItem3.Click += new System.EventHandler(this.копироватьToolStripMenuItem2_Click);
+            // 
+            // вставитьToolStripMenuItem3
+            // 
+            this.вставитьToolStripMenuItem3.Image = global::GTR_Watch_face.Properties.Resources.Files_Clipboard_icon;
+            this.вставитьToolStripMenuItem3.Name = "вставитьToolStripMenuItem3";
+            resources.ApplyResources(this.вставитьToolStripMenuItem3, "вставитьToolStripMenuItem3");
+            this.вставитьToolStripMenuItem3.Click += new System.EventHandler(this.вставитьToolStripMenuItem3_Click);
+            // 
+            // удалитьСтрокуToolStripMenuItem1
+            // 
+            this.удалитьСтрокуToolStripMenuItem1.Image = global::GTR_Watch_face.Properties.Resources.table_row_delete_icon;
+            this.удалитьСтрокуToolStripMenuItem1.Name = "удалитьСтрокуToolStripMenuItem1";
+            resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem1, "удалитьСтрокуToolStripMenuItem1");
+            this.удалитьСтрокуToolStripMenuItem1.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
+            // 
+            // checkBox_MotiomAnimation
+            // 
+            resources.ApplyResources(this.checkBox_MotiomAnimation, "checkBox_MotiomAnimation");
+            this.checkBox_MotiomAnimation.Name = "checkBox_MotiomAnimation";
+            this.helpProvider1.SetShowHelp(this.checkBox_MotiomAnimation, ((bool)(resources.GetObject("checkBox_MotiomAnimation.ShowHelp"))));
+            this.checkBox_MotiomAnimation.UseVisualStyleBackColor = true;
+            this.checkBox_MotiomAnimation.CheckedChanged += new System.EventHandler(this.checkBox_MotiomAnimation_CheckedChanged);
+            this.checkBox_MotiomAnimation.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // checkBox_Animation
+            // 
+            resources.ApplyResources(this.checkBox_Animation, "checkBox_Animation");
+            this.checkBox_Animation.Name = "checkBox_Animation";
+            this.helpProvider1.SetShowHelp(this.checkBox_Animation, ((bool)(resources.GetObject("checkBox_Animation.ShowHelp"))));
+            this.checkBox_Animation.UseVisualStyleBackColor = true;
+            this.checkBox_Animation.CheckedChanged += new System.EventHandler(this.checkBox_Animation_CheckedChanged);
+            this.checkBox_Animation.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // button_Animation
+            // 
+            resources.ApplyResources(this.button_Animation, "button_Animation");
+            this.button_Animation.Name = "button_Animation";
+            this.helpProvider1.SetShowHelp(this.button_Animation, ((bool)(resources.GetObject("button_Animation.ShowHelp"))));
+            this.button_Animation.UseVisualStyleBackColor = true;
+            this.button_Animation.Click += new System.EventHandler(this.button_Animation_Click);
             // 
             // panel_Shortcuts
             // 
@@ -5350,36 +6115,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Steps_Width, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Steps_Width.ShowHelp"))));
             this.numericUpDown_Shortcuts_Steps_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // contextMenuStrip_X
-            // 
-            this.contextMenuStrip_X.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip_X.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.вставитьКоординатуХToolStripMenuItem,
-            this.копироватьToolStripMenuItem,
-            this.вставитьToolStripMenuItem});
-            this.contextMenuStrip_X.Name = "contextMenuStrip_X";
-            this.helpProvider1.SetShowHelp(this.contextMenuStrip_X, ((bool)(resources.GetObject("contextMenuStrip_X.ShowHelp"))));
-            resources.ApplyResources(this.contextMenuStrip_X, "contextMenuStrip_X");
-            this.contextMenuStrip_X.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_X_Opening);
-            // 
-            // вставитьКоординатуХToolStripMenuItem
-            // 
-            resources.ApplyResources(this.вставитьКоординатуХToolStripMenuItem, "вставитьКоординатуХToolStripMenuItem");
-            this.вставитьКоординатуХToolStripMenuItem.Name = "вставитьКоординатуХToolStripMenuItem";
-            this.вставитьКоординатуХToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатуХToolStripMenuItem_Click);
-            // 
-            // копироватьToolStripMenuItem
-            // 
-            resources.ApplyResources(this.копироватьToolStripMenuItem, "копироватьToolStripMenuItem");
-            this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
-            this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
-            // 
-            // вставитьToolStripMenuItem
-            // 
-            resources.ApplyResources(this.вставитьToolStripMenuItem, "вставитьToolStripMenuItem");
-            this.вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
-            this.вставитьToolStripMenuItem.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
-            // 
             // numericUpDown_Shortcuts_Steps_Y
             // 
             this.numericUpDown_Shortcuts_Steps_Y.ContextMenuStrip = this.contextMenuStrip_Y;
@@ -5398,36 +6133,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_Shortcuts_Steps_Y, ((bool)(resources.GetObject("numericUpDown_Shortcuts_Steps_Y.ShowHelp"))));
             this.numericUpDown_Shortcuts_Steps_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_Shortcuts_Steps_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // contextMenuStrip_Y
-            // 
-            this.contextMenuStrip_Y.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip_Y.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.копироватьToolStripMenuItem1,
-            this.вставитьToolStripMenuItem1});
-            this.contextMenuStrip_Y.Name = "contextMenuStrip_X";
-            this.helpProvider1.SetShowHelp(this.contextMenuStrip_Y, ((bool)(resources.GetObject("contextMenuStrip_Y.ShowHelp"))));
-            resources.ApplyResources(this.contextMenuStrip_Y, "contextMenuStrip_Y");
-            this.contextMenuStrip_Y.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip_Y_Opening);
-            // 
-            // toolStripMenuItem1
-            // 
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.вставитьКоординатуYToolStripMenuItem_Click);
-            // 
-            // копироватьToolStripMenuItem1
-            // 
-            resources.ApplyResources(this.копироватьToolStripMenuItem1, "копироватьToolStripMenuItem1");
-            this.копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
-            this.копироватьToolStripMenuItem1.Click += new System.EventHandler(this.копироватьToolStripMenuItem_Click);
-            // 
-            // вставитьToolStripMenuItem1
-            // 
-            resources.ApplyResources(this.вставитьToolStripMenuItem1, "вставитьToolStripMenuItem1");
-            this.вставитьToolStripMenuItem1.Name = "вставитьToolStripMenuItem1";
-            this.вставитьToolStripMenuItem1.Click += new System.EventHandler(this.вставитьToolStripMenuItem_Click);
             // 
             // numericUpDown_Shortcuts_Steps_X
             // 
@@ -8473,6 +9178,8 @@
             // tabPage35
             // 
             this.tabPage35.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_Y);
+            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_X);
             this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_EndAngle);
             this.tabPage35.Controls.Add(this.label374);
             this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_StartAngle);
@@ -8483,14 +9190,46 @@
             this.tabPage35.Controls.Add(this.label369);
             this.tabPage35.Controls.Add(this.comboBox_Battery_ClockHand_Image);
             this.tabPage35.Controls.Add(this.label370);
-            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_Y);
             this.tabPage35.Controls.Add(this.label371);
-            this.tabPage35.Controls.Add(this.numericUpDown_Battery_ClockHand_X);
             this.tabPage35.Controls.Add(this.label372);
             this.tabPage35.Controls.Add(this.checkBox_Battery_ClockHand);
             resources.ApplyResources(this.tabPage35, "tabPage35");
             this.tabPage35.Name = "tabPage35";
             this.helpProvider1.SetShowHelp(this.tabPage35, ((bool)(resources.GetObject("tabPage35.ShowHelp"))));
+            // 
+            // numericUpDown_Battery_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_Y, "numericUpDown_Battery_ClockHand_Y");
+            this.numericUpDown_Battery_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_Y.Name = "numericUpDown_Battery_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Battery_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_X, "numericUpDown_Battery_ClockHand_X");
+            this.numericUpDown_Battery_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Battery_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Battery_ClockHand_X.Name = "numericUpDown_Battery_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_Battery_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_Battery_ClockHand_EndAngle
             // 
@@ -8616,45 +9355,11 @@
             this.label370.Name = "label370";
             this.helpProvider1.SetShowHelp(this.label370, ((bool)(resources.GetObject("label370.ShowHelp"))));
             // 
-            // numericUpDown_Battery_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_Y, "numericUpDown_Battery_ClockHand_Y");
-            this.numericUpDown_Battery_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Battery_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Battery_ClockHand_Y.Name = "numericUpDown_Battery_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_Battery_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label371
             // 
             resources.ApplyResources(this.label371, "label371");
             this.label371.Name = "label371";
             this.helpProvider1.SetShowHelp(this.label371, ((bool)(resources.GetObject("label371.ShowHelp"))));
-            // 
-            // numericUpDown_Battery_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_Battery_ClockHand_X, "numericUpDown_Battery_ClockHand_X");
-            this.numericUpDown_Battery_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Battery_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Battery_ClockHand_X.Name = "numericUpDown_Battery_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Battery_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Battery_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_Battery_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label372
             // 
@@ -8759,24 +9464,28 @@
             // 
             // вставитьКоординатыToolStripMenuItem
             // 
+            this.вставитьКоординатыToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.Actions_insert_text_icon;
             this.вставитьКоординатыToolStripMenuItem.Name = "вставитьКоординатыToolStripMenuItem";
             resources.ApplyResources(this.вставитьКоординатыToolStripMenuItem, "вставитьКоординатыToolStripMenuItem");
             this.вставитьКоординатыToolStripMenuItem.Click += new System.EventHandler(this.вставитьКоординатыToolStripMenuItem_Click);
             // 
             // копироватьToolStripMenuItem2
             // 
+            this.копироватьToolStripMenuItem2.Image = global::GTR_Watch_face.Properties.Resources.Files_Copy_File_icon;
             this.копироватьToolStripMenuItem2.Name = "копироватьToolStripMenuItem2";
             resources.ApplyResources(this.копироватьToolStripMenuItem2, "копироватьToolStripMenuItem2");
             this.копироватьToolStripMenuItem2.Click += new System.EventHandler(this.копироватьToolStripMenuItem2_Click);
             // 
             // вставитьToolStripMenuItem2
             // 
+            this.вставитьToolStripMenuItem2.Image = global::GTR_Watch_face.Properties.Resources.Files_Clipboard_icon;
             this.вставитьToolStripMenuItem2.Name = "вставитьToolStripMenuItem2";
             resources.ApplyResources(this.вставитьToolStripMenuItem2, "вставитьToolStripMenuItem2");
             this.вставитьToolStripMenuItem2.Click += new System.EventHandler(this.вставитьToolStripMenuItem2_Click);
             // 
             // удалитьСтрокуToolStripMenuItem
             // 
+            this.удалитьСтрокуToolStripMenuItem.Image = global::GTR_Watch_face.Properties.Resources.table_row_delete_icon;
             this.удалитьСтрокуToolStripMenuItem.Name = "удалитьСтрокуToolStripMenuItem";
             resources.ApplyResources(this.удалитьСтрокуToolStripMenuItem, "удалитьСтрокуToolStripMenuItem");
             this.удалитьСтрокуToolStripMenuItem.Click += new System.EventHandler(this.удалитьСтрокуToolStripMenuItem_Click);
@@ -9280,13 +9989,8 @@
             // 
             this.tabControl_Activity.Controls.Add(this.tabPage12);
             this.tabControl_Activity.Controls.Add(this.tabPage13);
-            this.tabControl_Activity.Controls.Add(this.tabPage14);
-            this.tabControl_Activity.Controls.Add(this.tabPage44);
-            this.tabControl_Activity.Controls.Add(this.tabPage51);
-            this.tabControl_Activity.Controls.Add(this.tabPage45);
-            this.tabControl_Activity.Controls.Add(this.tabPage15);
-            this.tabControl_Activity.Controls.Add(this.tabPage11);
-            this.tabControl_Activity.Controls.Add(this.tabPage52);
+            this.tabControl_Activity.Controls.Add(this.tabPage55);
+            this.tabControl_Activity.Controls.Add(this.tabPage59);
             this.tabControl_Activity.Controls.Add(this.tabPage16);
             resources.ApplyResources(this.tabControl_Activity, "tabControl_Activity");
             this.tabControl_Activity.Name = "tabControl_Activity";
@@ -9296,11 +10000,11 @@
             // tabPage12
             // 
             this.tabPage12.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_Spacing);
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_EndCorner_X);
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_Count);
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_StartCorner_Y);
             this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_StartCorner_X);
-            this.tabPage12.Controls.Add(this.numericUpDown_ActivitySteps_Spacing);
             this.tabPage12.Controls.Add(this.checkBox_ActivitySteps);
             this.tabPage12.Controls.Add(this.label122);
             this.tabPage12.Controls.Add(this.label123);
@@ -9318,6 +10022,23 @@
             resources.ApplyResources(this.tabPage12, "tabPage12");
             this.tabPage12.Name = "tabPage12";
             this.helpProvider1.SetShowHelp(this.tabPage12, ((bool)(resources.GetObject("tabPage12.ShowHelp"))));
+            // 
+            // numericUpDown_ActivitySteps_Spacing
+            // 
+            resources.ApplyResources(this.numericUpDown_ActivitySteps_Spacing, "numericUpDown_ActivitySteps_Spacing");
+            this.numericUpDown_ActivitySteps_Spacing.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivitySteps_Spacing.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivitySteps_Spacing.Name = "numericUpDown_ActivitySteps_Spacing";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivitySteps_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivitySteps_Spacing.ShowHelp"))));
+            this.numericUpDown_ActivitySteps_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_ActivitySteps_EndCorner_X
             // 
@@ -9392,23 +10113,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivitySteps_StartCorner_X, ((bool)(resources.GetObject("numericUpDown_ActivitySteps_StartCorner_X.ShowHelp"))));
             this.numericUpDown_ActivitySteps_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivitySteps_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_ActivitySteps_Spacing
-            // 
-            resources.ApplyResources(this.numericUpDown_ActivitySteps_Spacing, "numericUpDown_ActivitySteps_Spacing");
-            this.numericUpDown_ActivitySteps_Spacing.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivitySteps_Spacing.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ActivitySteps_Spacing.Name = "numericUpDown_ActivitySteps_Spacing";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivitySteps_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivitySteps_Spacing.ShowHelp"))));
-            this.numericUpDown_ActivitySteps_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_ActivitySteps
             // 
@@ -9534,15 +10238,15 @@
             // tabPage13
             // 
             this.tabPage13.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Decimal);
+            this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_Spacing);
             this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Suffix);
             this.tabPage13.Controls.Add(this.label173);
-            this.tabPage13.Controls.Add(this.comboBox_ActivityDistance_Decimal);
             this.tabPage13.Controls.Add(this.label172);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_EndCorner_X);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_Count);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_StartCorner_Y);
             this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_StartCorner_X);
-            this.tabPage13.Controls.Add(this.numericUpDown_ActivityDistance_Spacing);
             this.tabPage13.Controls.Add(this.checkBox_ActivityDistance);
             this.tabPage13.Controls.Add(this.label132);
             this.tabPage13.Controls.Add(this.label133);
@@ -9560,6 +10264,37 @@
             resources.ApplyResources(this.tabPage13, "tabPage13");
             this.tabPage13.Name = "tabPage13";
             this.helpProvider1.SetShowHelp(this.tabPage13, ((bool)(resources.GetObject("tabPage13.ShowHelp"))));
+            // 
+            // comboBox_ActivityDistance_Decimal
+            // 
+            this.comboBox_ActivityDistance_Decimal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityDistance_Decimal.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_ActivityDistance_Decimal, "comboBox_ActivityDistance_Decimal");
+            this.comboBox_ActivityDistance_Decimal.FormattingEnabled = true;
+            this.comboBox_ActivityDistance_Decimal.Name = "comboBox_ActivityDistance_Decimal";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Decimal, ((bool)(resources.GetObject("comboBox_ActivityDistance_Decimal.ShowHelp"))));
+            this.comboBox_ActivityDistance_Decimal.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityDistance_Decimal.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ActivityDistance_Decimal.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityDistance_Decimal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityDistance_Decimal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_ActivityDistance_Spacing
+            // 
+            resources.ApplyResources(this.numericUpDown_ActivityDistance_Spacing, "numericUpDown_ActivityDistance_Spacing");
+            this.numericUpDown_ActivityDistance_Spacing.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityDistance_Spacing.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivityDistance_Spacing.Name = "numericUpDown_ActivityDistance_Spacing";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityDistance_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivityDistance_Spacing.ShowHelp"))));
+            this.numericUpDown_ActivityDistance_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // comboBox_ActivityDistance_Suffix
             // 
@@ -9580,20 +10315,6 @@
             resources.ApplyResources(this.label173, "label173");
             this.label173.Name = "label173";
             this.helpProvider1.SetShowHelp(this.label173, ((bool)(resources.GetObject("label173.ShowHelp"))));
-            // 
-            // comboBox_ActivityDistance_Decimal
-            // 
-            this.comboBox_ActivityDistance_Decimal.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_ActivityDistance_Decimal.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityDistance_Decimal, "comboBox_ActivityDistance_Decimal");
-            this.comboBox_ActivityDistance_Decimal.FormattingEnabled = true;
-            this.comboBox_ActivityDistance_Decimal.Name = "comboBox_ActivityDistance_Decimal";
-            this.helpProvider1.SetShowHelp(this.comboBox_ActivityDistance_Decimal, ((bool)(resources.GetObject("comboBox_ActivityDistance_Decimal.ShowHelp"))));
-            this.comboBox_ActivityDistance_Decimal.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_ActivityDistance_Decimal.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_ActivityDistance_Decimal.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_ActivityDistance_Decimal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_ActivityDistance_Decimal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label172
             // 
@@ -9674,23 +10395,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityDistance_StartCorner_X, ((bool)(resources.GetObject("numericUpDown_ActivityDistance_StartCorner_X.ShowHelp"))));
             this.numericUpDown_ActivityDistance_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityDistance_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // numericUpDown_ActivityDistance_Spacing
-            // 
-            resources.ApplyResources(this.numericUpDown_ActivityDistance_Spacing, "numericUpDown_ActivityDistance_Spacing");
-            this.numericUpDown_ActivityDistance_Spacing.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityDistance_Spacing.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ActivityDistance_Spacing.Name = "numericUpDown_ActivityDistance_Spacing";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityDistance_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivityDistance_Spacing.ShowHelp"))));
-            this.numericUpDown_ActivityDistance_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_ActivityDistance
             // 
@@ -9813,31 +10517,69 @@
             this.label141.Name = "label141";
             this.helpProvider1.SetShowHelp(this.label141, ((bool)(resources.GetObject("label141.ShowHelp"))));
             // 
+            // tabPage55
+            // 
+            this.tabPage55.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage55.Controls.Add(this.tabControl8);
+            resources.ApplyResources(this.tabPage55, "tabPage55");
+            this.tabPage55.Name = "tabPage55";
+            this.helpProvider1.SetShowHelp(this.tabPage55, ((bool)(resources.GetObject("tabPage55.ShowHelp"))));
+            // 
+            // tabControl8
+            // 
+            this.tabControl8.Controls.Add(this.tabPage14);
+            this.tabControl8.Controls.Add(this.tabPage44);
+            this.tabControl8.Controls.Add(this.tabPage51);
+            this.tabControl8.Controls.Add(this.tabPage45);
+            resources.ApplyResources(this.tabControl8, "tabControl8");
+            this.tabControl8.Name = "tabControl8";
+            this.tabControl8.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.tabControl8, ((bool)(resources.GetObject("tabControl8.ShowHelp"))));
+            // 
             // tabPage14
             // 
             this.tabPage14.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_EndCorner_Y);
             this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_EndCorner_X);
-            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_Count);
-            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_StartCorner_Y);
-            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_StartCorner_X);
-            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_Spacing);
             this.tabPage14.Controls.Add(this.checkBox_ActivityPuls);
+            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_Count);
+            this.tabPage14.Controls.Add(this.label151);
+            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_StartCorner_Y);
+            this.tabPage14.Controls.Add(this.label150);
+            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_StartCorner_X);
+            this.tabPage14.Controls.Add(this.label149);
+            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_Spacing);
+            this.tabPage14.Controls.Add(this.label148);
+            this.tabPage14.Controls.Add(this.label147);
             this.tabPage14.Controls.Add(this.label142);
+            this.tabPage14.Controls.Add(this.comboBox_ActivityPuls_Image);
             this.tabPage14.Controls.Add(this.label143);
             this.tabPage14.Controls.Add(this.comboBox_ActivityPuls_Alignment);
+            this.tabPage14.Controls.Add(this.label146);
             this.tabPage14.Controls.Add(this.label144);
             this.tabPage14.Controls.Add(this.label145);
-            this.tabPage14.Controls.Add(this.label146);
-            this.tabPage14.Controls.Add(this.numericUpDown_ActivityPuls_EndCorner_Y);
-            this.tabPage14.Controls.Add(this.comboBox_ActivityPuls_Image);
-            this.tabPage14.Controls.Add(this.label147);
-            this.tabPage14.Controls.Add(this.label148);
-            this.tabPage14.Controls.Add(this.label149);
-            this.tabPage14.Controls.Add(this.label150);
-            this.tabPage14.Controls.Add(this.label151);
             resources.ApplyResources(this.tabPage14, "tabPage14");
             this.tabPage14.Name = "tabPage14";
             this.helpProvider1.SetShowHelp(this.tabPage14, ((bool)(resources.GetObject("tabPage14.ShowHelp"))));
+            // 
+            // numericUpDown_ActivityPuls_EndCorner_Y
+            // 
+            this.numericUpDown_ActivityPuls_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_ActivityPuls_EndCorner_Y, "numericUpDown_ActivityPuls_EndCorner_Y");
+            this.numericUpDown_ActivityPuls_EndCorner_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityPuls_EndCorner_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ActivityPuls_EndCorner_Y.Name = "numericUpDown_ActivityPuls_EndCorner_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPuls_EndCorner_Y, ((bool)(resources.GetObject("numericUpDown_ActivityPuls_EndCorner_Y.ShowHelp"))));
+            this.numericUpDown_ActivityPuls_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityPuls_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // numericUpDown_ActivityPuls_EndCorner_X
             // 
@@ -9858,6 +10600,15 @@
             this.numericUpDown_ActivityPuls_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityPuls_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
+            // checkBox_ActivityPuls
+            // 
+            resources.ApplyResources(this.checkBox_ActivityPuls, "checkBox_ActivityPuls");
+            this.checkBox_ActivityPuls.Name = "checkBox_ActivityPuls";
+            this.helpProvider1.SetShowHelp(this.checkBox_ActivityPuls, ((bool)(resources.GetObject("checkBox_ActivityPuls.ShowHelp"))));
+            this.checkBox_ActivityPuls.UseVisualStyleBackColor = true;
+            this.checkBox_ActivityPuls.CheckedChanged += new System.EventHandler(this.checkBox_ActivityPuls_CheckedChanged);
+            this.checkBox_ActivityPuls.Click += new System.EventHandler(this.checkBox_Click);
+            // 
             // numericUpDown_ActivityPuls_Count
             // 
             resources.ApplyResources(this.numericUpDown_ActivityPuls_Count, "numericUpDown_ActivityPuls_Count");
@@ -9874,6 +10625,12 @@
             0,
             0});
             this.numericUpDown_ActivityPuls_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label151
+            // 
+            resources.ApplyResources(this.label151, "label151");
+            this.label151.Name = "label151";
+            this.helpProvider1.SetShowHelp(this.label151, ((bool)(resources.GetObject("label151.ShowHelp"))));
             // 
             // numericUpDown_ActivityPuls_StartCorner_Y
             // 
@@ -9894,6 +10651,12 @@
             this.numericUpDown_ActivityPuls_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityPuls_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
+            // label150
+            // 
+            resources.ApplyResources(this.label150, "label150");
+            this.label150.Name = "label150";
+            this.helpProvider1.SetShowHelp(this.label150, ((bool)(resources.GetObject("label150.ShowHelp"))));
+            // 
             // numericUpDown_ActivityPuls_StartCorner_X
             // 
             this.numericUpDown_ActivityPuls_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
@@ -9913,6 +10676,12 @@
             this.numericUpDown_ActivityPuls_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityPuls_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
+            // label149
+            // 
+            resources.ApplyResources(this.label149, "label149");
+            this.label149.Name = "label149";
+            this.helpProvider1.SetShowHelp(this.label149, ((bool)(resources.GetObject("label149.ShowHelp"))));
+            // 
             // numericUpDown_ActivityPuls_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_ActivityPuls_Spacing, "numericUpDown_ActivityPuls_Spacing");
@@ -9930,20 +10699,37 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPuls_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivityPuls_Spacing.ShowHelp"))));
             this.numericUpDown_ActivityPuls_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // checkBox_ActivityPuls
+            // label148
             // 
-            resources.ApplyResources(this.checkBox_ActivityPuls, "checkBox_ActivityPuls");
-            this.checkBox_ActivityPuls.Name = "checkBox_ActivityPuls";
-            this.helpProvider1.SetShowHelp(this.checkBox_ActivityPuls, ((bool)(resources.GetObject("checkBox_ActivityPuls.ShowHelp"))));
-            this.checkBox_ActivityPuls.UseVisualStyleBackColor = true;
-            this.checkBox_ActivityPuls.CheckedChanged += new System.EventHandler(this.checkBox_ActivityPuls_CheckedChanged);
-            this.checkBox_ActivityPuls.Click += new System.EventHandler(this.checkBox_Click);
+            resources.ApplyResources(this.label148, "label148");
+            this.label148.Name = "label148";
+            this.helpProvider1.SetShowHelp(this.label148, ((bool)(resources.GetObject("label148.ShowHelp"))));
+            // 
+            // label147
+            // 
+            resources.ApplyResources(this.label147, "label147");
+            this.label147.Name = "label147";
+            this.helpProvider1.SetShowHelp(this.label147, ((bool)(resources.GetObject("label147.ShowHelp"))));
             // 
             // label142
             // 
             resources.ApplyResources(this.label142, "label142");
             this.label142.Name = "label142";
             this.helpProvider1.SetShowHelp(this.label142, ((bool)(resources.GetObject("label142.ShowHelp"))));
+            // 
+            // comboBox_ActivityPuls_Image
+            // 
+            this.comboBox_ActivityPuls_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityPuls_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_ActivityPuls_Image, "comboBox_ActivityPuls_Image");
+            this.comboBox_ActivityPuls_Image.FormattingEnabled = true;
+            this.comboBox_ActivityPuls_Image.Name = "comboBox_ActivityPuls_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityPuls_Image, ((bool)(resources.GetObject("comboBox_ActivityPuls_Image.ShowHelp"))));
+            this.comboBox_ActivityPuls_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityPuls_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ActivityPuls_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityPuls_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityPuls_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
             // 
             // label143
             // 
@@ -9970,6 +10756,12 @@
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityPuls_Alignment, ((bool)(resources.GetObject("comboBox_ActivityPuls_Alignment.ShowHelp"))));
             this.comboBox_ActivityPuls_Alignment.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
+            // label146
+            // 
+            resources.ApplyResources(this.label146, "label146");
+            this.label146.Name = "label146";
+            this.helpProvider1.SetShowHelp(this.label146, ((bool)(resources.GetObject("label146.ShowHelp"))));
+            // 
             // label144
             // 
             resources.ApplyResources(this.label144, "label144");
@@ -9982,155 +10774,37 @@
             this.label145.Name = "label145";
             this.helpProvider1.SetShowHelp(this.label145, ((bool)(resources.GetObject("label145.ShowHelp"))));
             // 
-            // label146
-            // 
-            resources.ApplyResources(this.label146, "label146");
-            this.label146.Name = "label146";
-            this.helpProvider1.SetShowHelp(this.label146, ((bool)(resources.GetObject("label146.ShowHelp"))));
-            // 
-            // numericUpDown_ActivityPuls_EndCorner_Y
-            // 
-            this.numericUpDown_ActivityPuls_EndCorner_Y.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_ActivityPuls_EndCorner_Y, "numericUpDown_ActivityPuls_EndCorner_Y");
-            this.numericUpDown_ActivityPuls_EndCorner_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityPuls_EndCorner_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ActivityPuls_EndCorner_Y.Name = "numericUpDown_ActivityPuls_EndCorner_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPuls_EndCorner_Y, ((bool)(resources.GetObject("numericUpDown_ActivityPuls_EndCorner_Y.ShowHelp"))));
-            this.numericUpDown_ActivityPuls_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityPuls_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // comboBox_ActivityPuls_Image
-            // 
-            this.comboBox_ActivityPuls_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_ActivityPuls_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityPuls_Image, "comboBox_ActivityPuls_Image");
-            this.comboBox_ActivityPuls_Image.FormattingEnabled = true;
-            this.comboBox_ActivityPuls_Image.Name = "comboBox_ActivityPuls_Image";
-            this.helpProvider1.SetShowHelp(this.comboBox_ActivityPuls_Image, ((bool)(resources.GetObject("comboBox_ActivityPuls_Image.ShowHelp"))));
-            this.comboBox_ActivityPuls_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_ActivityPuls_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_ActivityPuls_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_ActivityPuls_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_ActivityPuls_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label147
-            // 
-            resources.ApplyResources(this.label147, "label147");
-            this.label147.Name = "label147";
-            this.helpProvider1.SetShowHelp(this.label147, ((bool)(resources.GetObject("label147.ShowHelp"))));
-            // 
-            // label148
-            // 
-            resources.ApplyResources(this.label148, "label148");
-            this.label148.Name = "label148";
-            this.helpProvider1.SetShowHelp(this.label148, ((bool)(resources.GetObject("label148.ShowHelp"))));
-            // 
-            // label149
-            // 
-            resources.ApplyResources(this.label149, "label149");
-            this.label149.Name = "label149";
-            this.helpProvider1.SetShowHelp(this.label149, ((bool)(resources.GetObject("label149.ShowHelp"))));
-            // 
-            // label150
-            // 
-            resources.ApplyResources(this.label150, "label150");
-            this.label150.Name = "label150";
-            this.helpProvider1.SetShowHelp(this.label150, ((bool)(resources.GetObject("label150.ShowHelp"))));
-            // 
-            // label151
-            // 
-            resources.ApplyResources(this.label151, "label151");
-            this.label151.Name = "label151";
-            this.helpProvider1.SetShowHelp(this.label151, ((bool)(resources.GetObject("label151.ShowHelp"))));
-            // 
             // tabPage44
             // 
             this.tabPage44.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_ImageY);
-            this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_ImageX);
-            this.tabPage44.Controls.Add(this.label430);
-            this.tabPage44.Controls.Add(this.label431);
-            this.tabPage44.Controls.Add(this.checkBox_ActivityPulsScale_Image);
             this.tabPage44.Controls.Add(this.comboBox_ActivityPulsScale_Image);
             this.tabPage44.Controls.Add(this.comboBox_ActivityPulsScale_Flatness);
-            this.tabPage44.Controls.Add(this.label417);
             this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_EndAngle);
-            this.tabPage44.Controls.Add(this.label418);
             this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_StartAngle);
-            this.tabPage44.Controls.Add(this.label419);
             this.tabPage44.Controls.Add(this.comboBox_ActivityPulsScale_Color);
-            this.tabPage44.Controls.Add(this.label420);
             this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_Width);
-            this.tabPage44.Controls.Add(this.label421);
             this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_Radius_Y);
-            this.tabPage44.Controls.Add(this.label422);
             this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_Radius_X);
-            this.tabPage44.Controls.Add(this.label423);
             this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_Center_Y);
-            this.tabPage44.Controls.Add(this.label424);
             this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_Center_X);
-            this.tabPage44.Controls.Add(this.label425);
+            this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_ImageY);
             this.tabPage44.Controls.Add(this.checkBox_ActivityPulsScale);
+            this.tabPage44.Controls.Add(this.numericUpDown_ActivityPulsScale_ImageX);
+            this.tabPage44.Controls.Add(this.label425);
+            this.tabPage44.Controls.Add(this.label430);
+            this.tabPage44.Controls.Add(this.label431);
+            this.tabPage44.Controls.Add(this.label424);
+            this.tabPage44.Controls.Add(this.checkBox_ActivityPulsScale_Image);
+            this.tabPage44.Controls.Add(this.label423);
+            this.tabPage44.Controls.Add(this.label417);
+            this.tabPage44.Controls.Add(this.label422);
+            this.tabPage44.Controls.Add(this.label418);
+            this.tabPage44.Controls.Add(this.label421);
+            this.tabPage44.Controls.Add(this.label419);
+            this.tabPage44.Controls.Add(this.label420);
             resources.ApplyResources(this.tabPage44, "tabPage44");
             this.tabPage44.Name = "tabPage44";
             this.helpProvider1.SetShowHelp(this.tabPage44, ((bool)(resources.GetObject("tabPage44.ShowHelp"))));
-            // 
-            // numericUpDown_ActivityPulsScale_ImageY
-            // 
-            this.numericUpDown_ActivityPulsScale_ImageY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_ActivityPulsScale_ImageY, "numericUpDown_ActivityPulsScale_ImageY");
-            this.numericUpDown_ActivityPulsScale_ImageY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityPulsScale_ImageY.Name = "numericUpDown_ActivityPulsScale_ImageY";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPulsScale_ImageY, ((bool)(resources.GetObject("numericUpDown_ActivityPulsScale_ImageY.ShowHelp"))));
-            this.numericUpDown_ActivityPulsScale_ImageY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityPulsScale_ImageY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_ActivityPulsScale_ImageX
-            // 
-            this.numericUpDown_ActivityPulsScale_ImageX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_ActivityPulsScale_ImageX, "numericUpDown_ActivityPulsScale_ImageX");
-            this.numericUpDown_ActivityPulsScale_ImageX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityPulsScale_ImageX.Name = "numericUpDown_ActivityPulsScale_ImageX";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPulsScale_ImageX, ((bool)(resources.GetObject("numericUpDown_ActivityPulsScale_ImageX.ShowHelp"))));
-            this.numericUpDown_ActivityPulsScale_ImageX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityPulsScale_ImageX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // label430
-            // 
-            resources.ApplyResources(this.label430, "label430");
-            this.label430.Name = "label430";
-            this.helpProvider1.SetShowHelp(this.label430, ((bool)(resources.GetObject("label430.ShowHelp"))));
-            // 
-            // label431
-            // 
-            resources.ApplyResources(this.label431, "label431");
-            this.label431.Name = "label431";
-            this.helpProvider1.SetShowHelp(this.label431, ((bool)(resources.GetObject("label431.ShowHelp"))));
-            // 
-            // checkBox_ActivityPulsScale_Image
-            // 
-            resources.ApplyResources(this.checkBox_ActivityPulsScale_Image, "checkBox_ActivityPulsScale_Image");
-            this.checkBox_ActivityPulsScale_Image.Name = "checkBox_ActivityPulsScale_Image";
-            this.helpProvider1.SetShowHelp(this.checkBox_ActivityPulsScale_Image, ((bool)(resources.GetObject("checkBox_ActivityPulsScale_Image.ShowHelp"))));
-            this.checkBox_ActivityPulsScale_Image.UseVisualStyleBackColor = true;
-            this.checkBox_ActivityPulsScale_Image.CheckedChanged += new System.EventHandler(this.checkBox_ActivityPulsScale_Image_CheckedChanged);
-            this.checkBox_ActivityPulsScale_Image.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // comboBox_ActivityPulsScale_Image
             // 
@@ -10159,12 +10833,6 @@
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityPulsScale_Flatness, ((bool)(resources.GetObject("comboBox_ActivityPulsScale_Flatness.ShowHelp"))));
             this.comboBox_ActivityPulsScale_Flatness.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // label417
-            // 
-            resources.ApplyResources(this.label417, "label417");
-            this.label417.Name = "label417";
-            this.helpProvider1.SetShowHelp(this.label417, ((bool)(resources.GetObject("label417.ShowHelp"))));
-            // 
             // numericUpDown_ActivityPulsScale_EndAngle
             // 
             resources.ApplyResources(this.numericUpDown_ActivityPulsScale_EndAngle, "numericUpDown_ActivityPulsScale_EndAngle");
@@ -10186,12 +10854,6 @@
             0,
             0});
             this.numericUpDown_ActivityPulsScale_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label418
-            // 
-            resources.ApplyResources(this.label418, "label418");
-            this.label418.Name = "label418";
-            this.helpProvider1.SetShowHelp(this.label418, ((bool)(resources.GetObject("label418.ShowHelp"))));
             // 
             // numericUpDown_ActivityPulsScale_StartAngle
             // 
@@ -10215,12 +10877,6 @@
             0});
             this.numericUpDown_ActivityPulsScale_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label419
-            // 
-            resources.ApplyResources(this.label419, "label419");
-            this.label419.Name = "label419";
-            this.helpProvider1.SetShowHelp(this.label419, ((bool)(resources.GetObject("label419.ShowHelp"))));
-            // 
             // comboBox_ActivityPulsScale_Color
             // 
             this.comboBox_ActivityPulsScale_Color.BackColor = System.Drawing.Color.DarkOrange;
@@ -10231,12 +10887,6 @@
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityPulsScale_Color, ((bool)(resources.GetObject("comboBox_ActivityPulsScale_Color.ShowHelp"))));
             this.comboBox_ActivityPulsScale_Color.Click += new System.EventHandler(this.comboBox_ActivityPulsScale_Color_Click);
             this.comboBox_ActivityPulsScale_Color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label420
-            // 
-            resources.ApplyResources(this.label420, "label420");
-            this.label420.Name = "label420";
-            this.helpProvider1.SetShowHelp(this.label420, ((bool)(resources.GetObject("label420.ShowHelp"))));
             // 
             // numericUpDown_ActivityPulsScale_Width
             // 
@@ -10255,12 +10905,6 @@
             0});
             this.numericUpDown_ActivityPulsScale_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label421
-            // 
-            resources.ApplyResources(this.label421, "label421");
-            this.label421.Name = "label421";
-            this.helpProvider1.SetShowHelp(this.label421, ((bool)(resources.GetObject("label421.ShowHelp"))));
-            // 
             // numericUpDown_ActivityPulsScale_Radius_Y
             // 
             resources.ApplyResources(this.numericUpDown_ActivityPulsScale_Radius_Y, "numericUpDown_ActivityPulsScale_Radius_Y");
@@ -10273,12 +10917,6 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPulsScale_Radius_Y, ((bool)(resources.GetObject("numericUpDown_ActivityPulsScale_Radius_Y.ShowHelp"))));
             this.numericUpDown_ActivityPulsScale_Radius_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label422
-            // 
-            resources.ApplyResources(this.label422, "label422");
-            this.label422.Name = "label422";
-            this.helpProvider1.SetShowHelp(this.label422, ((bool)(resources.GetObject("label422.ShowHelp"))));
-            // 
             // numericUpDown_ActivityPulsScale_Radius_X
             // 
             resources.ApplyResources(this.numericUpDown_ActivityPulsScale_Radius_X, "numericUpDown_ActivityPulsScale_Radius_X");
@@ -10290,12 +10928,6 @@
             this.numericUpDown_ActivityPulsScale_Radius_X.Name = "numericUpDown_ActivityPulsScale_Radius_X";
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPulsScale_Radius_X, ((bool)(resources.GetObject("numericUpDown_ActivityPulsScale_Radius_X.ShowHelp"))));
             this.numericUpDown_ActivityPulsScale_Radius_X.ValueChanged += new System.EventHandler(this.numericUpDown_ActivityPulsScale_Radius_X_ValueChanged);
-            // 
-            // label423
-            // 
-            resources.ApplyResources(this.label423, "label423");
-            this.label423.Name = "label423";
-            this.helpProvider1.SetShowHelp(this.label423, ((bool)(resources.GetObject("label423.ShowHelp"))));
             // 
             // numericUpDown_ActivityPulsScale_Center_Y
             // 
@@ -10316,12 +10948,6 @@
             this.numericUpDown_ActivityPulsScale_Center_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityPulsScale_Center_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // label424
-            // 
-            resources.ApplyResources(this.label424, "label424");
-            this.label424.Name = "label424";
-            this.helpProvider1.SetShowHelp(this.label424, ((bool)(resources.GetObject("label424.ShowHelp"))));
-            // 
             // numericUpDown_ActivityPulsScale_Center_X
             // 
             this.numericUpDown_ActivityPulsScale_Center_X.ContextMenuStrip = this.contextMenuStrip_X;
@@ -10341,11 +10967,19 @@
             this.numericUpDown_ActivityPulsScale_Center_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityPulsScale_Center_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // label425
+            // numericUpDown_ActivityPulsScale_ImageY
             // 
-            resources.ApplyResources(this.label425, "label425");
-            this.label425.Name = "label425";
-            this.helpProvider1.SetShowHelp(this.label425, ((bool)(resources.GetObject("label425.ShowHelp"))));
+            this.numericUpDown_ActivityPulsScale_ImageY.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_ActivityPulsScale_ImageY, "numericUpDown_ActivityPulsScale_ImageY");
+            this.numericUpDown_ActivityPulsScale_ImageY.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityPulsScale_ImageY.Name = "numericUpDown_ActivityPulsScale_ImageY";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPulsScale_ImageY, ((bool)(resources.GetObject("numericUpDown_ActivityPulsScale_ImageY.ShowHelp"))));
+            this.numericUpDown_ActivityPulsScale_ImageY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityPulsScale_ImageY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // checkBox_ActivityPulsScale
             // 
@@ -10356,27 +10990,164 @@
             this.checkBox_ActivityPulsScale.CheckedChanged += new System.EventHandler(this.checkBox_ActivityPulsScale_CheckedChanged);
             this.checkBox_ActivityPulsScale.Click += new System.EventHandler(this.checkBox_Click);
             // 
+            // numericUpDown_ActivityPulsScale_ImageX
+            // 
+            this.numericUpDown_ActivityPulsScale_ImageX.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_ActivityPulsScale_ImageX, "numericUpDown_ActivityPulsScale_ImageX");
+            this.numericUpDown_ActivityPulsScale_ImageX.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityPulsScale_ImageX.Name = "numericUpDown_ActivityPulsScale_ImageX";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityPulsScale_ImageX, ((bool)(resources.GetObject("numericUpDown_ActivityPulsScale_ImageX.ShowHelp"))));
+            this.numericUpDown_ActivityPulsScale_ImageX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityPulsScale_ImageX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // label425
+            // 
+            resources.ApplyResources(this.label425, "label425");
+            this.label425.Name = "label425";
+            this.helpProvider1.SetShowHelp(this.label425, ((bool)(resources.GetObject("label425.ShowHelp"))));
+            // 
+            // label430
+            // 
+            resources.ApplyResources(this.label430, "label430");
+            this.label430.Name = "label430";
+            this.helpProvider1.SetShowHelp(this.label430, ((bool)(resources.GetObject("label430.ShowHelp"))));
+            // 
+            // label431
+            // 
+            resources.ApplyResources(this.label431, "label431");
+            this.label431.Name = "label431";
+            this.helpProvider1.SetShowHelp(this.label431, ((bool)(resources.GetObject("label431.ShowHelp"))));
+            // 
+            // label424
+            // 
+            resources.ApplyResources(this.label424, "label424");
+            this.label424.Name = "label424";
+            this.helpProvider1.SetShowHelp(this.label424, ((bool)(resources.GetObject("label424.ShowHelp"))));
+            // 
+            // checkBox_ActivityPulsScale_Image
+            // 
+            resources.ApplyResources(this.checkBox_ActivityPulsScale_Image, "checkBox_ActivityPulsScale_Image");
+            this.checkBox_ActivityPulsScale_Image.Name = "checkBox_ActivityPulsScale_Image";
+            this.helpProvider1.SetShowHelp(this.checkBox_ActivityPulsScale_Image, ((bool)(resources.GetObject("checkBox_ActivityPulsScale_Image.ShowHelp"))));
+            this.checkBox_ActivityPulsScale_Image.UseVisualStyleBackColor = true;
+            this.checkBox_ActivityPulsScale_Image.CheckedChanged += new System.EventHandler(this.checkBox_ActivityPulsScale_Image_CheckedChanged);
+            this.checkBox_ActivityPulsScale_Image.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // label423
+            // 
+            resources.ApplyResources(this.label423, "label423");
+            this.label423.Name = "label423";
+            this.helpProvider1.SetShowHelp(this.label423, ((bool)(resources.GetObject("label423.ShowHelp"))));
+            // 
+            // label417
+            // 
+            resources.ApplyResources(this.label417, "label417");
+            this.label417.Name = "label417";
+            this.helpProvider1.SetShowHelp(this.label417, ((bool)(resources.GetObject("label417.ShowHelp"))));
+            // 
+            // label422
+            // 
+            resources.ApplyResources(this.label422, "label422");
+            this.label422.Name = "label422";
+            this.helpProvider1.SetShowHelp(this.label422, ((bool)(resources.GetObject("label422.ShowHelp"))));
+            // 
+            // label418
+            // 
+            resources.ApplyResources(this.label418, "label418");
+            this.label418.Name = "label418";
+            this.helpProvider1.SetShowHelp(this.label418, ((bool)(resources.GetObject("label418.ShowHelp"))));
+            // 
+            // label421
+            // 
+            resources.ApplyResources(this.label421, "label421");
+            this.label421.Name = "label421";
+            this.helpProvider1.SetShowHelp(this.label421, ((bool)(resources.GetObject("label421.ShowHelp"))));
+            // 
+            // label419
+            // 
+            resources.ApplyResources(this.label419, "label419");
+            this.label419.Name = "label419";
+            this.helpProvider1.SetShowHelp(this.label419, ((bool)(resources.GetObject("label419.ShowHelp"))));
+            // 
+            // label420
+            // 
+            resources.ApplyResources(this.label420, "label420");
+            this.label420.Name = "label420";
+            this.helpProvider1.SetShowHelp(this.label420, ((bool)(resources.GetObject("label420.ShowHelp"))));
+            // 
             // tabPage51
             // 
             this.tabPage51.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_EndAngle);
-            this.tabPage51.Controls.Add(this.label466);
-            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_StartAngle);
-            this.tabPage51.Controls.Add(this.label467);
-            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_Offset_Y);
-            this.tabPage51.Controls.Add(this.label468);
-            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_Offset_X);
-            this.tabPage51.Controls.Add(this.label469);
-            this.tabPage51.Controls.Add(this.comboBox_Pulse_ClockHand_Image);
-            this.tabPage51.Controls.Add(this.label470);
             this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_Y);
-            this.tabPage51.Controls.Add(this.label471);
             this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_X);
-            this.tabPage51.Controls.Add(this.label472);
+            this.tabPage51.Controls.Add(this.comboBox_Pulse_ClockHand_Image);
+            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_EndAngle);
+            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_Offset_Y);
+            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_StartAngle);
+            this.tabPage51.Controls.Add(this.numericUpDown_Pulse_ClockHand_Offset_X);
             this.tabPage51.Controls.Add(this.checkBox_Pulse_ClockHand);
+            this.tabPage51.Controls.Add(this.label466);
+            this.tabPage51.Controls.Add(this.label472);
+            this.tabPage51.Controls.Add(this.label467);
+            this.tabPage51.Controls.Add(this.label471);
+            this.tabPage51.Controls.Add(this.label468);
+            this.tabPage51.Controls.Add(this.label470);
+            this.tabPage51.Controls.Add(this.label469);
             resources.ApplyResources(this.tabPage51, "tabPage51");
             this.tabPage51.Name = "tabPage51";
             this.helpProvider1.SetShowHelp(this.tabPage51, ((bool)(resources.GetObject("tabPage51.ShowHelp"))));
+            // 
+            // numericUpDown_Pulse_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_Y, "numericUpDown_Pulse_ClockHand_Y");
+            this.numericUpDown_Pulse_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Pulse_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Pulse_ClockHand_Y.Name = "numericUpDown_Pulse_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_Pulse_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Pulse_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_X, "numericUpDown_Pulse_ClockHand_X");
+            this.numericUpDown_Pulse_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Pulse_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Pulse_ClockHand_X.Name = "numericUpDown_Pulse_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_Pulse_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // comboBox_Pulse_ClockHand_Image
+            // 
+            this.comboBox_Pulse_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Pulse_ClockHand_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Pulse_ClockHand_Image, "comboBox_Pulse_ClockHand_Image");
+            this.comboBox_Pulse_ClockHand_Image.FormattingEnabled = true;
+            this.comboBox_Pulse_ClockHand_Image.Name = "comboBox_Pulse_ClockHand_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_Pulse_ClockHand_Image, ((bool)(resources.GetObject("comboBox_Pulse_ClockHand_Image.ShowHelp"))));
+            this.comboBox_Pulse_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Pulse_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Pulse_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Pulse_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            this.comboBox_Pulse_ClockHand_Image.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
             // 
             // numericUpDown_Pulse_ClockHand_EndAngle
             // 
@@ -10400,11 +11171,23 @@
             0});
             this.numericUpDown_Pulse_ClockHand_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label466
+            // numericUpDown_Pulse_ClockHand_Offset_Y
             // 
-            resources.ApplyResources(this.label466, "label466");
-            this.label466.Name = "label466";
-            this.helpProvider1.SetShowHelp(this.label466, ((bool)(resources.GetObject("label466.ShowHelp"))));
+            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_Offset_Y, "numericUpDown_Pulse_ClockHand_Offset_Y");
+            this.numericUpDown_Pulse_ClockHand_Offset_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Pulse_ClockHand_Offset_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Pulse_ClockHand_Offset_Y.Name = "numericUpDown_Pulse_ClockHand_Offset_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_Offset_Y, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_Offset_Y.ShowHelp"))));
+            this.numericUpDown_Pulse_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Pulse_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
             // 
             // numericUpDown_Pulse_ClockHand_StartAngle
             // 
@@ -10428,36 +11211,6 @@
             0});
             this.numericUpDown_Pulse_ClockHand_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label467
-            // 
-            resources.ApplyResources(this.label467, "label467");
-            this.label467.Name = "label467";
-            this.helpProvider1.SetShowHelp(this.label467, ((bool)(resources.GetObject("label467.ShowHelp"))));
-            // 
-            // numericUpDown_Pulse_ClockHand_Offset_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_Offset_Y, "numericUpDown_Pulse_ClockHand_Offset_Y");
-            this.numericUpDown_Pulse_ClockHand_Offset_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Pulse_ClockHand_Offset_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Pulse_ClockHand_Offset_Y.Name = "numericUpDown_Pulse_ClockHand_Offset_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_Offset_Y, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_Offset_Y.ShowHelp"))));
-            this.numericUpDown_Pulse_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Pulse_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
-            // 
-            // label468
-            // 
-            resources.ApplyResources(this.label468, "label468");
-            this.label468.Name = "label468";
-            this.helpProvider1.SetShowHelp(this.label468, ((bool)(resources.GetObject("label468.ShowHelp"))));
-            // 
             // numericUpDown_Pulse_ClockHand_Offset_X
             // 
             resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_Offset_X, "numericUpDown_Pulse_ClockHand_Offset_X");
@@ -10476,78 +11229,6 @@
             this.numericUpDown_Pulse_ClockHand_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_Pulse_ClockHand_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
             // 
-            // label469
-            // 
-            resources.ApplyResources(this.label469, "label469");
-            this.label469.Name = "label469";
-            this.helpProvider1.SetShowHelp(this.label469, ((bool)(resources.GetObject("label469.ShowHelp"))));
-            // 
-            // comboBox_Pulse_ClockHand_Image
-            // 
-            this.comboBox_Pulse_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Pulse_ClockHand_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Pulse_ClockHand_Image, "comboBox_Pulse_ClockHand_Image");
-            this.comboBox_Pulse_ClockHand_Image.FormattingEnabled = true;
-            this.comboBox_Pulse_ClockHand_Image.Name = "comboBox_Pulse_ClockHand_Image";
-            this.helpProvider1.SetShowHelp(this.comboBox_Pulse_ClockHand_Image, ((bool)(resources.GetObject("comboBox_Pulse_ClockHand_Image.ShowHelp"))));
-            this.comboBox_Pulse_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Pulse_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Pulse_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Pulse_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            this.comboBox_Pulse_ClockHand_Image.KeyUp += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            // 
-            // label470
-            // 
-            resources.ApplyResources(this.label470, "label470");
-            this.label470.Name = "label470";
-            this.helpProvider1.SetShowHelp(this.label470, ((bool)(resources.GetObject("label470.ShowHelp"))));
-            // 
-            // numericUpDown_Pulse_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_Y, "numericUpDown_Pulse_ClockHand_Y");
-            this.numericUpDown_Pulse_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Pulse_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Pulse_ClockHand_Y.Name = "numericUpDown_Pulse_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_Pulse_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label471
-            // 
-            resources.ApplyResources(this.label471, "label471");
-            this.label471.Name = "label471";
-            this.helpProvider1.SetShowHelp(this.label471, ((bool)(resources.GetObject("label471.ShowHelp"))));
-            // 
-            // numericUpDown_Pulse_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_Pulse_ClockHand_X, "numericUpDown_Pulse_ClockHand_X");
-            this.numericUpDown_Pulse_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Pulse_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Pulse_ClockHand_X.Name = "numericUpDown_Pulse_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Pulse_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Pulse_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_Pulse_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label472
-            // 
-            resources.ApplyResources(this.label472, "label472");
-            this.label472.Name = "label472";
-            this.helpProvider1.SetShowHelp(this.label472, ((bool)(resources.GetObject("label472.ShowHelp"))));
-            // 
             // checkBox_Pulse_ClockHand
             // 
             resources.ApplyResources(this.checkBox_Pulse_ClockHand, "checkBox_Pulse_ClockHand");
@@ -10555,6 +11236,48 @@
             this.helpProvider1.SetShowHelp(this.checkBox_Pulse_ClockHand, ((bool)(resources.GetObject("checkBox_Pulse_ClockHand.ShowHelp"))));
             this.checkBox_Pulse_ClockHand.UseVisualStyleBackColor = true;
             this.checkBox_Pulse_ClockHand.CheckedChanged += new System.EventHandler(this.checkBox_Pulse_ClockHand_CheckedChanged);
+            // 
+            // label466
+            // 
+            resources.ApplyResources(this.label466, "label466");
+            this.label466.Name = "label466";
+            this.helpProvider1.SetShowHelp(this.label466, ((bool)(resources.GetObject("label466.ShowHelp"))));
+            // 
+            // label472
+            // 
+            resources.ApplyResources(this.label472, "label472");
+            this.label472.Name = "label472";
+            this.helpProvider1.SetShowHelp(this.label472, ((bool)(resources.GetObject("label472.ShowHelp"))));
+            // 
+            // label467
+            // 
+            resources.ApplyResources(this.label467, "label467");
+            this.label467.Name = "label467";
+            this.helpProvider1.SetShowHelp(this.label467, ((bool)(resources.GetObject("label467.ShowHelp"))));
+            // 
+            // label471
+            // 
+            resources.ApplyResources(this.label471, "label471");
+            this.label471.Name = "label471";
+            this.helpProvider1.SetShowHelp(this.label471, ((bool)(resources.GetObject("label471.ShowHelp"))));
+            // 
+            // label468
+            // 
+            resources.ApplyResources(this.label468, "label468");
+            this.label468.Name = "label468";
+            this.helpProvider1.SetShowHelp(this.label468, ((bool)(resources.GetObject("label468.ShowHelp"))));
+            // 
+            // label470
+            // 
+            resources.ApplyResources(this.label470, "label470");
+            this.label470.Name = "label470";
+            this.helpProvider1.SetShowHelp(this.label470, ((bool)(resources.GetObject("label470.ShowHelp"))));
+            // 
+            // label469
+            // 
+            resources.ApplyResources(this.label469, "label469");
+            this.label469.Name = "label469";
+            this.helpProvider1.SetShowHelp(this.label469, ((bool)(resources.GetObject("label469.ShowHelp"))));
             // 
             // tabPage45
             // 
@@ -10629,28 +11352,46 @@
             this.label121.Name = "label121";
             this.helpProvider1.SetShowHelp(this.label121, ((bool)(resources.GetObject("label121.ShowHelp"))));
             // 
+            // tabPage59
+            // 
+            this.tabPage59.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage59.Controls.Add(this.tabControl9);
+            resources.ApplyResources(this.tabPage59, "tabPage59");
+            this.tabPage59.Name = "tabPage59";
+            this.helpProvider1.SetShowHelp(this.tabPage59, ((bool)(resources.GetObject("tabPage59.ShowHelp"))));
+            // 
+            // tabControl9
+            // 
+            this.tabControl9.Controls.Add(this.tabPage15);
+            this.tabControl9.Controls.Add(this.tabPage11);
+            this.tabControl9.Controls.Add(this.tabPage52);
+            resources.ApplyResources(this.tabControl9, "tabControl9");
+            this.tabControl9.Name = "tabControl9";
+            this.tabControl9.SelectedIndex = 0;
+            this.helpProvider1.SetShowHelp(this.tabControl9, ((bool)(resources.GetObject("tabControl9.ShowHelp"))));
+            // 
             // tabPage15
             // 
             this.tabPage15.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_EndCorner_X);
-            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_Count);
-            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_StartCorner_Y);
-            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_StartCorner_X);
-            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_Spacing);
             this.tabPage15.Controls.Add(this.checkBox_ActivityCalories);
+            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_Count);
+            this.tabPage15.Controls.Add(this.label161);
+            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_StartCorner_Y);
+            this.tabPage15.Controls.Add(this.label160);
+            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_StartCorner_X);
+            this.tabPage15.Controls.Add(this.label159);
+            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_Spacing);
+            this.tabPage15.Controls.Add(this.label158);
+            this.tabPage15.Controls.Add(this.label157);
             this.tabPage15.Controls.Add(this.label152);
+            this.tabPage15.Controls.Add(this.comboBox_ActivityCalories_Image);
             this.tabPage15.Controls.Add(this.label153);
+            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_EndCorner_Y);
             this.tabPage15.Controls.Add(this.comboBox_ActivityCalories_Alignment);
+            this.tabPage15.Controls.Add(this.label156);
             this.tabPage15.Controls.Add(this.label154);
             this.tabPage15.Controls.Add(this.label155);
-            this.tabPage15.Controls.Add(this.label156);
-            this.tabPage15.Controls.Add(this.numericUpDown_ActivityCalories_EndCorner_Y);
-            this.tabPage15.Controls.Add(this.comboBox_ActivityCalories_Image);
-            this.tabPage15.Controls.Add(this.label157);
-            this.tabPage15.Controls.Add(this.label158);
-            this.tabPage15.Controls.Add(this.label159);
-            this.tabPage15.Controls.Add(this.label160);
-            this.tabPage15.Controls.Add(this.label161);
             resources.ApplyResources(this.tabPage15, "tabPage15");
             this.tabPage15.Name = "tabPage15";
             this.helpProvider1.SetShowHelp(this.tabPage15, ((bool)(resources.GetObject("tabPage15.ShowHelp"))));
@@ -10674,6 +11415,15 @@
             this.numericUpDown_ActivityCalories_EndCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityCalories_EndCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
+            // checkBox_ActivityCalories
+            // 
+            resources.ApplyResources(this.checkBox_ActivityCalories, "checkBox_ActivityCalories");
+            this.checkBox_ActivityCalories.Name = "checkBox_ActivityCalories";
+            this.helpProvider1.SetShowHelp(this.checkBox_ActivityCalories, ((bool)(resources.GetObject("checkBox_ActivityCalories.ShowHelp"))));
+            this.checkBox_ActivityCalories.UseVisualStyleBackColor = true;
+            this.checkBox_ActivityCalories.CheckedChanged += new System.EventHandler(this.checkBox_ActivityCalories_CheckedChanged);
+            this.checkBox_ActivityCalories.Click += new System.EventHandler(this.checkBox_Click);
+            // 
             // numericUpDown_ActivityCalories_Count
             // 
             resources.ApplyResources(this.numericUpDown_ActivityCalories_Count, "numericUpDown_ActivityCalories_Count");
@@ -10690,6 +11440,12 @@
             0,
             0});
             this.numericUpDown_ActivityCalories_Count.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // label161
+            // 
+            resources.ApplyResources(this.label161, "label161");
+            this.label161.Name = "label161";
+            this.helpProvider1.SetShowHelp(this.label161, ((bool)(resources.GetObject("label161.ShowHelp"))));
             // 
             // numericUpDown_ActivityCalories_StartCorner_Y
             // 
@@ -10710,6 +11466,12 @@
             this.numericUpDown_ActivityCalories_StartCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityCalories_StartCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
+            // label160
+            // 
+            resources.ApplyResources(this.label160, "label160");
+            this.label160.Name = "label160";
+            this.helpProvider1.SetShowHelp(this.label160, ((bool)(resources.GetObject("label160.ShowHelp"))));
+            // 
             // numericUpDown_ActivityCalories_StartCorner_X
             // 
             this.numericUpDown_ActivityCalories_StartCorner_X.ContextMenuStrip = this.contextMenuStrip_X;
@@ -10729,6 +11491,12 @@
             this.numericUpDown_ActivityCalories_StartCorner_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityCalories_StartCorner_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
+            // label159
+            // 
+            resources.ApplyResources(this.label159, "label159");
+            this.label159.Name = "label159";
+            this.helpProvider1.SetShowHelp(this.label159, ((bool)(resources.GetObject("label159.ShowHelp"))));
+            // 
             // numericUpDown_ActivityCalories_Spacing
             // 
             resources.ApplyResources(this.numericUpDown_ActivityCalories_Spacing, "numericUpDown_ActivityCalories_Spacing");
@@ -10746,14 +11514,17 @@
             this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCalories_Spacing, ((bool)(resources.GetObject("numericUpDown_ActivityCalories_Spacing.ShowHelp"))));
             this.numericUpDown_ActivityCalories_Spacing.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // checkBox_ActivityCalories
+            // label158
             // 
-            resources.ApplyResources(this.checkBox_ActivityCalories, "checkBox_ActivityCalories");
-            this.checkBox_ActivityCalories.Name = "checkBox_ActivityCalories";
-            this.helpProvider1.SetShowHelp(this.checkBox_ActivityCalories, ((bool)(resources.GetObject("checkBox_ActivityCalories.ShowHelp"))));
-            this.checkBox_ActivityCalories.UseVisualStyleBackColor = true;
-            this.checkBox_ActivityCalories.CheckedChanged += new System.EventHandler(this.checkBox_ActivityCalories_CheckedChanged);
-            this.checkBox_ActivityCalories.Click += new System.EventHandler(this.checkBox_Click);
+            resources.ApplyResources(this.label158, "label158");
+            this.label158.Name = "label158";
+            this.helpProvider1.SetShowHelp(this.label158, ((bool)(resources.GetObject("label158.ShowHelp"))));
+            // 
+            // label157
+            // 
+            resources.ApplyResources(this.label157, "label157");
+            this.label157.Name = "label157";
+            this.helpProvider1.SetShowHelp(this.label157, ((bool)(resources.GetObject("label157.ShowHelp"))));
             // 
             // label152
             // 
@@ -10761,48 +11532,25 @@
             this.label152.Name = "label152";
             this.helpProvider1.SetShowHelp(this.label152, ((bool)(resources.GetObject("label152.ShowHelp"))));
             // 
+            // comboBox_ActivityCalories_Image
+            // 
+            this.comboBox_ActivityCalories_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_ActivityCalories_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_ActivityCalories_Image, "comboBox_ActivityCalories_Image");
+            this.comboBox_ActivityCalories_Image.FormattingEnabled = true;
+            this.comboBox_ActivityCalories_Image.Name = "comboBox_ActivityCalories_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityCalories_Image, ((bool)(resources.GetObject("comboBox_ActivityCalories_Image.ShowHelp"))));
+            this.comboBox_ActivityCalories_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_ActivityCalories_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_ActivityCalories_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_ActivityCalories_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_ActivityCalories_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
             // label153
             // 
             resources.ApplyResources(this.label153, "label153");
             this.label153.Name = "label153";
             this.helpProvider1.SetShowHelp(this.label153, ((bool)(resources.GetObject("label153.ShowHelp"))));
-            // 
-            // comboBox_ActivityCalories_Alignment
-            // 
-            this.comboBox_ActivityCalories_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.comboBox_ActivityCalories_Alignment, "comboBox_ActivityCalories_Alignment");
-            this.comboBox_ActivityCalories_Alignment.FormattingEnabled = true;
-            this.comboBox_ActivityCalories_Alignment.Items.AddRange(new object[] {
-            resources.GetString("comboBox_ActivityCalories_Alignment.Items"),
-            resources.GetString("comboBox_ActivityCalories_Alignment.Items1"),
-            resources.GetString("comboBox_ActivityCalories_Alignment.Items2"),
-            resources.GetString("comboBox_ActivityCalories_Alignment.Items3"),
-            resources.GetString("comboBox_ActivityCalories_Alignment.Items4"),
-            resources.GetString("comboBox_ActivityCalories_Alignment.Items5"),
-            resources.GetString("comboBox_ActivityCalories_Alignment.Items6"),
-            resources.GetString("comboBox_ActivityCalories_Alignment.Items7"),
-            resources.GetString("comboBox_ActivityCalories_Alignment.Items8")});
-            this.comboBox_ActivityCalories_Alignment.Name = "comboBox_ActivityCalories_Alignment";
-            this.helpProvider1.SetShowHelp(this.comboBox_ActivityCalories_Alignment, ((bool)(resources.GetObject("comboBox_ActivityCalories_Alignment.ShowHelp"))));
-            this.comboBox_ActivityCalories_Alignment.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            // 
-            // label154
-            // 
-            resources.ApplyResources(this.label154, "label154");
-            this.label154.Name = "label154";
-            this.helpProvider1.SetShowHelp(this.label154, ((bool)(resources.GetObject("label154.ShowHelp"))));
-            // 
-            // label155
-            // 
-            resources.ApplyResources(this.label155, "label155");
-            this.label155.Name = "label155";
-            this.helpProvider1.SetShowHelp(this.label155, ((bool)(resources.GetObject("label155.ShowHelp"))));
-            // 
-            // label156
-            // 
-            resources.ApplyResources(this.label156, "label156");
-            this.label156.Name = "label156";
-            this.helpProvider1.SetShowHelp(this.label156, ((bool)(resources.GetObject("label156.ShowHelp"))));
             // 
             // numericUpDown_ActivityCalories_EndCorner_Y
             // 
@@ -10823,130 +11571,74 @@
             this.numericUpDown_ActivityCalories_EndCorner_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityCalories_EndCorner_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // comboBox_ActivityCalories_Image
+            // comboBox_ActivityCalories_Alignment
             // 
-            this.comboBox_ActivityCalories_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_ActivityCalories_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_ActivityCalories_Image, "comboBox_ActivityCalories_Image");
-            this.comboBox_ActivityCalories_Image.FormattingEnabled = true;
-            this.comboBox_ActivityCalories_Image.Name = "comboBox_ActivityCalories_Image";
-            this.helpProvider1.SetShowHelp(this.comboBox_ActivityCalories_Image, ((bool)(resources.GetObject("comboBox_ActivityCalories_Image.ShowHelp"))));
-            this.comboBox_ActivityCalories_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_ActivityCalories_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_ActivityCalories_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_ActivityCalories_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_ActivityCalories_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            this.comboBox_ActivityCalories_Alignment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBox_ActivityCalories_Alignment, "comboBox_ActivityCalories_Alignment");
+            this.comboBox_ActivityCalories_Alignment.FormattingEnabled = true;
+            this.comboBox_ActivityCalories_Alignment.Items.AddRange(new object[] {
+            resources.GetString("comboBox_ActivityCalories_Alignment.Items"),
+            resources.GetString("comboBox_ActivityCalories_Alignment.Items1"),
+            resources.GetString("comboBox_ActivityCalories_Alignment.Items2"),
+            resources.GetString("comboBox_ActivityCalories_Alignment.Items3"),
+            resources.GetString("comboBox_ActivityCalories_Alignment.Items4"),
+            resources.GetString("comboBox_ActivityCalories_Alignment.Items5"),
+            resources.GetString("comboBox_ActivityCalories_Alignment.Items6"),
+            resources.GetString("comboBox_ActivityCalories_Alignment.Items7"),
+            resources.GetString("comboBox_ActivityCalories_Alignment.Items8")});
+            this.comboBox_ActivityCalories_Alignment.Name = "comboBox_ActivityCalories_Alignment";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityCalories_Alignment, ((bool)(resources.GetObject("comboBox_ActivityCalories_Alignment.ShowHelp"))));
+            this.comboBox_ActivityCalories_Alignment.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // label157
+            // label156
             // 
-            resources.ApplyResources(this.label157, "label157");
-            this.label157.Name = "label157";
-            this.helpProvider1.SetShowHelp(this.label157, ((bool)(resources.GetObject("label157.ShowHelp"))));
+            resources.ApplyResources(this.label156, "label156");
+            this.label156.Name = "label156";
+            this.helpProvider1.SetShowHelp(this.label156, ((bool)(resources.GetObject("label156.ShowHelp"))));
             // 
-            // label158
+            // label154
             // 
-            resources.ApplyResources(this.label158, "label158");
-            this.label158.Name = "label158";
-            this.helpProvider1.SetShowHelp(this.label158, ((bool)(resources.GetObject("label158.ShowHelp"))));
+            resources.ApplyResources(this.label154, "label154");
+            this.label154.Name = "label154";
+            this.helpProvider1.SetShowHelp(this.label154, ((bool)(resources.GetObject("label154.ShowHelp"))));
             // 
-            // label159
+            // label155
             // 
-            resources.ApplyResources(this.label159, "label159");
-            this.label159.Name = "label159";
-            this.helpProvider1.SetShowHelp(this.label159, ((bool)(resources.GetObject("label159.ShowHelp"))));
-            // 
-            // label160
-            // 
-            resources.ApplyResources(this.label160, "label160");
-            this.label160.Name = "label160";
-            this.helpProvider1.SetShowHelp(this.label160, ((bool)(resources.GetObject("label160.ShowHelp"))));
-            // 
-            // label161
-            // 
-            resources.ApplyResources(this.label161, "label161");
-            this.label161.Name = "label161";
-            this.helpProvider1.SetShowHelp(this.label161, ((bool)(resources.GetObject("label161.ShowHelp"))));
+            resources.ApplyResources(this.label155, "label155");
+            this.label155.Name = "label155";
+            this.helpProvider1.SetShowHelp(this.label155, ((bool)(resources.GetObject("label155.ShowHelp"))));
             // 
             // tabPage11
             // 
             this.tabPage11.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_ImageY);
-            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_ImageX);
-            this.tabPage11.Controls.Add(this.label426);
-            this.tabPage11.Controls.Add(this.label427);
-            this.tabPage11.Controls.Add(this.checkBox_ActivityCaloriesScale_Image);
             this.tabPage11.Controls.Add(this.comboBox_ActivityCaloriesScale_Image);
             this.tabPage11.Controls.Add(this.comboBox_ActivityCaloriesScale_Flatness);
-            this.tabPage11.Controls.Add(this.label112);
             this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_EndAngle);
-            this.tabPage11.Controls.Add(this.label113);
             this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_StartAngle);
-            this.tabPage11.Controls.Add(this.label114);
-            this.tabPage11.Controls.Add(this.comboBox_ActivityCaloriesScale_Color);
-            this.tabPage11.Controls.Add(this.label115);
-            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_Width);
-            this.tabPage11.Controls.Add(this.label116);
-            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_Radius_Y);
-            this.tabPage11.Controls.Add(this.label117);
-            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_Radius_X);
-            this.tabPage11.Controls.Add(this.label118);
             this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_Center_Y);
-            this.tabPage11.Controls.Add(this.label119);
+            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_Radius_Y);
+            this.tabPage11.Controls.Add(this.comboBox_ActivityCaloriesScale_Color);
+            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_Width);
+            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_Radius_X);
             this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_Center_X);
-            this.tabPage11.Controls.Add(this.label120);
+            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_ImageY);
             this.tabPage11.Controls.Add(this.checkBox_ActivityCaloriesScale);
+            this.tabPage11.Controls.Add(this.numericUpDown_ActivityCaloriesScale_ImageX);
+            this.tabPage11.Controls.Add(this.label120);
+            this.tabPage11.Controls.Add(this.label426);
+            this.tabPage11.Controls.Add(this.label427);
+            this.tabPage11.Controls.Add(this.label119);
+            this.tabPage11.Controls.Add(this.checkBox_ActivityCaloriesScale_Image);
+            this.tabPage11.Controls.Add(this.label118);
+            this.tabPage11.Controls.Add(this.label112);
+            this.tabPage11.Controls.Add(this.label117);
+            this.tabPage11.Controls.Add(this.label113);
+            this.tabPage11.Controls.Add(this.label116);
+            this.tabPage11.Controls.Add(this.label114);
+            this.tabPage11.Controls.Add(this.label115);
             resources.ApplyResources(this.tabPage11, "tabPage11");
             this.tabPage11.Name = "tabPage11";
             this.helpProvider1.SetShowHelp(this.tabPage11, ((bool)(resources.GetObject("tabPage11.ShowHelp"))));
-            // 
-            // numericUpDown_ActivityCaloriesScale_ImageY
-            // 
-            this.numericUpDown_ActivityCaloriesScale_ImageY.ContextMenuStrip = this.contextMenuStrip_Y;
-            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_ImageY, "numericUpDown_ActivityCaloriesScale_ImageY");
-            this.numericUpDown_ActivityCaloriesScale_ImageY.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityCaloriesScale_ImageY.Name = "numericUpDown_ActivityCaloriesScale_ImageY";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_ImageY, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_ImageY.ShowHelp"))));
-            this.numericUpDown_ActivityCaloriesScale_ImageY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityCaloriesScale_ImageY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
-            // 
-            // numericUpDown_ActivityCaloriesScale_ImageX
-            // 
-            this.numericUpDown_ActivityCaloriesScale_ImageX.ContextMenuStrip = this.contextMenuStrip_X;
-            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_ImageX, "numericUpDown_ActivityCaloriesScale_ImageX");
-            this.numericUpDown_ActivityCaloriesScale_ImageX.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityCaloriesScale_ImageX.Name = "numericUpDown_ActivityCaloriesScale_ImageX";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_ImageX, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_ImageX.ShowHelp"))));
-            this.numericUpDown_ActivityCaloriesScale_ImageX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_ActivityCaloriesScale_ImageX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
-            // 
-            // label426
-            // 
-            resources.ApplyResources(this.label426, "label426");
-            this.label426.Name = "label426";
-            this.helpProvider1.SetShowHelp(this.label426, ((bool)(resources.GetObject("label426.ShowHelp"))));
-            // 
-            // label427
-            // 
-            resources.ApplyResources(this.label427, "label427");
-            this.label427.Name = "label427";
-            this.helpProvider1.SetShowHelp(this.label427, ((bool)(resources.GetObject("label427.ShowHelp"))));
-            // 
-            // checkBox_ActivityCaloriesScale_Image
-            // 
-            resources.ApplyResources(this.checkBox_ActivityCaloriesScale_Image, "checkBox_ActivityCaloriesScale_Image");
-            this.checkBox_ActivityCaloriesScale_Image.Name = "checkBox_ActivityCaloriesScale_Image";
-            this.helpProvider1.SetShowHelp(this.checkBox_ActivityCaloriesScale_Image, ((bool)(resources.GetObject("checkBox_ActivityCaloriesScale_Image.ShowHelp"))));
-            this.checkBox_ActivityCaloriesScale_Image.UseVisualStyleBackColor = true;
-            this.checkBox_ActivityCaloriesScale_Image.CheckedChanged += new System.EventHandler(this.checkBox_ActivityCaloriesScale_Image_CheckedChanged);
-            this.checkBox_ActivityCaloriesScale_Image.Click += new System.EventHandler(this.checkBox_Click);
             // 
             // comboBox_ActivityCaloriesScale_Image
             // 
@@ -10975,12 +11667,6 @@
             this.helpProvider1.SetShowHelp(this.comboBox_ActivityCaloriesScale_Flatness, ((bool)(resources.GetObject("comboBox_ActivityCaloriesScale_Flatness.ShowHelp"))));
             this.comboBox_ActivityCaloriesScale_Flatness.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
             // 
-            // label112
-            // 
-            resources.ApplyResources(this.label112, "label112");
-            this.label112.Name = "label112";
-            this.helpProvider1.SetShowHelp(this.label112, ((bool)(resources.GetObject("label112.ShowHelp"))));
-            // 
             // numericUpDown_ActivityCaloriesScale_EndAngle
             // 
             resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_EndAngle, "numericUpDown_ActivityCaloriesScale_EndAngle");
@@ -11002,12 +11688,6 @@
             0,
             0});
             this.numericUpDown_ActivityCaloriesScale_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label113
-            // 
-            resources.ApplyResources(this.label113, "label113");
-            this.label113.Name = "label113";
-            this.helpProvider1.SetShowHelp(this.label113, ((bool)(resources.GetObject("label113.ShowHelp"))));
             // 
             // numericUpDown_ActivityCaloriesScale_StartAngle
             // 
@@ -11031,88 +11711,6 @@
             0});
             this.numericUpDown_ActivityCaloriesScale_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label114
-            // 
-            resources.ApplyResources(this.label114, "label114");
-            this.label114.Name = "label114";
-            this.helpProvider1.SetShowHelp(this.label114, ((bool)(resources.GetObject("label114.ShowHelp"))));
-            // 
-            // comboBox_ActivityCaloriesScale_Color
-            // 
-            this.comboBox_ActivityCaloriesScale_Color.BackColor = System.Drawing.Color.DarkOrange;
-            this.comboBox_ActivityCaloriesScale_Color.DropDownHeight = 1;
-            resources.ApplyResources(this.comboBox_ActivityCaloriesScale_Color, "comboBox_ActivityCaloriesScale_Color");
-            this.comboBox_ActivityCaloriesScale_Color.FormattingEnabled = true;
-            this.comboBox_ActivityCaloriesScale_Color.Name = "comboBox_ActivityCaloriesScale_Color";
-            this.helpProvider1.SetShowHelp(this.comboBox_ActivityCaloriesScale_Color, ((bool)(resources.GetObject("comboBox_ActivityCaloriesScale_Color.ShowHelp"))));
-            this.comboBox_ActivityCaloriesScale_Color.Click += new System.EventHandler(this.comboBox_ActivityCaloriesScale_Color_Click);
-            this.comboBox_ActivityCaloriesScale_Color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label115
-            // 
-            resources.ApplyResources(this.label115, "label115");
-            this.label115.Name = "label115";
-            this.helpProvider1.SetShowHelp(this.label115, ((bool)(resources.GetObject("label115.ShowHelp"))));
-            // 
-            // numericUpDown_ActivityCaloriesScale_Width
-            // 
-            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_Width, "numericUpDown_ActivityCaloriesScale_Width");
-            this.numericUpDown_ActivityCaloriesScale_Width.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityCaloriesScale_Width.Name = "numericUpDown_ActivityCaloriesScale_Width";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_Width, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_Width.ShowHelp"))));
-            this.numericUpDown_ActivityCaloriesScale_Width.Value = new decimal(new int[] {
-            4,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityCaloriesScale_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label116
-            // 
-            resources.ApplyResources(this.label116, "label116");
-            this.label116.Name = "label116";
-            this.helpProvider1.SetShowHelp(this.label116, ((bool)(resources.GetObject("label116.ShowHelp"))));
-            // 
-            // numericUpDown_ActivityCaloriesScale_Radius_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_Radius_Y, "numericUpDown_ActivityCaloriesScale_Radius_Y");
-            this.numericUpDown_ActivityCaloriesScale_Radius_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityCaloriesScale_Radius_Y.Name = "numericUpDown_ActivityCaloriesScale_Radius_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_Radius_Y, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_Radius_Y.ShowHelp"))));
-            this.numericUpDown_ActivityCaloriesScale_Radius_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label117
-            // 
-            resources.ApplyResources(this.label117, "label117");
-            this.label117.Name = "label117";
-            this.helpProvider1.SetShowHelp(this.label117, ((bool)(resources.GetObject("label117.ShowHelp"))));
-            // 
-            // numericUpDown_ActivityCaloriesScale_Radius_X
-            // 
-            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_Radius_X, "numericUpDown_ActivityCaloriesScale_Radius_X");
-            this.numericUpDown_ActivityCaloriesScale_Radius_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ActivityCaloriesScale_Radius_X.Name = "numericUpDown_ActivityCaloriesScale_Radius_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_Radius_X, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_Radius_X.ShowHelp"))));
-            this.numericUpDown_ActivityCaloriesScale_Radius_X.ValueChanged += new System.EventHandler(this.numericUpDown_ActivityCaloriesScale_Radius_X_ValueChanged);
-            // 
-            // label118
-            // 
-            resources.ApplyResources(this.label118, "label118");
-            this.label118.Name = "label118";
-            this.helpProvider1.SetShowHelp(this.label118, ((bool)(resources.GetObject("label118.ShowHelp"))));
-            // 
             // numericUpDown_ActivityCaloriesScale_Center_Y
             // 
             this.numericUpDown_ActivityCaloriesScale_Center_Y.ContextMenuStrip = this.contextMenuStrip_Y;
@@ -11132,11 +11730,57 @@
             this.numericUpDown_ActivityCaloriesScale_Center_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityCaloriesScale_Center_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
-            // label119
+            // numericUpDown_ActivityCaloriesScale_Radius_Y
             // 
-            resources.ApplyResources(this.label119, "label119");
-            this.label119.Name = "label119";
-            this.helpProvider1.SetShowHelp(this.label119, ((bool)(resources.GetObject("label119.ShowHelp"))));
+            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_Radius_Y, "numericUpDown_ActivityCaloriesScale_Radius_Y");
+            this.numericUpDown_ActivityCaloriesScale_Radius_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityCaloriesScale_Radius_Y.Name = "numericUpDown_ActivityCaloriesScale_Radius_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_Radius_Y, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_Radius_Y.ShowHelp"))));
+            this.numericUpDown_ActivityCaloriesScale_Radius_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // comboBox_ActivityCaloriesScale_Color
+            // 
+            this.comboBox_ActivityCaloriesScale_Color.BackColor = System.Drawing.Color.DarkOrange;
+            this.comboBox_ActivityCaloriesScale_Color.DropDownHeight = 1;
+            resources.ApplyResources(this.comboBox_ActivityCaloriesScale_Color, "comboBox_ActivityCaloriesScale_Color");
+            this.comboBox_ActivityCaloriesScale_Color.FormattingEnabled = true;
+            this.comboBox_ActivityCaloriesScale_Color.Name = "comboBox_ActivityCaloriesScale_Color";
+            this.helpProvider1.SetShowHelp(this.comboBox_ActivityCaloriesScale_Color, ((bool)(resources.GetObject("comboBox_ActivityCaloriesScale_Color.ShowHelp"))));
+            this.comboBox_ActivityCaloriesScale_Color.Click += new System.EventHandler(this.comboBox_ActivityCaloriesScale_Color_Click);
+            this.comboBox_ActivityCaloriesScale_Color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_ActivityCaloriesScale_Width
+            // 
+            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_Width, "numericUpDown_ActivityCaloriesScale_Width");
+            this.numericUpDown_ActivityCaloriesScale_Width.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityCaloriesScale_Width.Name = "numericUpDown_ActivityCaloriesScale_Width";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_Width, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_Width.ShowHelp"))));
+            this.numericUpDown_ActivityCaloriesScale_Width.Value = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityCaloriesScale_Width.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_ActivityCaloriesScale_Radius_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_Radius_X, "numericUpDown_ActivityCaloriesScale_Radius_X");
+            this.numericUpDown_ActivityCaloriesScale_Radius_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityCaloriesScale_Radius_X.Name = "numericUpDown_ActivityCaloriesScale_Radius_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_Radius_X, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_Radius_X.ShowHelp"))));
+            this.numericUpDown_ActivityCaloriesScale_Radius_X.ValueChanged += new System.EventHandler(this.numericUpDown_ActivityCaloriesScale_Radius_X_ValueChanged);
             // 
             // numericUpDown_ActivityCaloriesScale_Center_X
             // 
@@ -11157,11 +11801,19 @@
             this.numericUpDown_ActivityCaloriesScale_Center_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_ActivityCaloriesScale_Center_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
             // 
-            // label120
+            // numericUpDown_ActivityCaloriesScale_ImageY
             // 
-            resources.ApplyResources(this.label120, "label120");
-            this.label120.Name = "label120";
-            this.helpProvider1.SetShowHelp(this.label120, ((bool)(resources.GetObject("label120.ShowHelp"))));
+            this.numericUpDown_ActivityCaloriesScale_ImageY.ContextMenuStrip = this.contextMenuStrip_Y;
+            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_ImageY, "numericUpDown_ActivityCaloriesScale_ImageY");
+            this.numericUpDown_ActivityCaloriesScale_ImageY.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityCaloriesScale_ImageY.Name = "numericUpDown_ActivityCaloriesScale_ImageY";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_ImageY, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_ImageY.ShowHelp"))));
+            this.numericUpDown_ActivityCaloriesScale_ImageY.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityCaloriesScale_ImageY.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_Y_MouseDoubleClick);
             // 
             // checkBox_ActivityCaloriesScale
             // 
@@ -11172,27 +11824,182 @@
             this.checkBox_ActivityCaloriesScale.CheckedChanged += new System.EventHandler(this.checkBox_ActivityCaloriesScale_CheckedChanged);
             this.checkBox_ActivityCaloriesScale.Click += new System.EventHandler(this.checkBox_Click);
             // 
+            // numericUpDown_ActivityCaloriesScale_ImageX
+            // 
+            this.numericUpDown_ActivityCaloriesScale_ImageX.ContextMenuStrip = this.contextMenuStrip_X;
+            resources.ApplyResources(this.numericUpDown_ActivityCaloriesScale_ImageX, "numericUpDown_ActivityCaloriesScale_ImageX");
+            this.numericUpDown_ActivityCaloriesScale_ImageX.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ActivityCaloriesScale_ImageX.Name = "numericUpDown_ActivityCaloriesScale_ImageX";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ActivityCaloriesScale_ImageX, ((bool)(resources.GetObject("numericUpDown_ActivityCaloriesScale_ImageX.ShowHelp"))));
+            this.numericUpDown_ActivityCaloriesScale_ImageX.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_ActivityCaloriesScale_ImageX.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_X_MouseDoubleClick);
+            // 
+            // label120
+            // 
+            resources.ApplyResources(this.label120, "label120");
+            this.label120.Name = "label120";
+            this.helpProvider1.SetShowHelp(this.label120, ((bool)(resources.GetObject("label120.ShowHelp"))));
+            // 
+            // label426
+            // 
+            resources.ApplyResources(this.label426, "label426");
+            this.label426.Name = "label426";
+            this.helpProvider1.SetShowHelp(this.label426, ((bool)(resources.GetObject("label426.ShowHelp"))));
+            // 
+            // label427
+            // 
+            resources.ApplyResources(this.label427, "label427");
+            this.label427.Name = "label427";
+            this.helpProvider1.SetShowHelp(this.label427, ((bool)(resources.GetObject("label427.ShowHelp"))));
+            // 
+            // label119
+            // 
+            resources.ApplyResources(this.label119, "label119");
+            this.label119.Name = "label119";
+            this.helpProvider1.SetShowHelp(this.label119, ((bool)(resources.GetObject("label119.ShowHelp"))));
+            // 
+            // checkBox_ActivityCaloriesScale_Image
+            // 
+            resources.ApplyResources(this.checkBox_ActivityCaloriesScale_Image, "checkBox_ActivityCaloriesScale_Image");
+            this.checkBox_ActivityCaloriesScale_Image.Name = "checkBox_ActivityCaloriesScale_Image";
+            this.helpProvider1.SetShowHelp(this.checkBox_ActivityCaloriesScale_Image, ((bool)(resources.GetObject("checkBox_ActivityCaloriesScale_Image.ShowHelp"))));
+            this.checkBox_ActivityCaloriesScale_Image.UseVisualStyleBackColor = true;
+            this.checkBox_ActivityCaloriesScale_Image.CheckedChanged += new System.EventHandler(this.checkBox_ActivityCaloriesScale_Image_CheckedChanged);
+            this.checkBox_ActivityCaloriesScale_Image.Click += new System.EventHandler(this.checkBox_Click);
+            // 
+            // label118
+            // 
+            resources.ApplyResources(this.label118, "label118");
+            this.label118.Name = "label118";
+            this.helpProvider1.SetShowHelp(this.label118, ((bool)(resources.GetObject("label118.ShowHelp"))));
+            // 
+            // label112
+            // 
+            resources.ApplyResources(this.label112, "label112");
+            this.label112.Name = "label112";
+            this.helpProvider1.SetShowHelp(this.label112, ((bool)(resources.GetObject("label112.ShowHelp"))));
+            // 
+            // label117
+            // 
+            resources.ApplyResources(this.label117, "label117");
+            this.label117.Name = "label117";
+            this.helpProvider1.SetShowHelp(this.label117, ((bool)(resources.GetObject("label117.ShowHelp"))));
+            // 
+            // label113
+            // 
+            resources.ApplyResources(this.label113, "label113");
+            this.label113.Name = "label113";
+            this.helpProvider1.SetShowHelp(this.label113, ((bool)(resources.GetObject("label113.ShowHelp"))));
+            // 
+            // label116
+            // 
+            resources.ApplyResources(this.label116, "label116");
+            this.label116.Name = "label116";
+            this.helpProvider1.SetShowHelp(this.label116, ((bool)(resources.GetObject("label116.ShowHelp"))));
+            // 
+            // label114
+            // 
+            resources.ApplyResources(this.label114, "label114");
+            this.label114.Name = "label114";
+            this.helpProvider1.SetShowHelp(this.label114, ((bool)(resources.GetObject("label114.ShowHelp"))));
+            // 
+            // label115
+            // 
+            resources.ApplyResources(this.label115, "label115");
+            this.label115.Name = "label115";
+            this.helpProvider1.SetShowHelp(this.label115, ((bool)(resources.GetObject("label115.ShowHelp"))));
+            // 
             // tabPage52
             // 
             this.tabPage52.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_EndAngle);
-            this.tabPage52.Controls.Add(this.label458);
-            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_StartAngle);
-            this.tabPage52.Controls.Add(this.label459);
-            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_Offset_Y);
-            this.tabPage52.Controls.Add(this.label461);
-            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_Offset_X);
-            this.tabPage52.Controls.Add(this.label462);
-            this.tabPage52.Controls.Add(this.comboBox_Calories_ClockHand_Image);
-            this.tabPage52.Controls.Add(this.label463);
             this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_Y);
-            this.tabPage52.Controls.Add(this.label464);
             this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_X);
-            this.tabPage52.Controls.Add(this.label465);
+            this.tabPage52.Controls.Add(this.comboBox_Calories_ClockHand_Image);
+            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_Offset_Y);
+            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_EndAngle);
+            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_StartAngle);
+            this.tabPage52.Controls.Add(this.numericUpDown_Calories_ClockHand_Offset_X);
             this.tabPage52.Controls.Add(this.checkBox_Calories_ClockHand);
+            this.tabPage52.Controls.Add(this.label458);
+            this.tabPage52.Controls.Add(this.label465);
+            this.tabPage52.Controls.Add(this.label459);
+            this.tabPage52.Controls.Add(this.label464);
+            this.tabPage52.Controls.Add(this.label461);
+            this.tabPage52.Controls.Add(this.label463);
+            this.tabPage52.Controls.Add(this.label462);
             resources.ApplyResources(this.tabPage52, "tabPage52");
             this.tabPage52.Name = "tabPage52";
             this.helpProvider1.SetShowHelp(this.tabPage52, ((bool)(resources.GetObject("tabPage52.ShowHelp"))));
+            // 
+            // numericUpDown_Calories_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_Calories_ClockHand_Y, "numericUpDown_Calories_ClockHand_Y");
+            this.numericUpDown_Calories_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Calories_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Calories_ClockHand_Y.Name = "numericUpDown_Calories_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_Calories_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_Calories_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_Calories_ClockHand_X, "numericUpDown_Calories_ClockHand_X");
+            this.numericUpDown_Calories_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Calories_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Calories_ClockHand_X.Name = "numericUpDown_Calories_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_Calories_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // comboBox_Calories_ClockHand_Image
+            // 
+            this.comboBox_Calories_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.comboBox_Calories_ClockHand_Image.DropDownWidth = 75;
+            resources.ApplyResources(this.comboBox_Calories_ClockHand_Image, "comboBox_Calories_ClockHand_Image");
+            this.comboBox_Calories_ClockHand_Image.FormattingEnabled = true;
+            this.comboBox_Calories_ClockHand_Image.Name = "comboBox_Calories_ClockHand_Image";
+            this.helpProvider1.SetShowHelp(this.comboBox_Calories_ClockHand_Image, ((bool)(resources.GetObject("comboBox_Calories_ClockHand_Image.ShowHelp"))));
+            this.comboBox_Calories_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
+            this.comboBox_Calories_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
+            this.comboBox_Calories_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
+            this.comboBox_Calories_ClockHand_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
+            this.comboBox_Calories_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
+            // 
+            // numericUpDown_Calories_ClockHand_Offset_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_Calories_ClockHand_Offset_Y, "numericUpDown_Calories_ClockHand_Offset_Y");
+            this.numericUpDown_Calories_ClockHand_Offset_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_Calories_ClockHand_Offset_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_Calories_ClockHand_Offset_Y.Name = "numericUpDown_Calories_ClockHand_Offset_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_Offset_Y, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_Offset_Y.ShowHelp"))));
+            this.numericUpDown_Calories_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            this.numericUpDown_Calories_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
             // 
             // numericUpDown_Calories_ClockHand_EndAngle
             // 
@@ -11216,12 +12023,6 @@
             0});
             this.numericUpDown_Calories_ClockHand_EndAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label458
-            // 
-            resources.ApplyResources(this.label458, "label458");
-            this.label458.Name = "label458";
-            this.helpProvider1.SetShowHelp(this.label458, ((bool)(resources.GetObject("label458.ShowHelp"))));
-            // 
             // numericUpDown_Calories_ClockHand_StartAngle
             // 
             resources.ApplyResources(this.numericUpDown_Calories_ClockHand_StartAngle, "numericUpDown_Calories_ClockHand_StartAngle");
@@ -11244,36 +12045,6 @@
             0});
             this.numericUpDown_Calories_ClockHand_StartAngle.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
-            // label459
-            // 
-            resources.ApplyResources(this.label459, "label459");
-            this.label459.Name = "label459";
-            this.helpProvider1.SetShowHelp(this.label459, ((bool)(resources.GetObject("label459.ShowHelp"))));
-            // 
-            // numericUpDown_Calories_ClockHand_Offset_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_Calories_ClockHand_Offset_Y, "numericUpDown_Calories_ClockHand_Offset_Y");
-            this.numericUpDown_Calories_ClockHand_Offset_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Calories_ClockHand_Offset_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Calories_ClockHand_Offset_Y.Name = "numericUpDown_Calories_ClockHand_Offset_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_Offset_Y, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_Offset_Y.ShowHelp"))));
-            this.numericUpDown_Calories_ClockHand_Offset_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            this.numericUpDown_Calories_ClockHand_Offset_Y.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetY_MouseDoubleClick);
-            // 
-            // label461
-            // 
-            resources.ApplyResources(this.label461, "label461");
-            this.label461.Name = "label461";
-            this.helpProvider1.SetShowHelp(this.label461, ((bool)(resources.GetObject("label461.ShowHelp"))));
-            // 
             // numericUpDown_Calories_ClockHand_Offset_X
             // 
             resources.ApplyResources(this.numericUpDown_Calories_ClockHand_Offset_X, "numericUpDown_Calories_ClockHand_Offset_X");
@@ -11292,78 +12063,6 @@
             this.numericUpDown_Calories_ClockHand_Offset_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             this.numericUpDown_Calories_ClockHand_Offset_X.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.numericUpDown_OffSetX_MouseDoubleClick);
             // 
-            // label462
-            // 
-            resources.ApplyResources(this.label462, "label462");
-            this.label462.Name = "label462";
-            this.helpProvider1.SetShowHelp(this.label462, ((bool)(resources.GetObject("label462.ShowHelp"))));
-            // 
-            // comboBox_Calories_ClockHand_Image
-            // 
-            this.comboBox_Calories_ClockHand_Image.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.comboBox_Calories_ClockHand_Image.DropDownWidth = 75;
-            resources.ApplyResources(this.comboBox_Calories_ClockHand_Image, "comboBox_Calories_ClockHand_Image");
-            this.comboBox_Calories_ClockHand_Image.FormattingEnabled = true;
-            this.comboBox_Calories_ClockHand_Image.Name = "comboBox_Calories_ClockHand_Image";
-            this.helpProvider1.SetShowHelp(this.comboBox_Calories_ClockHand_Image, ((bool)(resources.GetObject("comboBox_Calories_ClockHand_Image.ShowHelp"))));
-            this.comboBox_Calories_ClockHand_Image.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox_Image_DrawItem);
-            this.comboBox_Calories_ClockHand_Image.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.comboBox_Image_MeasureItem);
-            this.comboBox_Calories_ClockHand_Image.SelectedIndexChanged += new System.EventHandler(this.comboBox_SelectedIndexChanged);
-            this.comboBox_Calories_ClockHand_Image.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBox_KeyDown);
-            this.comboBox_Calories_ClockHand_Image.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_KeyPress);
-            // 
-            // label463
-            // 
-            resources.ApplyResources(this.label463, "label463");
-            this.label463.Name = "label463";
-            this.helpProvider1.SetShowHelp(this.label463, ((bool)(resources.GetObject("label463.ShowHelp"))));
-            // 
-            // numericUpDown_Calories_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_Calories_ClockHand_Y, "numericUpDown_Calories_ClockHand_Y");
-            this.numericUpDown_Calories_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Calories_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Calories_ClockHand_Y.Name = "numericUpDown_Calories_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_Calories_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label464
-            // 
-            resources.ApplyResources(this.label464, "label464");
-            this.label464.Name = "label464";
-            this.helpProvider1.SetShowHelp(this.label464, ((bool)(resources.GetObject("label464.ShowHelp"))));
-            // 
-            // numericUpDown_Calories_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_Calories_ClockHand_X, "numericUpDown_Calories_ClockHand_X");
-            this.numericUpDown_Calories_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_Calories_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_Calories_ClockHand_X.Name = "numericUpDown_Calories_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_Calories_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_Calories_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_Calories_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
-            // label465
-            // 
-            resources.ApplyResources(this.label465, "label465");
-            this.label465.Name = "label465";
-            this.helpProvider1.SetShowHelp(this.label465, ((bool)(resources.GetObject("label465.ShowHelp"))));
-            // 
             // checkBox_Calories_ClockHand
             // 
             resources.ApplyResources(this.checkBox_Calories_ClockHand, "checkBox_Calories_ClockHand");
@@ -11371,6 +12070,48 @@
             this.helpProvider1.SetShowHelp(this.checkBox_Calories_ClockHand, ((bool)(resources.GetObject("checkBox_Calories_ClockHand.ShowHelp"))));
             this.checkBox_Calories_ClockHand.UseVisualStyleBackColor = true;
             this.checkBox_Calories_ClockHand.CheckedChanged += new System.EventHandler(this.checkBox_Calories_ClockHand_CheckedChanged);
+            // 
+            // label458
+            // 
+            resources.ApplyResources(this.label458, "label458");
+            this.label458.Name = "label458";
+            this.helpProvider1.SetShowHelp(this.label458, ((bool)(resources.GetObject("label458.ShowHelp"))));
+            // 
+            // label465
+            // 
+            resources.ApplyResources(this.label465, "label465");
+            this.label465.Name = "label465";
+            this.helpProvider1.SetShowHelp(this.label465, ((bool)(resources.GetObject("label465.ShowHelp"))));
+            // 
+            // label459
+            // 
+            resources.ApplyResources(this.label459, "label459");
+            this.label459.Name = "label459";
+            this.helpProvider1.SetShowHelp(this.label459, ((bool)(resources.GetObject("label459.ShowHelp"))));
+            // 
+            // label464
+            // 
+            resources.ApplyResources(this.label464, "label464");
+            this.label464.Name = "label464";
+            this.helpProvider1.SetShowHelp(this.label464, ((bool)(resources.GetObject("label464.ShowHelp"))));
+            // 
+            // label461
+            // 
+            resources.ApplyResources(this.label461, "label461");
+            this.label461.Name = "label461";
+            this.helpProvider1.SetShowHelp(this.label461, ((bool)(resources.GetObject("label461.ShowHelp"))));
+            // 
+            // label463
+            // 
+            resources.ApplyResources(this.label463, "label463");
+            this.label463.Name = "label463";
+            this.helpProvider1.SetShowHelp(this.label463, ((bool)(resources.GetObject("label463.ShowHelp"))));
+            // 
+            // label462
+            // 
+            resources.ApplyResources(this.label462, "label462");
+            this.label462.Name = "label462";
+            this.helpProvider1.SetShowHelp(this.label462, ((bool)(resources.GetObject("label462.ShowHelp"))));
             // 
             // tabPage16
             // 
@@ -11805,6 +12546,8 @@
             // tabPage37
             // 
             this.tabPage37.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_Y);
+            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_X);
             this.tabPage37.Controls.Add(this.checkBox_StProg_ClockHand);
             this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_EndAngle);
             this.tabPage37.Controls.Add(this.label375);
@@ -11816,13 +12559,45 @@
             this.tabPage37.Controls.Add(this.label378);
             this.tabPage37.Controls.Add(this.comboBox_StProg_ClockHand_Image);
             this.tabPage37.Controls.Add(this.label379);
-            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_Y);
             this.tabPage37.Controls.Add(this.label380);
-            this.tabPage37.Controls.Add(this.numericUpDown_StProg_ClockHand_X);
             this.tabPage37.Controls.Add(this.label381);
             resources.ApplyResources(this.tabPage37, "tabPage37");
             this.tabPage37.Name = "tabPage37";
             this.helpProvider1.SetShowHelp(this.tabPage37, ((bool)(resources.GetObject("tabPage37.ShowHelp"))));
+            // 
+            // numericUpDown_StProg_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_Y, "numericUpDown_StProg_ClockHand_Y");
+            this.numericUpDown_StProg_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StProg_ClockHand_Y.Name = "numericUpDown_StProg_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_StProg_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_X, "numericUpDown_StProg_ClockHand_X");
+            this.numericUpDown_StProg_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_StProg_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_StProg_ClockHand_X.Name = "numericUpDown_StProg_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_StProg_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_StProg_ClockHand
             // 
@@ -11957,45 +12732,11 @@
             this.label379.Name = "label379";
             this.helpProvider1.SetShowHelp(this.label379, ((bool)(resources.GetObject("label379.ShowHelp"))));
             // 
-            // numericUpDown_StProg_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_Y, "numericUpDown_StProg_ClockHand_Y");
-            this.numericUpDown_StProg_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_StProg_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_StProg_ClockHand_Y.Name = "numericUpDown_StProg_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_StProg_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label380
             // 
             resources.ApplyResources(this.label380, "label380");
             this.label380.Name = "label380";
             this.helpProvider1.SetShowHelp(this.label380, ((bool)(resources.GetObject("label380.ShowHelp"))));
-            // 
-            // numericUpDown_StProg_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_StProg_ClockHand_X, "numericUpDown_StProg_ClockHand_X");
-            this.numericUpDown_StProg_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_StProg_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_StProg_ClockHand_X.Name = "numericUpDown_StProg_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_StProg_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_StProg_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_StProg_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label381
             // 
@@ -12106,6 +12847,8 @@
             // tabPage38
             // 
             this.tabPage38.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_Y);
+            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_X);
             this.tabPage38.Controls.Add(this.checkBox_ADDay_ClockHand);
             this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_EndAngle);
             this.tabPage38.Controls.Add(this.label396);
@@ -12117,13 +12860,45 @@
             this.tabPage38.Controls.Add(this.label399);
             this.tabPage38.Controls.Add(this.comboBox_ADDay_ClockHand_Image);
             this.tabPage38.Controls.Add(this.label400);
-            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_Y);
             this.tabPage38.Controls.Add(this.label401);
-            this.tabPage38.Controls.Add(this.numericUpDown_ADDay_ClockHand_X);
             this.tabPage38.Controls.Add(this.label402);
             resources.ApplyResources(this.tabPage38, "tabPage38");
             this.tabPage38.Name = "tabPage38";
             this.helpProvider1.SetShowHelp(this.tabPage38, ((bool)(resources.GetObject("tabPage38.ShowHelp"))));
+            // 
+            // numericUpDown_ADDay_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_Y, "numericUpDown_ADDay_ClockHand_Y");
+            this.numericUpDown_ADDay_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_Y.Name = "numericUpDown_ADDay_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_ADDay_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_X, "numericUpDown_ADDay_ClockHand_X");
+            this.numericUpDown_ADDay_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADDay_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADDay_ClockHand_X.Name = "numericUpDown_ADDay_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_ADDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // checkBox_ADDay_ClockHand
             // 
@@ -12253,45 +13028,11 @@
             this.label400.Name = "label400";
             this.helpProvider1.SetShowHelp(this.label400, ((bool)(resources.GetObject("label400.ShowHelp"))));
             // 
-            // numericUpDown_ADDay_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_Y, "numericUpDown_ADDay_ClockHand_Y");
-            this.numericUpDown_ADDay_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADDay_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADDay_ClockHand_Y.Name = "numericUpDown_ADDay_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_ADDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label401
             // 
             resources.ApplyResources(this.label401, "label401");
             this.label401.Name = "label401";
             this.helpProvider1.SetShowHelp(this.label401, ((bool)(resources.GetObject("label401.ShowHelp"))));
-            // 
-            // numericUpDown_ADDay_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_ADDay_ClockHand_X, "numericUpDown_ADDay_ClockHand_X");
-            this.numericUpDown_ADDay_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADDay_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADDay_ClockHand_X.Name = "numericUpDown_ADDay_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADDay_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_ADDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label402
             // 
@@ -12302,6 +13043,8 @@
             // tabPage39
             // 
             this.tabPage39.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_Y);
+            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_X);
             this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_EndAngle);
             this.tabPage39.Controls.Add(this.label389);
             this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_StartAngle);
@@ -12312,14 +13055,46 @@
             this.tabPage39.Controls.Add(this.label392);
             this.tabPage39.Controls.Add(this.comboBox_ADWeekDay_ClockHand_Image);
             this.tabPage39.Controls.Add(this.label393);
-            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_Y);
             this.tabPage39.Controls.Add(this.label394);
-            this.tabPage39.Controls.Add(this.numericUpDown_ADWeekDay_ClockHand_X);
             this.tabPage39.Controls.Add(this.label395);
             this.tabPage39.Controls.Add(this.checkBox_ADWeekDay_ClockHand);
             resources.ApplyResources(this.tabPage39, "tabPage39");
             this.tabPage39.Name = "tabPage39";
             this.helpProvider1.SetShowHelp(this.tabPage39, ((bool)(resources.GetObject("tabPage39.ShowHelp"))));
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_Y, "numericUpDown_ADWeekDay_ClockHand_Y");
+            this.numericUpDown_ADWeekDay_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_Y.Name = "numericUpDown_ADWeekDay_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_ADWeekDay_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_X, "numericUpDown_ADWeekDay_ClockHand_X");
+            this.numericUpDown_ADWeekDay_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADWeekDay_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADWeekDay_ClockHand_X.Name = "numericUpDown_ADWeekDay_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_ADWeekDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_ADWeekDay_ClockHand_EndAngle
             // 
@@ -12440,45 +13215,11 @@
             this.label393.Name = "label393";
             this.helpProvider1.SetShowHelp(this.label393, ((bool)(resources.GetObject("label393.ShowHelp"))));
             // 
-            // numericUpDown_ADWeekDay_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_Y, "numericUpDown_ADWeekDay_ClockHand_Y");
-            this.numericUpDown_ADWeekDay_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADWeekDay_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADWeekDay_ClockHand_Y.Name = "numericUpDown_ADWeekDay_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_ADWeekDay_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label394
             // 
             resources.ApplyResources(this.label394, "label394");
             this.label394.Name = "label394";
             this.helpProvider1.SetShowHelp(this.label394, ((bool)(resources.GetObject("label394.ShowHelp"))));
-            // 
-            // numericUpDown_ADWeekDay_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_ADWeekDay_ClockHand_X, "numericUpDown_ADWeekDay_ClockHand_X");
-            this.numericUpDown_ADWeekDay_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADWeekDay_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADWeekDay_ClockHand_X.Name = "numericUpDown_ADWeekDay_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADWeekDay_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADWeekDay_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_ADWeekDay_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label395
             // 
@@ -12498,6 +13239,8 @@
             // tabPage40
             // 
             this.tabPage40.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_Y);
+            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_X);
             this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_EndAngle);
             this.tabPage40.Controls.Add(this.label382);
             this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_StartAngle);
@@ -12508,14 +13251,46 @@
             this.tabPage40.Controls.Add(this.label385);
             this.tabPage40.Controls.Add(this.comboBox_ADMonth_ClockHand_Image);
             this.tabPage40.Controls.Add(this.label386);
-            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_Y);
             this.tabPage40.Controls.Add(this.label387);
-            this.tabPage40.Controls.Add(this.numericUpDown_ADMonth_ClockHand_X);
             this.tabPage40.Controls.Add(this.label388);
             this.tabPage40.Controls.Add(this.checkBox_ADMonth_ClockHand);
             resources.ApplyResources(this.tabPage40, "tabPage40");
             this.tabPage40.Name = "tabPage40";
             this.helpProvider1.SetShowHelp(this.tabPage40, ((bool)(resources.GetObject("tabPage40.ShowHelp"))));
+            // 
+            // numericUpDown_ADMonth_ClockHand_Y
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_Y, "numericUpDown_ADMonth_ClockHand_Y");
+            this.numericUpDown_ADMonth_ClockHand_Y.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_Y.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_Y.Name = "numericUpDown_ADMonth_ClockHand_Y";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Y.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
+            // 
+            // numericUpDown_ADMonth_ClockHand_X
+            // 
+            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_X, "numericUpDown_ADMonth_ClockHand_X");
+            this.numericUpDown_ADMonth_ClockHand_X.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numericUpDown_ADMonth_ClockHand_X.Minimum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDown_ADMonth_ClockHand_X.Name = "numericUpDown_ADMonth_ClockHand_X";
+            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_X.ShowHelp"))));
+            this.numericUpDown_ADMonth_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // numericUpDown_ADMonth_ClockHand_EndAngle
             // 
@@ -12641,45 +13416,11 @@
             this.label386.Name = "label386";
             this.helpProvider1.SetShowHelp(this.label386, ((bool)(resources.GetObject("label386.ShowHelp"))));
             // 
-            // numericUpDown_ADMonth_ClockHand_Y
-            // 
-            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_Y, "numericUpDown_ADMonth_ClockHand_Y");
-            this.numericUpDown_ADMonth_ClockHand_Y.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADMonth_ClockHand_Y.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADMonth_ClockHand_Y.Name = "numericUpDown_ADMonth_ClockHand_Y";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_Y, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_Y.ShowHelp"))));
-            this.numericUpDown_ADMonth_ClockHand_Y.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
-            // 
             // label387
             // 
             resources.ApplyResources(this.label387, "label387");
             this.label387.Name = "label387";
             this.helpProvider1.SetShowHelp(this.label387, ((bool)(resources.GetObject("label387.ShowHelp"))));
-            // 
-            // numericUpDown_ADMonth_ClockHand_X
-            // 
-            resources.ApplyResources(this.numericUpDown_ADMonth_ClockHand_X, "numericUpDown_ADMonth_ClockHand_X");
-            this.numericUpDown_ADMonth_ClockHand_X.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numericUpDown_ADMonth_ClockHand_X.Minimum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDown_ADMonth_ClockHand_X.Name = "numericUpDown_ADMonth_ClockHand_X";
-            this.helpProvider1.SetShowHelp(this.numericUpDown_ADMonth_ClockHand_X, ((bool)(resources.GetObject("numericUpDown_ADMonth_ClockHand_X.ShowHelp"))));
-            this.numericUpDown_ADMonth_ClockHand_X.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // label388
             // 
@@ -15126,6 +15867,8 @@
             // tabPage33
             // 
             this.tabPage33.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage33.Controls.Add(this.comboBox_Animation_Preview_Speed);
+            this.tabPage33.Controls.Add(this.label483);
             this.tabPage33.Controls.Add(this.groupBox8);
             this.tabPage33.Controls.Add(this.button_Reset);
             this.tabPage33.Controls.Add(this.checkBox_JsonWarnings);
@@ -15140,6 +15883,27 @@
             resources.ApplyResources(this.tabPage33, "tabPage33");
             this.tabPage33.Name = "tabPage33";
             this.helpProvider1.SetShowHelp(this.tabPage33, ((bool)(resources.GetObject("tabPage33.ShowHelp"))));
+            // 
+            // comboBox_Animation_Preview_Speed
+            // 
+            this.comboBox_Animation_Preview_Speed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Animation_Preview_Speed.FormattingEnabled = true;
+            this.comboBox_Animation_Preview_Speed.Items.AddRange(new object[] {
+            resources.GetString("comboBox_Animation_Preview_Speed.Items"),
+            resources.GetString("comboBox_Animation_Preview_Speed.Items1"),
+            resources.GetString("comboBox_Animation_Preview_Speed.Items2"),
+            resources.GetString("comboBox_Animation_Preview_Speed.Items3"),
+            resources.GetString("comboBox_Animation_Preview_Speed.Items4")});
+            resources.ApplyResources(this.comboBox_Animation_Preview_Speed, "comboBox_Animation_Preview_Speed");
+            this.comboBox_Animation_Preview_Speed.Name = "comboBox_Animation_Preview_Speed";
+            this.helpProvider1.SetShowHelp(this.comboBox_Animation_Preview_Speed, ((bool)(resources.GetObject("comboBox_Animation_Preview_Speed.ShowHelp"))));
+            this.comboBox_Animation_Preview_Speed.SelectedIndexChanged += new System.EventHandler(this.comboBox_Animation_Preview_Speed_SelectedIndexChanged);
+            // 
+            // label483
+            // 
+            resources.ApplyResources(this.label483, "label483");
+            this.label483.Name = "label483";
+            this.helpProvider1.SetShowHelp(this.label483, ((bool)(resources.GetObject("label483.ShowHelp"))));
             // 
             // groupBox8
             // 
@@ -15202,7 +15966,9 @@
             resources.GetString("comboBox_Language.Items4"),
             resources.GetString("comboBox_Language.Items5"),
             resources.GetString("comboBox_Language.Items6"),
-            resources.GetString("comboBox_Language.Items7")});
+            resources.GetString("comboBox_Language.Items7"),
+            resources.GetString("comboBox_Language.Items8"),
+            resources.GetString("comboBox_Language.Items9")});
             resources.ApplyResources(this.comboBox_Language, "comboBox_Language");
             this.comboBox_Language.Name = "comboBox_Language";
             this.helpProvider1.SetShowHelp(this.comboBox_Language, ((bool)(resources.GetObject("comboBox_Language.ShowHelp"))));
@@ -15410,13 +16176,13 @@
             // tabPage43
             // 
             this.tabPage43.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage43.Controls.Add(this.linkLabel_resunpacker_qzip);
             this.tabPage43.Controls.Add(this.label_TranslateHelp);
             this.tabPage43.Controls.Add(this.label415);
             this.tabPage43.Controls.Add(this.label414);
             this.tabPage43.Controls.Add(this.label412);
             this.tabPage43.Controls.Add(this.linkLabel_help);
             this.tabPage43.Controls.Add(this.label413);
-            this.tabPage43.Controls.Add(this.label_Res_PackerUnpacker);
             this.tabPage43.Controls.Add(this.linkLabel_py_amazfit_tools);
             this.tabPage43.Controls.Add(this.label410);
             this.tabPage43.Controls.Add(this.pictureBox2);
@@ -15428,6 +16194,14 @@
             resources.ApplyResources(this.tabPage43, "tabPage43");
             this.tabPage43.Name = "tabPage43";
             this.helpProvider1.SetShowHelp(this.tabPage43, ((bool)(resources.GetObject("tabPage43.ShowHelp"))));
+            // 
+            // linkLabel_resunpacker_qzip
+            // 
+            resources.ApplyResources(this.linkLabel_resunpacker_qzip, "linkLabel_resunpacker_qzip");
+            this.linkLabel_resunpacker_qzip.Name = "linkLabel_resunpacker_qzip";
+            this.helpProvider1.SetShowHelp(this.linkLabel_resunpacker_qzip, ((bool)(resources.GetObject("linkLabel_resunpacker_qzip.ShowHelp"))));
+            this.linkLabel_resunpacker_qzip.TabStop = true;
+            this.linkLabel_resunpacker_qzip.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_resunpacker_qzip_LinkClicked);
             // 
             // label_TranslateHelp
             // 
@@ -15466,12 +16240,6 @@
             resources.ApplyResources(this.label413, "label413");
             this.label413.Name = "label413";
             this.helpProvider1.SetShowHelp(this.label413, ((bool)(resources.GetObject("label413.ShowHelp"))));
-            // 
-            // label_Res_PackerUnpacker
-            // 
-            resources.ApplyResources(this.label_Res_PackerUnpacker, "label_Res_PackerUnpacker");
-            this.label_Res_PackerUnpacker.Name = "label_Res_PackerUnpacker";
-            this.helpProvider1.SetShowHelp(this.label_Res_PackerUnpacker, ((bool)(resources.GetObject("label_Res_PackerUnpacker.ShowHelp"))));
             // 
             // linkLabel_py_amazfit_tools
             // 
@@ -15597,7 +16365,7 @@
             this.helpProvider1.SetShowHelp(this.radioButton_47, ((bool)(resources.GetObject("radioButton_47.ShowHelp"))));
             this.radioButton_47.TabStop = true;
             this.radioButton_47.UseVisualStyleBackColor = true;
-            this.radioButton_47.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            this.radioButton_47.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
             // 
             // radioButton_42
             // 
@@ -15605,7 +16373,7 @@
             this.radioButton_42.Name = "radioButton_42";
             this.helpProvider1.SetShowHelp(this.radioButton_42, ((bool)(resources.GetObject("radioButton_42.ShowHelp"))));
             this.radioButton_42.UseVisualStyleBackColor = true;
-            this.radioButton_42.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            this.radioButton_42.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
             // 
             // helpProvider1
             // 
@@ -15630,7 +16398,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_border, ((bool)(resources.GetObject("checkBox_border.ShowHelp"))));
             this.checkBox_border.UseVisualStyleBackColor = true;
             this.checkBox_border.CheckedChanged += new System.EventHandler(this.checkBox_border_CheckedChanged);
-            this.checkBox_border.Click += new System.EventHandler(this.checkBox_Click);
+            this.checkBox_border.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
             // label_version
             // 
@@ -15644,7 +16412,7 @@
             this.radioButton_gts.Name = "radioButton_gts";
             this.helpProvider1.SetShowHelp(this.radioButton_gts, ((bool)(resources.GetObject("radioButton_gts.ShowHelp"))));
             this.radioButton_gts.UseVisualStyleBackColor = true;
-            this.radioButton_gts.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            this.radioButton_gts.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
             // 
             // checkBox_crop
             // 
@@ -15655,7 +16423,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_crop, ((bool)(resources.GetObject("checkBox_crop.ShowHelp"))));
             this.checkBox_crop.UseVisualStyleBackColor = true;
             this.checkBox_crop.CheckedChanged += new System.EventHandler(this.checkBox_crop_CheckedChanged);
-            this.checkBox_crop.Click += new System.EventHandler(this.checkBox_Click);
+            this.checkBox_crop.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
             // pictureBox1
             // 
@@ -15673,7 +16441,7 @@
             this.helpProvider1.SetShowHelp(this.checkBox_Show_Shortcuts, ((bool)(resources.GetObject("checkBox_Show_Shortcuts.ShowHelp"))));
             this.checkBox_Show_Shortcuts.UseVisualStyleBackColor = true;
             this.checkBox_Show_Shortcuts.CheckedChanged += new System.EventHandler(this.checkBox_Show_Shortcuts_CheckedChanged);
-            this.checkBox_Show_Shortcuts.Click += new System.EventHandler(this.checkBox_Click);
+            this.checkBox_Show_Shortcuts.Click += new System.EventHandler(this.checkBox_ShowSettings_Click);
             // 
             // radioButton_TRex
             // 
@@ -15681,7 +16449,15 @@
             this.radioButton_TRex.Name = "radioButton_TRex";
             this.helpProvider1.SetShowHelp(this.radioButton_TRex, ((bool)(resources.GetObject("radioButton_TRex.ShowHelp"))));
             this.radioButton_TRex.UseVisualStyleBackColor = true;
-            this.radioButton_TRex.CheckedChanged += new System.EventHandler(this.radioButton_47_CheckedChanged);
+            this.radioButton_TRex.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
+            // 
+            // radioButton_Verge
+            // 
+            resources.ApplyResources(this.radioButton_Verge, "radioButton_Verge");
+            this.radioButton_Verge.Name = "radioButton_Verge";
+            this.helpProvider1.SetShowHelp(this.radioButton_Verge, ((bool)(resources.GetObject("radioButton_Verge.ShowHelp"))));
+            this.radioButton_Verge.UseVisualStyleBackColor = true;
+            this.radioButton_Verge.CheckedChanged += new System.EventHandler(this.radioButton_Model_Changed);
             // 
             // timer2
             // 
@@ -15699,6 +16475,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radioButton_Verge);
             this.Controls.Add(this.radioButton_TRex);
             this.Controls.Add(this.checkBox_Show_Shortcuts);
             this.Controls.Add(this.checkBox_crop);
@@ -15720,6 +16497,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.helpProvider1.SetHelpNavigator(this, ((System.Windows.Forms.HelpNavigator)(resources.GetObject("$this.HelpNavigator"))));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -15728,6 +16506,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -15847,14 +16626,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ImagesList)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel_Animation.ResumeLayout(false);
+            this.tabControl_Animation.ResumeLayout(false);
+            this.tabPage53.ResumeLayout(false);
+            this.tabPage53.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_SpeedAnimation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_CyclesCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_Pause)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_TimeAnimation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_Count)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_Y)).EndInit();
+            this.contextMenuStrip_Y.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StaticAnimation_X)).EndInit();
+            this.contextMenuStrip_X.ResumeLayout(false);
+            this.tabPage54.ResumeLayout(false);
+            this.tabPage54.PerformLayout();
+            this.groupBox_MotiomAnimation.ResumeLayout(false);
+            this.groupBox_MotiomAnimation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_StartCoordinates_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_MotiomAnimation_EndCoordinates_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MotiomAnimation)).EndInit();
+            this.contextMenuStrip_XY_InAnimationTable.ResumeLayout(false);
             this.panel_Shortcuts.ResumeLayout(false);
             this.tabControl_Shortcuts.ResumeLayout(false);
             this.tabPage46.ResumeLayout(false);
             this.tabPage46.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Width)).EndInit();
-            this.contextMenuStrip_X.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Y)).EndInit();
-            this.contextMenuStrip_Y.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Shortcuts_Steps_Height)).EndInit();
             this.tabPage47.ResumeLayout(false);
@@ -15977,12 +16777,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_Scale_Center_X)).EndInit();
             this.tabPage35.ResumeLayout(false);
             this.tabPage35.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Battery_ClockHand_X)).EndInit();
             this.tabPage42.ResumeLayout(false);
             this.tabPage42.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Battery_IconSet)).EndInit();
@@ -16010,32 +16810,32 @@
             this.tabControl_Activity.ResumeLayout(false);
             this.tabPage12.ResumeLayout(false);
             this.tabPage12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_EndCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_StartCorner_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_StartCorner_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivitySteps_EndCorner_Y)).EndInit();
             this.tabPage13.ResumeLayout(false);
             this.tabPage13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_EndCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_StartCorner_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_StartCorner_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_Spacing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityDistance_EndCorner_Y)).EndInit();
+            this.tabPage55.ResumeLayout(false);
+            this.tabControl8.ResumeLayout(false);
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_EndCorner_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_EndCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_Count)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_StartCorner_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_StartCorner_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_Spacing)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPuls_EndCorner_Y)).EndInit();
             this.tabPage44.ResumeLayout(false);
             this.tabPage44.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Width)).EndInit();
@@ -16043,17 +16843,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Radius_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Center_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_Center_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityPulsScale_ImageX)).EndInit();
             this.tabPage51.ResumeLayout(false);
             this.tabPage51.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_EndAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_StartAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_EndAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_StartAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pulse_ClockHand_Offset_X)).EndInit();
             this.tabPage45.ResumeLayout(false);
             this.tabPage45.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ActivityPuls_IconSet)).EndInit();
+            this.tabPage59.ResumeLayout(false);
+            this.tabControl9.ResumeLayout(false);
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCalories_EndCorner_X)).EndInit();
@@ -16064,23 +16868,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCalories_EndCorner_Y)).EndInit();
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageY)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_StartAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Width)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Radius_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Radius_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Center_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Radius_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Width)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Radius_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_Center_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityCaloriesScale_ImageX)).EndInit();
             this.tabPage52.ResumeLayout(false);
             this.tabPage52.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_EndAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_StartAngle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_X)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_EndAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_StartAngle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Calories_ClockHand_Offset_X)).EndInit();
             this.tabPage16.ResumeLayout(false);
             this.tabPage16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ActivityStar_Y)).EndInit();
@@ -16100,12 +16904,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StepsProgress_Width)).EndInit();
             this.tabPage37.ResumeLayout(false);
             this.tabPage37.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_StProg_ClockHand_X)).EndInit();
             this.tabPage41.ResumeLayout(false);
             this.tabPage41.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_SPSliced)).EndInit();
@@ -16113,28 +16917,28 @@
             this.tabControl7.ResumeLayout(false);
             this.tabPage38.ResumeLayout(false);
             this.tabPage38.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADDay_ClockHand_X)).EndInit();
             this.tabPage39.ResumeLayout(false);
             this.tabPage39.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADWeekDay_ClockHand_X)).EndInit();
             this.tabPage40.ResumeLayout(false);
             this.tabPage40.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_EndAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_StartAngle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_Y)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Offset_X)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_Y)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_ADMonth_ClockHand_X)).EndInit();
             this.panel_Date.ResumeLayout(false);
             this.panel_Date.PerformLayout();
             this.tabControl_Date.ResumeLayout(false);
@@ -16383,7 +17187,6 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set1;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set1;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set1;
         private System.Windows.Forms.CheckBox checkBox_DoNotDisturb_Set1;
@@ -16403,7 +17206,6 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set2;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set2;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set2;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set2;
@@ -16525,7 +17327,6 @@
         private System.Windows.Forms.CheckBox checkBox_Activity;
         private System.Windows.Forms.Button button_Activity;
         private System.Windows.Forms.TabControl tabControl_Activity;
-        private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
         private System.Windows.Forms.NumericUpDown numericUpDown_ActivitySteps_EndCorner_X;
         private System.Windows.Forms.NumericUpDown numericUpDown_ActivitySteps_Count;
@@ -16566,7 +17367,6 @@
         private System.Windows.Forms.Label label139;
         private System.Windows.Forms.Label label140;
         private System.Windows.Forms.Label label141;
-        private System.Windows.Forms.TabPage tabPage14;
         private System.Windows.Forms.NumericUpDown numericUpDown_ActivityPuls_EndCorner_X;
         private System.Windows.Forms.NumericUpDown numericUpDown_ActivityPuls_Count;
         private System.Windows.Forms.NumericUpDown numericUpDown_ActivityPuls_StartCorner_Y;
@@ -16586,7 +17386,6 @@
         private System.Windows.Forms.Label label149;
         private System.Windows.Forms.Label label150;
         private System.Windows.Forms.Label label151;
-        private System.Windows.Forms.TabPage tabPage15;
         private System.Windows.Forms.NumericUpDown numericUpDown_ActivityCalories_EndCorner_X;
         private System.Windows.Forms.NumericUpDown numericUpDown_ActivityCalories_Count;
         private System.Windows.Forms.NumericUpDown numericUpDown_ActivityCalories_StartCorner_Y;
@@ -16756,7 +17555,6 @@
         private System.Windows.Forms.Label label218;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set3;
         private System.Windows.Forms.Label label219;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set3;
         private System.Windows.Forms.Label label220;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set3;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set3;
@@ -16778,7 +17576,6 @@
         private System.Windows.Forms.Label label234;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set5;
         private System.Windows.Forms.Label label235;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set5;
         private System.Windows.Forms.Label label236;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set5;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set5;
@@ -16800,7 +17597,6 @@
         private System.Windows.Forms.Label label226;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set4;
         private System.Windows.Forms.Label label227;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set4;
         private System.Windows.Forms.Label label228;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set4;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set4;
@@ -16828,7 +17624,6 @@
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set6;
         private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set6;
         private System.Windows.Forms.Label label87;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set6;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set6;
@@ -16850,7 +17645,6 @@
         private System.Windows.Forms.Label label240;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set7;
         private System.Windows.Forms.Label label241;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set7;
         private System.Windows.Forms.Label label242;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set7;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set7;
@@ -16872,7 +17666,6 @@
         private System.Windows.Forms.Label label248;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set8;
         private System.Windows.Forms.Label label249;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set8;
         private System.Windows.Forms.Label label250;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set8;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set8;
@@ -16894,7 +17687,6 @@
         private System.Windows.Forms.Label label264;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set10;
         private System.Windows.Forms.Label label265;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set10;
         private System.Windows.Forms.Label label266;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set10;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set10;
@@ -16916,7 +17708,6 @@
         private System.Windows.Forms.Label label256;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set9;
         private System.Windows.Forms.Label label257;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set9;
         private System.Windows.Forms.Label label258;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set9;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set9;
@@ -17012,13 +17803,7 @@
         private System.Windows.Forms.Label label321;
         private System.Windows.Forms.Label label322;
         private System.Windows.Forms.GroupBox groupBox_Symbols;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherSet_NightTemp;
         private System.Windows.Forms.Label label299;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherSet_DayTemp;
-        private System.Windows.Forms.NumericUpDown numericUpDown_WeatherSet_Temp;
-        private System.Windows.Forms.CheckBox checkBox_WeatherSet_DayTemp;
-        private System.Windows.Forms.CheckBox checkBox_WeatherSet_Temp;
-        private System.Windows.Forms.ComboBox comboBox_WeatherSet_Icon;
         private System.Windows.Forms.Label label288;
         private System.Windows.Forms.TabPage tabPage28;
         private System.Windows.Forms.ComboBox comboBox_Battery_Percent_Image;
@@ -17085,7 +17870,6 @@
         private System.Windows.Forms.Label label325;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set11;
         private System.Windows.Forms.Label label326;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set11;
         private System.Windows.Forms.Label label327;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set11;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set11;
@@ -17107,7 +17891,6 @@
         private System.Windows.Forms.Label label341;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set13;
         private System.Windows.Forms.Label label342;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set13;
         private System.Windows.Forms.Label label343;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set13;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set13;
@@ -17129,7 +17912,6 @@
         private System.Windows.Forms.Label label333;
         private System.Windows.Forms.NumericUpDown numericUpDown_Distance_Set12;
         private System.Windows.Forms.Label label334;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set12;
         private System.Windows.Forms.Label label335;
         private System.Windows.Forms.NumericUpDown numericUpDown_Battery_Set12;
         private System.Windows.Forms.DateTimePicker dateTimePicker_Time_Set12;
@@ -17182,7 +17964,6 @@
         private System.Windows.Forms.RadioButton radioButton_Settings_AfterUnpack_Download;
         private System.Windows.Forms.RadioButton radioButton_Settings_AfterUnpack_Dialog;
         private System.Windows.Forms.Label label_version;
-        private System.Windows.Forms.NumericUpDown numericUpDown_Gif_Speed;
         private System.Windows.Forms.Label label355;
         private System.Windows.Forms.Button button_zip_unpack;
         private System.Windows.Forms.Button button_pack_zip;
@@ -17320,7 +18101,6 @@
         private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem удалитьСтрокуToolStripMenuItem;
-        private System.Windows.Forms.CheckBox checkBox_crop;
         private System.Windows.Forms.TabPage tabPage43;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label409;
@@ -17329,7 +18109,6 @@
         private System.Windows.Forms.Label label_version_help;
         private System.Windows.Forms.Label label406;
         private System.Windows.Forms.Label label413;
-        private System.Windows.Forms.Label label_Res_PackerUnpacker;
         private System.Windows.Forms.LinkLabel linkLabel_py_amazfit_tools;
         private System.Windows.Forms.Label label410;
         private System.Windows.Forms.LinkLabel linkLabel_help;
@@ -17337,8 +18116,6 @@
         private System.Windows.Forms.Label label415;
         private System.Windows.Forms.Label label414;
         private System.Windows.Forms.Label label412;
-        private System.Windows.Forms.TabPage tabPage44;
-        private System.Windows.Forms.TabPage tabPage45;
         private System.Windows.Forms.ComboBox comboBox_ActivityPulsScale_Flatness;
         private System.Windows.Forms.Label label417;
         private System.Windows.Forms.NumericUpDown numericUpDown_ActivityPulsScale_EndAngle;
@@ -17470,7 +18247,6 @@
         private System.Windows.Forms.CheckBox checkBox_DOW_IconSet;
         private System.Windows.Forms.ComboBox comboBox_DOW_IconSet_Image;
         private System.Windows.Forms.Label label460;
-        private System.Windows.Forms.TabPage tabPage51;
         private System.Windows.Forms.NumericUpDown numericUpDown_Pulse_ClockHand_EndAngle;
         private System.Windows.Forms.Label label466;
         private System.Windows.Forms.NumericUpDown numericUpDown_Pulse_ClockHand_StartAngle;
@@ -17486,7 +18262,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown_Pulse_ClockHand_X;
         private System.Windows.Forms.Label label472;
         private System.Windows.Forms.CheckBox checkBox_Pulse_ClockHand;
-        private System.Windows.Forms.TabPage tabPage52;
         private System.Windows.Forms.NumericUpDown numericUpDown_Calories_ClockHand_EndAngle;
         private System.Windows.Forms.Label label458;
         private System.Windows.Forms.NumericUpDown numericUpDown_Calories_ClockHand_StartAngle;
@@ -17509,6 +18284,101 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NameFile;
         private System.Windows.Forms.DataGridViewImageColumn ColumnImage;
         private System.Windows.Forms.RadioButton radioButton_TRex;
+        private System.Windows.Forms.Panel panel_Animation;
+        private System.Windows.Forms.TabControl tabControl_Animation;
+        private System.Windows.Forms.TabPage tabPage53;
+        private System.Windows.Forms.TabPage tabPage54;
+        private System.Windows.Forms.CheckBox checkBox_Animation;
+        private System.Windows.Forms.Button button_Animation;
+        private System.Windows.Forms.ComboBox comboBox_StaticAnimation_Image;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StaticAnimation_Count;
+        private System.Windows.Forms.Label label411;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StaticAnimation_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StaticAnimation_X;
+        private System.Windows.Forms.CheckBox checkBox_StaticAnimation;
+        private System.Windows.Forms.Label label416;
+        private System.Windows.Forms.Label label473;
+        private System.Windows.Forms.Label label474;
+        private System.Windows.Forms.Label label475;
+        private System.Windows.Forms.Button button_ShowAnimation;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StaticAnimation_CyclesCount;
+        private System.Windows.Forms.Label label476;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StaticAnimation_Pause;
+        private System.Windows.Forms.Label label478;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StaticAnimation_TimeAnimation;
+        private System.Windows.Forms.Label label477;
+        private System.Windows.Forms.NumericUpDown numericUpDown_StaticAnimation_SpeedAnimation;
+        private System.Windows.Forms.Label label479;
+        private System.Windows.Forms.DataGridView dataGridView_MotiomAnimation;
+        private System.Windows.Forms.ComboBox comboBox_MotiomAnimation_Image;
+        private System.Windows.Forms.Label label480;
+        private System.Windows.Forms.CheckBox checkBox_MotiomAnimation;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MotiomAnimation_EndCoordinates_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MotiomAnimation_EndCoordinates_X;
+        private System.Windows.Forms.Label label484;
+        private System.Windows.Forms.Label label485;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MotiomAnimation_StartCoordinates_Y;
+        private System.Windows.Forms.NumericUpDown numericUpDown_MotiomAnimation_StartCoordinates_X;
+        private System.Windows.Forms.Label label481;
+        private System.Windows.Forms.Label label482;
+        private System.Windows.Forms.RadioButton radioButton_MotiomAnimation_EndCoordinates;
+        private System.Windows.Forms.RadioButton radioButton_MotiomAnimation_StartCoordinates;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_XY_InAnimationTable;
+        private System.Windows.Forms.ToolStripMenuItem вставитьНачальныеКоординатыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вставитьКонечныеКоординатыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem копироватьToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem вставитьToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem удалитьСтрокуToolStripMenuItem1;
+        public System.Windows.Forms.NumericUpDown numericUpDown_WeatherSet_NightTemp;
+        public System.Windows.Forms.NumericUpDown numericUpDown_WeatherSet_DayTemp;
+        public System.Windows.Forms.CheckBox checkBox_WeatherSet_DayTemp;
+        public System.Windows.Forms.CheckBox checkBox_WeatherSet_Temp;
+        public System.Windows.Forms.ComboBox comboBox_WeatherSet_Icon;
+        public System.Windows.Forms.NumericUpDown numericUpDown_WeatherSet_Temp;
+        public System.Windows.Forms.CheckBox checkBox_crop;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Gif_Speed;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set1;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set2;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set3;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set5;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set4;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set6;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set7;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set8;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set10;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set9;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set11;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set13;
+        public System.Windows.Forms.NumericUpDown numericUpDown_Calories_Set12;
+        private System.Windows.Forms.TabPage tabPage55;
+        private System.Windows.Forms.TabControl tabControl8;
+        private System.Windows.Forms.TabPage tabPage14;
+        private System.Windows.Forms.TabPage tabPage44;
+        private System.Windows.Forms.TabPage tabPage51;
+        private System.Windows.Forms.TabPage tabPage59;
+        private System.Windows.Forms.TabControl tabControl9;
+        private System.Windows.Forms.TabPage tabPage15;
+        private System.Windows.Forms.TabPage tabPage11;
+        private System.Windows.Forms.TabPage tabPage52;
+        private System.Windows.Forms.TabPage tabPage45;
+        private System.Windows.Forms.GroupBox groupBox_MotiomAnimation;
+        private System.Windows.Forms.RadioButton radioButton_Verge;
+        private System.Windows.Forms.Label label483;
+        private System.Windows.Forms.ComboBox comboBox_Animation_Preview_Speed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AnimationColumn11;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn AnimationColumn12;
+        private System.Windows.Forms.LinkLabel linkLabel_resunpacker_qzip;
     }
 }
 
